@@ -585,10 +585,7 @@ CKEDITOR.add
 </script>
 </td>
 </tr>
-<<<<<<< HEAD
-=======
 
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <tr>
 <td >Skills  Required</td>
 <td colspan=3>
@@ -599,10 +596,7 @@ CKEDITOR.add
 </script>
 </td>
 </tr>
-<<<<<<< HEAD
 
-=======
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <tr>
 <td>Maximum No of Students</td>
 <td> <select class="form-control" name=l_PR_No_Students >
