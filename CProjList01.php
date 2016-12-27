@@ -93,11 +93,9 @@ include ('header.php');
     
     print('<br><br><br><div class="alert alert-info"><table class="ady-table-content" style="width:100%">');
     print ('<tr><td>Search by Project Name  <input class="form-control " type=text name=l_PR_Name ></td>');
-<<<<<<< HEAD
     print ('<td> Filter by domain <select  class="form-control" name="l_SD_Name" align="right">');
-=======
+
     print ('<td> Filter by Technology <select  class="form-control" name="l_SD_Name" align="right">');
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     //to show all the technologies in the filter
     $l_sql_SD      ='SELECT SD_Name, SD_id FROM SubDomain WHERE Org_id = "'.$_SESSION['g_Org_id'].'"';
     $l_result_SD =mysql_query($l_sql_SD);
@@ -166,11 +164,11 @@ include ('header.php');
         {
             $l_PR_id                = $l_row[0];
             $l_PR_Name              = $l_row[1];
-<<<<<<< HEAD
+
             $l_PR_Desc              = $l_row[2];
-=======
+
             $l_PR_Desc              = html_entity_decode($l_row[2]);
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+
             $l_PR_ComplexityLevel   = $l_row[3];
             $l_PR_URL               = $l_row[4];
             $l_PR_NoOfPastAttempts  = $l_row[5];
