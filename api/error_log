@@ -1,0 +1,15 @@
+[13-Jun-2016 07:08:25 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/zaireprojects/public_html/api/test.php on line 8
+[13-Jun-2016 07:08:41 UTC] PHP Fatal error:  Call to undefined function url() in /home/zaireprojects/public_html/api/test.php on line 8
+[25-Nov-2016 10:47:17 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/zaireprojects/public_html/api/insert_userapi.php on line 10
+[25-Nov-2016 10:47:39 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/zaireprojects/public_html/api/insert_userapi.php on line 13
+[25-Nov-2016 11:05:33 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/zaireprojects/public_html/api/insert_userapi.php on line 205
+[25-Nov-2016 11:06:11 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/zaireprojects/public_html/api/insert_userapi.php on line 205
+[25-Nov-2016 11:13:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/zaireprojects/public_html/api/insert_userapi.php:46) in /home/zaireprojects/public_html/api/insert_userapi.php on line 47
+[25-Nov-2016 11:14:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/zaireprojects/public_html/api/insert_userapi.php:46) in /home/zaireprojects/public_html/api/insert_userapi.php on line 47
+[25-Nov-2016 11:16:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/zaireprojects/public_html/api/insert_userapi.php:46) in /home/zaireprojects/public_html/api/insert_userapi.php on line 47
+[12-Dec-2016 09:32:32 UTC] PHP Warning:  array_keys() expects parameter 1 to be array, null given in /home/zaireprojects/public_html/api/apitest02.php on line 17
+[12-Dec-2016 09:32:32 UTC] PHP Warning:  array_values() expects parameter 1 to be array, null given in /home/zaireprojects/public_html/api/apitest02.php on line 21
+[12-Dec-2016 09:32:32 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/zaireprojects/public_html/api/apitest02.php on line 21
+[12-Dec-2016 09:32:32 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/zaireprojects/public_html/api/apitest02.php on line 48
+[12-Dec-2016 09:32:46 UTC] PHP Fatal error:  Call to undefined function url() in /home/zaireprojects/public_html/api/test.php on line 8
+[12-Dec-2016 09:35:39 UTC] PHP Fatal error:  Call to undefined function url() in /home/zaireprojects/public_html/api/test.php on line 8
