@@ -45,11 +45,8 @@ if($l_UR_Type == 'G')
 else if($l_UR_Type == 'M')
 {
 //select the pending request of team with projects
-<<<<<<< HEAD
     $l_query =  "select  MR.MR_SentDateTime, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, TM.TM_Name, UR.UR_FirstName, UR.UR_MiddleName, UR.UR_LastName, UR.UR_USN, UR.UR_Semester, UR.UR_Phno, TM.TM_id, PR.PR_id,TM.Org_id,PR.MO_id from Mentor_Requests as MR, Projects as PR, Teams as TM, Users as UR where UR.TM_id   = MR.TM_id and TM.TM_id   = MR.TM_id and PR.PR_id   = TM.PR_id and MR.Org_id='".$_SESSION['g_Org_id']."' and UR.UR_Type= 'S' and MR.MR_ResponseDateTime is null and MR.UR_id   = '".$l_UR_Receiver."' order by TM.TM_Name, UR.UR_FirstName";
-=======
-         $l_query =  "select  MR.MR_SentDateTime, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, TM.TM_Name, UR.UR_FirstName, UR.UR_MiddleName, UR.UR_LastName, UR.UR_USN, UR.UR_Semester, UR.UR_Phno, TM.TM_id, PR.PR_id,TM.Org_id from Mentor_Requests as MR, Projects as PR, Teams as TM, Users as UR where UR.TM_id   = MR.TM_id and TM.TM_id   = MR.TM_id and PR.PR_id   = TM.PR_id and MR.Org_id='".$_SESSION['g_Org_id']."' and UR.UR_Type= 'S' and MR.MR_ResponseDateTime is null and MR.UR_id   = '".$l_UR_Receiver."' order by TM.TM_Name, UR.UR_FirstName";
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+
 }
 
 $l_proj_res = mysql_query($l_query) or die(mysql_error());    // run the actual SQL
@@ -79,10 +76,7 @@ print ('</tr>');
             $l_TM_id        = $l_row[11];
             $l_PR_id        = $l_row[12];
             $l_User_org       = $l_row[13];
-<<<<<<< HEAD
             $l_model       = $l_row[14];
-=======
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
             print ('<tr style="' . $l_UR_Color_Table02. '">');
             
                 if($l_prev_teamname <> $l_TM_Name)
@@ -111,11 +105,8 @@ print ( "<td><input type='button'  value='Accept' class='btn btn-primary' onClic
          // Check the User type should be Mentor and accept/Reject the request
                      else if($l_UR_Type == 'M')
                      {
-<<<<<<< HEAD
 print ( "<td><input type='button'  class='btn btn-primary' value='Accept' onClick=\"window.location='MUpdateComm.php?g_updSQL=Accept|".$l_TM_id."|".$l_PR_id."|".$l_User_org."&&model=".$l_model."'\"> </td>");
-=======
-print ( "<td><input type='button'  class='btn btn-primary' value='Accept' onClick=\"window.location='MUpdateComm.php?g_updSQL=Accept|".$l_TM_id."|".$l_PR_id."|".$l_User_org."'\"> </td>");
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+
 
                     print ( "<td><input type='button' class='btn btn-primary' value='Reject' onClick=\"window.location='MUpdateComm.php?g_updSQL=Reject|".$l_TM_id."|".$l_User_org."'\"> </td>");
                      }
@@ -149,9 +140,7 @@ print('</tr>');
     print ('</tr>');
 print ('</table>');
 }
-
 }
-
 ?>
 
 </div>

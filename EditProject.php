@@ -34,13 +34,8 @@ if(is_null($l_UR_id)||($l_UR_Type !='G' && $l_UR_Type !='M' && $l_UR_Type !='C')
 
 $l_PR_id	=$_REQUEST['g_PR_id'];
 
-
-
-<<<<<<< HEAD
-$l_query_display = 'Select PR_Name, PR_Desc, PR_ReleaseDate, PR_ExpiryDate, UR_Owner,PR_SynopsisURL,PR_Objective,PR_Background,PR_Functional_Requirement,PR_Non_Functional_Requirement,PR_Duration,PR_No_Students from Projects where PR_id = "'.$l_PR_id.'" and Org_id="'.$_SESSION['g_Org_id'].'"';
-=======
 $l_query_display = 'Select PR_Name, PR_Desc, PR_ReleaseDate, PR_ExpiryDate, UR_Owner,PR_SynopsisURL,PR_Objective,PR_Background,PR_Functional_Requirement,PR_Non_Functional_Requirement,PR_Duration,PR_No_Students,PR_Short_Desc from Projects where PR_id = "'.$l_PR_id.'" and Org_id="'.$_SESSION['g_Org_id'].'"';
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+
 $l_result_display = mysql_query($l_query_display);
 
 
@@ -48,11 +43,8 @@ if ($l_row_display = mysql_fetch_row($l_result_display))
 {
      $l_Project_name = $l_row_display[0];
      $l_PR_Desc = $l_row_display[1];
-<<<<<<< HEAD
-=======
+
    $l_PR_Short_Desc = $l_row_display[12];
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
-   
      $l_PR_Objective=$l_row_display[6];
      $l_PR_Background=$l_row_display[7];
      $l_Functional_Requirement=$l_row_display[8];

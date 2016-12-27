@@ -81,16 +81,17 @@
           $l_PR_id= $l_data[0]+1;
           $l_PR_Name    = $_POST['l_PR_Name'];
           $l_PR_Desc    = $_POST['l_PR_Desc'];
-
          $l_PR_Short_Desc    = $_POST['l_PR_Short_Desc'];
           $l_PR_Objective    = $_POST['l_PR_Objective'];
           $l_PR_Background    = $_POST['l_PR_Background'];
           $l_PR_Functional_req    = $_POST['l_PR_Functional_req'];
           $l_Non_PR_Functional_req   = $_POST['l_PR_N_req'];
-
+          /*
+          Modified Date :8th Sep 2016*/
           $l_PR_Prerequisite  = $_POST['l_PR_Prerequisite'];
           $allowed_synopsis=$_POST['allowed_synopsis'];
-          
+            $allowed_mentors=$_POST['allowed_mentors'];
+          /*-- ---*/
 
           $l_PR_No_Students  = $_POST['l_PR_No_Students'];
           $l_PR_System_Req = $_POST['l_PR_System_req'];
@@ -100,6 +101,7 @@
           $_SESSION['l_PR_Name_fill']=$l_PR_Name;
           $_SESSION['l_PR_Desc_fill']=$l_PR_Desc;
 
+          
            $_SESSION['l_PR_Short_Desc_fill']=$l_PR_Short_Desc;
           $_SESSION['l_PR_Objective_fill']=$l_PR_Objective;
           $_SESSION['l_PR_Background_fill']=$l_PR_Background;
@@ -175,7 +177,15 @@
           @$file_size=$_FILES['file']['size'];   //new  modification line
           @$file_type=$_FILES['file']['type'];   //new  modification line
           @$file_path=$_FILES['file']['tmp_name'];  //new  modification line
-          
+
+           @$ExtraDoc_Size=$_FILES['datafile']['size'];   //new  modification line
+          @$ExtraDoc_Type=$_FILES['datafile']['type'];   //new  modification line
+          @$ExtraDoc_Path=$_FILES['datafile']['tmp_name'];
+          if(!empty(trim($_POST['datafile_name']))){
+          $ExtraDoc_Name=$_POST['datafile_name'];
+          } else{
+          $ExtraDoc_Name="Data Sheet";
+          }
 
           $l_AL_sel_id_arr_uni_temp=array_unique($l_AL_sel_id_arr);  //unique list of documents with corresponding index
           
@@ -324,15 +334,19 @@
           {
           
           
-
-          $l_query = "insert into Projects  (PR_id, PR_Name,PR_Desc,PR_Short_Desc,PR_Objective,PR_Background,PR_Functional_Requirement,PR_Non_Functional_Requirement,PR_System_Requirements, PR_ReleaseDate , PR_ExpiryDate, PR_SynopsisURL,UR_Owner,PR_InsertDateTime,PR_Duration,PR_ComplexityLevel,PR_ip,MO_id,PR_Synopsis_Original_Name,Org_id,PR_No_Students,IN_id,PR_Prerequisites,PR_AllowedSynopsis) values (".$l_PR_id.", \"".$l_PR_Name."\",\"".htmlspecialchars($l_PR_Desc)."\",\"".htmlspecialchars($l_PR_Short_Desc)."\",\"".htmlspecialchars($l_PR_Objective)."\",\"".htmlspecialchars($l_PR_Background)."\",\"".htmlspecialchars($l_PR_Functional_req)."\",\"".htmlspecialchars($l_Non_PR_Functional_req)."\",\"".htmlspecialchars($l_PR_System_Req)."\",".$l_PR_ReleaseDate.",".$l_PR_ExpiryDate.", \"".$l_PR_Synopsis_URL."\", \"".$l_UR_id."\",".$l_PR_InsertDateTime.",".$l_PR_Duration.",".$l_PR_level.",\"".$l_Z_NDA_URL."\",".$l_PR_model.",\"".$l_synopsis_original_name."\",\"".$_SESSION['g_Org_id']."\",\"".$l_PR_No_Students."\",".$l_PR_Industry.",\"".$l_PR_Prerequisite."\",\"".$allowed_synopsis."\")";
+          /*$l_query = "insert into Projects  (PR_id, PR_Name,PR_Desc,PR_Objective,PR_Background,PR_Functional_Requirement,PR_Non_Functional_Requirement,PR_System_Requirements, PR_ReleaseDate , PR_ExpiryDate, PR_SynopsisURL,UR_Owner,PR_InsertDateTime,PR_Duration,PR_ComplexityLevel,PR_ip,MO_id,PR_Synopsis_Original_Name,Org_id,PR_No_Students,IN_id) values (".$l_PR_id.", \"".$l_PR_Name."\",\"".htmlspecialchars($l_PR_Desc)."\", \"".htmlspecialchars($l_PR_Objective)."\",\"".htmlspecialchars($l_PR_Background)."\",\"".htmlspecialchars($l_PR_Functional_req)."\",\"".htmlspecialchars($l_Non_PR_Functional_req)."\",\"".htmlspecialchars($l_PR_System_Req)."\",".$l_PR_ReleaseDate.",".$l_PR_ExpiryDate.", \"".$l_PR_Synopsis_URL."\", \"".$l_UR_id."\",".$l_PR_InsertDateTime.",".$l_PR_Duration.",".$l_PR_level.",\"".$l_Z_NDA_URL."\",".$l_PR_model.",\"".$l_synopsis_original_name."\",\"".$_SESSION['g_Org_id']."\",\"".$l_PR_No_Students."\",".$l_PR_Industry.")";
           $result = mysql_query($l_query);
-          
+          */
+          /*Modified Date:8th SEP 2016 */
+           $l_query = "insert into Projects  (PR_id, PR_Name,PR_Desc,PR_Short_Desc,PR_Objective,PR_Background,PR_Functional_Requirement,PR_Non_Functional_Requirement,PR_System_Requirements, PR_ReleaseDate , PR_ExpiryDate, PR_SynopsisURL,UR_Owner,PR_InsertDateTime,PR_Duration,PR_ComplexityLevel,PR_ip,MO_id,PR_Synopsis_Original_Name,Org_id,PR_No_Students,IN_id,PR_Prerequisites,PR_AllowedSynopsis,PR_MentorAllowed) values (".$l_PR_id.", \"".$l_PR_Name."\",\"".htmlspecialchars($l_PR_Desc)."\",\"".htmlspecialchars($l_PR_Short_Desc)."\", \"".htmlspecialchars($l_PR_Objective)."\",\"".htmlspecialchars($l_PR_Background)."\",\"".htmlspecialchars($l_PR_Functional_req)."\",\"".htmlspecialchars($l_Non_PR_Functional_req)."\",\"".htmlspecialchars($l_PR_System_Req)."\",".$l_PR_ReleaseDate.",".$l_PR_ExpiryDate.", \"".$l_PR_Synopsis_URL."\", \"".$l_UR_id."\",".$l_PR_InsertDateTime.",".$l_PR_Duration.",".$l_PR_level.",\"".$l_Z_NDA_URL."\",".$l_PR_model.",\"".$l_synopsis_original_name."\",\"".$_SESSION['g_Org_id']."\",\"".$l_PR_No_Students."\",".$l_PR_Industry.",\"".$l_PR_Prerequisite."\",\"".$allowed_synopsis."\",\"".$allowed_mentors."\")";
+          $result = mysql_query($l_query);
+          /*------   -----*/
           $l_insert_solution = "insert into Project_Solution (PR_id,SO_id) values (".$l_PR_id.",".$l_PR_Solution.")";
           mysql_query($l_insert_solution) or die(mysql_error);
 
           $data=addslashes(file_get_contents($file_path));
-          mysql_query("INSERT INTO Project_Synopsis (PR_id,PR_Synopsis_Data,PR_Synopsis_Original_Name,PR_Synopsis_Size,PR_Synopsis_Type,Org_id,PR_Synopsis_Name) values(".$l_PR_id.",'".$data."','".$file_name."','".$file_size."','".$file_type."','".$_SESSION['g_Org_id']."','".$file_Modified_Name."')");
+          $ExtraDoc=file_get_contents($ExtraDoc_Path);
+          mysql_query("INSERT INTO Project_Synopsis (PR_id,PR_Synopsis_Data,PR_Synopsis_Original_Name,PR_Synopsis_Size,PR_Synopsis_Type,Org_id,PR_Synopsis_Name,PR_ExtraDoc,PR_ExtraDoc_Name,PR_ExtraDoc_Size,PR_ExtraDoc_Type) values(".$l_PR_id.",'".mysql_real_escape_string( $data)."','".$file_name."','".$file_size."','".$file_type."','".$_SESSION['g_Org_id']."','".$file_Modified_Name."','".mysql_real_escape_string($ExtraDoc)."','".$ExtraDoc_Name."','".$ExtraDoc_Size."','".$ExtraDoc_Type."')");
 
           
           
@@ -340,18 +354,14 @@
           {
           $_SESSION['msg'] ='<div class="alert alert-success"><strong>'.$l_PR_Name.'</strong> Project added successfully !!</div>';
 
-          
-          unset($_SESSION['l_PR_Name_fill']);
-          
-           
-          unset($_SESSION['l_PR_Short_Desc_fill']);
-          unset($_SESSION['l_PR_Desc_fill']);
-          unset($_SESSION['l_PR_Objective_fill']);
-         unset( $_SESSION['l_PR_Background_fill']);
-          unset($_SESSION['l_PR_Functional_req_fill']);
-         unset( $_SESSION['l_Non_PR_Functional_req_fill']);
+                unset($_SESSION['l_PR_Name_fill']);
+                unset($_SESSION['l_PR_Short_Desc_fill']);
+                unset($_SESSION['l_PR_Desc_fill']);
+                unset($_SESSION['l_PR_Objective_fill']);
+                unset( $_SESSION['l_PR_Background_fill']);
+                unset($_SESSION['l_PR_Functional_req_fill']);
+                unset( $_SESSION['l_Non_PR_Functional_req_fill']);
                 unset( $_SESSION['l_PR_System_Req_fill']);
-
           }
           
           }/// if ( $l_row_validate[0] == 0 )
@@ -477,8 +487,7 @@
           }
           
           }
-          
-
+ 
           echo "<script>window.location.href='AddProject.php'</script>";
           }
           
@@ -585,7 +594,6 @@ CKEDITOR.add
 </script>
 </td>
 </tr>
-
 <tr>
 <td >Skills  Required</td>
 <td colspan=3>
@@ -596,7 +604,6 @@ CKEDITOR.add
 </script>
 </td>
 </tr>
-
 <tr>
 <td>Maximum No of Students</td>
 <td> <select class="form-control" name=l_PR_No_Students >
@@ -764,7 +771,20 @@ CKEDITOR.add
                       
                       print('<br>');
                       print('<table class="ady-table-content" style="width:100%;"><tr style="    background-color:rgba(11, 14, 95, 0.22);"><td style="width:35%">Allow Synopsis View as Pdf:<font color=red>*</font></td><td><input  type="radio" name="allowed_synopsis" id="allowed_synopsis" value="Y"> Yes&nbsp&nbsp&nbsp&nbsp&nbsp<input  type="radio" name="allowed_synopsis" checked id="allowed_synopsis" value="N">  No</td></tr></table>');
-
+                      print('<br>');
+                     
+                      print('<table class="ady-table-content" style="width:100%;"><tr style="    background-color:rgba(11, 14, 95, 0.22);"><td style="width:35%">Allow Only Company Mentors<font color=red>*</font></td><td><input  type="radio" name="allowed_mentors" id="allowed_mentors" value="Y"> Yes&nbsp&nbsp&nbsp&nbsp&nbsp<input  type="radio" name="allowed_mentors" checked id="allowed_mentors" value="N">  No</td></tr></table>');
+                      print('<br>');
+                      ?>
+                       <table class="ady-table-content" style="width:100%;">
+                         <tr style="    background-color:rgba(11, 14, 95, 0.22);">
+                         	<td>Attach Extra document</td>
+                         	<td> Name of Document:<input  type="text" name="datafile_name" id="datafile_name"></td>
+                         	<td><input  type="file" name="datafile" id="datafile"></td>
+                         </tr>
+                       </table>
+                      
+                      <?php
                       $l_SO_sql = 'select SO_id, SO_Name from Solution ';
                       $l_SO_result = mysql_query($l_SO_sql);
                       
@@ -957,53 +977,103 @@ CKEDITOR.add
                                                                             }
                                                                             mysql_free_result($l_result_sql);
                                                                             print('</table><br>');
+                                                            
+                                                                           
+                                                                           
+                                                                           
+                                                                           /* Select and Display All Technologies Name that can be use while performing project */
+    $l_select_sql = 'SELECT DO.DO_Name,DO.DO_id FROM Domain as DO';
+    $l_result_sql = mysql_query($l_select_sql);
+    ?>
+   <div class="row primary" style="  background-color: #337ab7; padding: 10px; margin: 0px; color: white; ">
+                        <div class="col-md-4">
+                            Domains
+                                </div>
+                        <div class="col-md-4">
+                            Select Technologies used for the Project
+                                </div>
+                        <div class="col-md-4">
+                            Most Prefered Technology
+                                </div>
+    </div>
+ <div class="panel-group" style="margin-bottom: 0px;" id="accordion">            
 
-                                                                            print('<table style="width:100%;" class="ady-table-content">');
-                                                                            print('<tr><th colspan=2>Select Technologies used for the Project</th><th colspan>Most Prefered Technology</th></tr>');
-                                                                            
-                                                                            /*Select and Display All Technologies Name that can be use while performing project*/
-                                                                            $l_select_sql = 'SELECT SD_id, SD_Name FROM SubDomain ';
-                                                                            $l_result_sql = mysql_query($l_select_sql);
-                                                                            
-                                                                            while($l_row = mysql_fetch_row($l_result_sql))
-                                                                            {
-                                                                            print ('<tr>');
-                                                                            $l_SD_id       = $l_row[0];
-                                                                            $l_SD_Name= $l_row[1];
-                                                                            
-                                                                            print( '<td>'.$l_SD_Name.'</td>');
-                                                                            
-                                                                            print('<td>');
-                 print('<center><input  type="checkbox" class="g_checkbox_select_DM" value="'.$l_SD_id.'" name="l_SD_sel[]">  </center</td>');
-                                                                            print('<td><center><input  type="radio" class="g_checkbox_select_DM" value="'.$l_SD_id.'" name="l_SD_prf" required>  </center</td>');
-                                                                            
-                                                                            
-                                                                            
-                                                                            print('</tr>');
-                                                                            }
-                                                                            
-                                                                            ///  Tearms and Conditions for NDA
-                                                                            print('</table><br>');
-                                                                            print('<table style="width:100%;" class="ady-table-content">');
-                                                                            print('<tr><th colspan=2>NDA</th></tr>');
-                                                                            
-                                                                            print('<tr><td style="text-align:left">Do You Want to Add NDA?</td><td style="width:13%;"><input class=" ady-form" type="checkbox" id="AcceptNda" onclick="ShowNdaRadio()"></td></tr>');
-                                                                            
-                                                                            print('<tr id="Ndatr" style="display:none"><td>');
-                                                                            print('<input  type="Radio" onclick="myFunctionshow()" id="NdaR1" class="g_checkbox_select_DM" value="N" name="Z_NDA">Custom <a>NDA</a>');
-                                                                            print('<input class="form-control ady-form" type="file" name="NDAfile" id="thenda" style="display:none" /></td>');
-                                                                            print('<td><input type="Radio" class="" value="Y" id="NdaR2" onclick="myFunctionhide()" name="Z_NDA">Go with Zaireprojects <a>NDA</a>
-                                                                                  </td></tr>
-                                                                                  ');
-                                                                                  mysql_free_result($l_result_sql);
-                                                                                  print('</table>');
-                                                                                  print('<table style="width:100%">');
-                                                                                  print('<tr><td style ="text-align:center" colspan=2><br><input class=" ady-req-btn btn-primary" type=submit name=SaveRec  accesskey=Alt-S value="Add Project" ></td></tr>');
-                                                                                  print('</table>');
-                                                                                  print('</form>');
-                                                                                  }
-                                                                                  print('</div></div></div></div>');
-                                                                                  ?>
+                                            <?php
+                                            while ($l_row = mysql_fetch_row($l_result_sql)) {
 
-        </div></div></div>
-                              <?php include('footer.php')?>
+
+                                                print ('<tr>');
+                                                ?> 
+                                                    <div class="panel panel-info" style="margin-bottom: 1px;">
+                                                       <a  data-toggle="collapse" data-parent="#accordion" href="#<?php echo $l_row[1]; ?>">
+                                                           <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                
+                                                <?php echo $l_row[0]; ?>
+                                                            </h4>
+                                                        </div></a>
+
+                                                <?php
+                                                $l_select_sql1 = 'SELECT SD.SD_id, SD.SD_Name FROM SubDomain as SD where SD.DO_id=' . $l_row[1];
+                                                $l_result_sql1 = mysql_query($l_select_sql1);
+                                                ?>
+                                                        <div id="<?php echo $l_row[1]; ?>" class="panel-collapse collapse <?php if($l_row[1]==2){ echo "in" ;} ?>">
+                                                            <div class="panel-body">
+                                                <?php
+                                                while ($l_row1 = mysql_fetch_row($l_result_sql1)) {
+                                                    $l_SD_id = $l_row1[0];
+                                                    $l_SD_Name = $l_row1[1];
+                                                    ?> 
+
+
+                                                                <div class="row"><div class="col-md-4"><label> <?php echo $l_SD_Name; ?>: </label>
+                                </div>
+                                <div class="col-md-4">
+                               <input  type="checkbox" class="g_checkbox_select_DM" value="<?php echo $l_SD_id; ?>" name="l_SD_sel[]"> 
+                              </div>
+                                <div class="col-md-4">
+                               <input  type="radio" class="g_checkbox_select_DM" value="<?php echo $l_SD_id; ?>" name="l_SD_prf" required>
+ </div>
+     </div>                                                             
+                                                <?php } ?> </div>
+                                                        </div>
+
+                                                    </div> 
+
+                                                <?php
+                                                
+                                            }
+                                            ?>
+                                            </div>                                                                      
+
+
+<?php
+///  Tearms and Conditions for NDA
+
+print('<table style="width:100%;" class="ady-table-content">');
+print('<tr><th colspan=2>NDA</th></tr>');
+
+print('<tr><td style="text-align:left">Do You Want to Add NDA?</td><td style="width:13%;"><input class=" ady-form" type="checkbox" id="AcceptNda" onclick="ShowNdaRadio()"></td></tr>');
+
+print('<tr id="Ndatr" style="display:none"><td>');
+print('<input  type="Radio" onclick="myFunctionshow()" id="NdaR1" class="g_checkbox_select_DM" value="N" name="Z_NDA">Custom <a>NDA</a>');
+print('<input class="form-control ady-form" type="file" name="NDAfile" id="thenda" style="display:none" /></td>');
+print('<td><input type="Radio" class="" value="Y" id="NdaR2" onclick="myFunctionhide()" name="Z_NDA">Go with Zaireprojects <a>NDA</a>
+                                      </td></tr>
+                                      ');
+mysql_free_result($l_result_sql);
+print('</table>');
+print('<table style="width:100%">');
+print('<tr><td style ="text-align:center" colspan=2><br><input class=" ady-req-btn btn-primary" type=submit name=SaveRec  accesskey=Alt-S value="Add Project" ></td></tr>');
+print('</table>');
+
+}
+//print('</div></div></div></div>');
+?>
+</form>
+ </div></div></div>
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<form>
+        
+ <?php include('footer.php') ?>

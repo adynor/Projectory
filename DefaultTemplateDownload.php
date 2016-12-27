@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 require_once('db_config.php');
-=======
-include('db_config.php');
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
 if(isset($_GET['ALid']))
     {
@@ -16,15 +12,9 @@ if(isset($_GET['ALid']))
         }
 $gotten = mysql_query($query);
 $row = mysql_fetch_row($gotten);
-<<<<<<< HEAD
-$row_name=$row[1].'.pdf';
-header("Content-disposition: attachment; filename= ".$row_name."");
-header("Cache-Control: no-cache");
-=======
+
 //row[1]=$row[1].'.pdf';
 header("Content-disposition: attachment; filename= $row[1].pdf");
 header("Cache-Control: no-cache");
-
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 echo $row[0];
 ?>
