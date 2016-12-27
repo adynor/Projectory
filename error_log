@@ -1,0 +1,148 @@
+[07-Dec-2016 08:20:03 UTC] PHP Fatal error:  Call to undefined method TCPDF::SetDefaultMonospaceFont() in /home/zaireprojects/public_html/test/TView_NewStudents.php on line 46
+[07-Dec-2016 08:20:50 UTC] PHP Fatal error:  Call to undefined method TCPDF::SetDefaultMonospaceFont() in /home/zaireprojects/public_html/test/TView_NewStudents.php on line 46
+[07-Dec-2016 08:26:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/zaireprojects/public_html/test/header.php:26) in /home/zaireprojects/public_html/test/tcpdf/tcpdf.php on line 7624
+[07-Dec-2016 08:39:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/zaireprojects/public_html/test/header.php:26) in /home/zaireprojects/public_html/test/tcpdf/tcpdf.php on line 7624
+[07-Dec-2016 08:40:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/zaireprojects/public_html/test/header.php:26) in /home/zaireprojects/public_html/test/tcpdf/tcpdf.php on line 7624
+[07-Dec-2016 08:42:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/zaireprojects/public_html/test/header.php:26) in /home/zaireprojects/public_html/test/tcpdf/tcpdf.php on line 7624
+[07-Dec-2016 08:51:51 UTC] PHP Warning:  require_once(tcpdf_include.php): failed to open stream: No such file or directory in /home/zaireprojects/public_html/test/TView_NewStudents.php on line 40
+[07-Dec-2016 08:51:51 UTC] PHP Fatal error:  require_once(): Failed opening required 'tcpdf_include.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/zaireprojects/public_html/test/TView_NewStudents.php on line 40
+[07-Dec-2016 08:52:16 UTC] PHP Warning:  require_once(tcpdf/tcpdf_include.php): failed to open stream: No such file or directory in /home/zaireprojects/public_html/test/TView_NewStudents.php on line 40
+[07-Dec-2016 08:52:16 UTC] PHP Fatal error:  require_once(): Failed opening required 'tcpdf/tcpdf_include.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/zaireprojects/public_html/test/TView_NewStudents.php on line 40
+[07-Dec-2016 08:52:44 UTC] PHP Warning:  require_once(test/tcpdf/tcpdf_include.php): failed to open stream: No such file or directory in /home/zaireprojects/public_html/test/TView_NewStudents.php on line 40
+[07-Dec-2016 08:52:44 UTC] PHP Fatal error:  require_once(): Failed opening required 'test/tcpdf/tcpdf_include.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/zaireprojects/public_html/test/TView_NewStudents.php on line 40
+[07-Dec-2016 08:53:05 UTC] PHP Warning:  require_once(test/tcpdf/tcpdf.php): failed to open stream: No such file or directory in /home/zaireprojects/public_html/test/TView_NewStudents.php on line 40
+[07-Dec-2016 08:53:05 UTC] PHP Fatal error:  require_once(): Failed opening required 'test/tcpdf/tcpdf.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/zaireprojects/public_html/test/TView_NewStudents.php on line 40
+[07-Dec-2016 09:07:06 UTC] PHP Parse error:  syntax error, unexpected 'center' (T_STRING) in /home/zaireprojects/public_html/test/getpdf.php on line 49
+[07-Dec-2016 09:11:50 UTC] PHP Parse error:  syntax error, unexpected 'ady' (T_STRING) in /home/zaireprojects/public_html/test/getpdf.php on line 49
+[14-Dec-2016 13:25:23 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[14-Dec-2016 13:25:23 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[14-Dec-2016 13:25:23 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[14-Dec-2016 13:25:23 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[14-Dec-2016 13:25:23 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[14-Dec-2016 13:25:23 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[14-Dec-2016 13:25:23 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[14-Dec-2016 13:25:23 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[14-Dec-2016 13:25:23 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[15-Dec-2016 07:02:03 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 19
+[15-Dec-2016 07:02:03 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 23
+[15-Dec-2016 07:22:57 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 19
+[15-Dec-2016 07:22:57 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 23
+[15-Dec-2016 07:24:02 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 19
+[15-Dec-2016 07:24:02 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 23
+[15-Dec-2016 07:25:10 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 19
+[15-Dec-2016 07:25:10 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 23
+[15-Dec-2016 07:31:53 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 19
+[15-Dec-2016 07:31:53 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 23
+[15-Dec-2016 07:31:56 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 19
+[15-Dec-2016 07:31:56 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 23
+[15-Dec-2016 07:32:18 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 19
+[15-Dec-2016 07:32:18 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 23
+[15-Dec-2016 07:49:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 19
+[15-Dec-2016 07:49:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 23
+[15-Dec-2016 07:51:51 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 19
+[15-Dec-2016 07:51:51 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 23
+[15-Dec-2016 08:05:23 UTC] PHP Parse error:  syntax error, unexpected '$pid_encode' (T_VARIABLE) in /home/zaireprojects/public_html/test/AdminProjectDetails.php on line 111
+[15-Dec-2016 08:16:49 UTC] PHP Parse error:  syntax error, unexpected 'C' (T_STRING) in /home/zaireprojects/public_html/test/TView_Projects02.php on line 83
+[15-Dec-2016 08:17:01 UTC] PHP Parse error:  syntax error, unexpected 'C' (T_STRING) in /home/zaireprojects/public_html/test/TView_Projects02.php on line 83
+[15-Dec-2016 08:17:27 UTC] PHP Parse error:  syntax error, unexpected 'C' (T_STRING) in /home/zaireprojects/public_html/test/TView_Projects02.php on line 83
+[15-Dec-2016 08:18:10 UTC] PHP Parse error:  syntax error, unexpected 'C' (T_STRING) in /home/zaireprojects/public_html/test/TView_Projects02.php on line 83
+[15-Dec-2016 08:18:25 UTC] PHP Parse error:  syntax error, unexpected 'C' (T_STRING) in /home/zaireprojects/public_html/test/TView_Projects02.php on line 83
+[15-Dec-2016 08:19:18 UTC] PHP Parse error:  syntax error, unexpected 'C' (T_STRING) in /home/zaireprojects/public_html/test/TView_Projects02.php on line 83
+[15-Dec-2016 08:19:27 UTC] PHP Parse error:  syntax error, unexpected 'C' (T_STRING) in /home/zaireprojects/public_html/test/TView_Projects02.php on line 83
+[15-Dec-2016 11:37:37 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 81
+[15-Dec-2016 12:33:37 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 146
+[15-Dec-2016 12:34:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:34:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:34:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:34:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:34:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:34:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:34:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:34:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:35:03 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:35:03 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:35:03 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:35:03 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:35:03 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:35:03 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:35:03 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[15-Dec-2016 12:35:03 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 148
+[16-Dec-2016 10:42:42 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[16-Dec-2016 10:42:42 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[16-Dec-2016 10:42:42 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[16-Dec-2016 10:42:42 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[16-Dec-2016 10:42:42 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[16-Dec-2016 10:42:42 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[16-Dec-2016 10:42:42 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[16-Dec-2016 10:42:42 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[16-Dec-2016 10:42:42 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[16-Dec-2016 11:36:01 UTC] PHP Parse error:  syntax error, unexpected 'for' (T_FOR) in /home/zaireprojects/public_html/test/advanceprojectsearch.php on line 147
+[17-Dec-2016 06:17:55 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/SHome.php on line 209
+[17-Dec-2016 06:17:55 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/SHome.php on line 425
+[17-Dec-2016 06:17:55 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/SHome.php on line 533
+[17-Dec-2016 06:17:55 UTC] PHP Warning:  max(): When only one parameter is given, it must be an array in /home/zaireprojects/public_html/test/SHome.php on line 535
+[17-Dec-2016 06:17:55 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/SHome.php on line 597
+[21-Dec-2016 08:24:13 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/zaireprojects/public_html/test/MHome.php on line 168
+[21-Dec-2016 08:45:54 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/zaireprojects/public_html/test/SHome.php on line 632
+[21-Dec-2016 09:15:22 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 46
+[22-Dec-2016 06:06:37 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[22-Dec-2016 06:06:37 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[22-Dec-2016 06:06:37 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[22-Dec-2016 06:06:37 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[22-Dec-2016 06:06:37 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[22-Dec-2016 06:06:37 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[22-Dec-2016 06:06:37 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[22-Dec-2016 06:06:37 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[22-Dec-2016 06:06:37 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/BookTheSlot.php on line 18
+[22-Dec-2016 06:11:53 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 14
+[22-Dec-2016 06:13:20 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 14
+[22-Dec-2016 06:13:55 UTC] PHP Parse error:  syntax error, unexpected '1' (T_LNUMBER), expecting ',' or ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 13
+[22-Dec-2016 06:18:12 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 15
+[22-Dec-2016 06:43:47 UTC] PHP Parse error:  syntax error, unexpected '', UR.UR_MiddleName,  '' (T_CONSTANT_ENCAPSED_STRING) in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 15
+[22-Dec-2016 08:20:47 UTC] PHP Parse error:  syntax error, unexpected 'mysql_query' (T_STRING) in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 9
+[22-Dec-2016 09:04:51 UTC] PHP Parse error:  syntax error, unexpected '$_GET' (T_VARIABLE) in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 16
+[22-Dec-2016 09:05:39 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 16
+[22-Dec-2016 09:05:52 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 16
+[22-Dec-2016 09:06:02 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 16
+[22-Dec-2016 10:51:09 UTC] PHP Parse error:  syntax error, unexpected 'break' (T_BREAK) in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 19
+[22-Dec-2016 12:51:49 UTC] PHP Parse error:  syntax error, unexpected 'switch' (T_SWITCH), expecting ',' or ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 83
+[22-Dec-2016 13:03:56 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 23
+[22-Dec-2016 13:03:56 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 24
+[22-Dec-2016 13:03:56 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 23
+[22-Dec-2016 13:03:56 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 24
+[22-Dec-2016 13:03:56 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 23
+[22-Dec-2016 13:03:56 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 24
+[22-Dec-2016 13:04:36 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 23
+[22-Dec-2016 13:04:36 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 24
+[22-Dec-2016 13:04:36 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 23
+[22-Dec-2016 13:04:36 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 24
+[22-Dec-2016 13:04:36 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 23
+[22-Dec-2016 13:04:36 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 24
+[22-Dec-2016 13:17:59 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 29
+[26-Dec-2016 08:32:10 UTC] PHP Parse error:  syntax error, unexpected '$Query1' (T_VARIABLE), expecting ',' or ';' in /home/zaireprojects/public_html/test/ViewSynopsis.php on line 24
+[26-Dec-2016 10:57:04 UTC] PHP Fatal error:  Call to undefined function getProjectName() in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 7
+[26-Dec-2016 10:57:54 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/SHome.php on line 209
+[26-Dec-2016 10:57:54 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/SHome.php on line 425
+[26-Dec-2016 10:57:54 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/SHome.php on line 533
+[26-Dec-2016 10:57:54 UTC] PHP Warning:  max(): When only one parameter is given, it must be an array in /home/zaireprojects/public_html/test/SHome.php on line 535
+[26-Dec-2016 10:57:54 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/SHome.php on line 597
+[26-Dec-2016 11:08:08 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 132
+[26-Dec-2016 11:17:22 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 79
+[26-Dec-2016 11:18:01 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 84
+[26-Dec-2016 11:20:07 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 84
+[26-Dec-2016 11:20:12 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 84
+[26-Dec-2016 11:21:52 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 80
+[26-Dec-2016 11:23:38 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 81
+[26-Dec-2016 11:24:10 UTC] PHP Parse error:  syntax error, unexpected '$return' (T_VARIABLE) in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 81
+[26-Dec-2016 11:24:36 UTC] PHP Parse error:  syntax error, unexpected '$return' (T_VARIABLE) in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 82
+[26-Dec-2016 11:24:58 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 81
+[26-Dec-2016 11:25:22 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 81
+[26-Dec-2016 11:26:54 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 81
+[26-Dec-2016 11:28:29 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 82
+[26-Dec-2016 11:28:32 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 82
+[26-Dec-2016 11:50:10 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 54
+[26-Dec-2016 11:50:10 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 55
+[27-Dec-2016 06:48:55 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 56
+[27-Dec-2016 06:48:55 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 57
+[27-Dec-2016 06:56:05 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 56
+[27-Dec-2016 06:56:05 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/PaymentMentorhr.php on line 57

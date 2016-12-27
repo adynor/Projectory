@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+RewriteCond %{HTTP_HOST} ^adynor\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.adynor\.com$
+RewriteRule ^/?$ "https\:\/\/www\.zaireprojects\.com\/" [R=301,L]
