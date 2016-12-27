@@ -13,6 +13,11 @@ include ('header.php');
    <div class="container" >
        <div class="row" style="padding:20px 0px">
            <div class="col-md-12 ady-row">
+<<<<<<< HEAD
+=======
+               
+               
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
 <?php
     $l_UR_Type= $_SESSION['g_UR_Type'];
@@ -54,7 +59,14 @@ $l_Name=$_POST['l_Name'];
 $array_Name=explode(' ',$l_Name);
 $l_count=count($array_Name);
 
+<<<<<<< HEAD
 
+=======
+if (preg_match("/[^A-Za-z'-]/",$_POST['l_Name'])) 
+          {
+        print("<div class='alert alert-danger'>invalid name and name should be alpha</div>");
+      }
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
  if($l_count == 1)
 {
     $l_UR_FirstName = $array_Name[0];
@@ -102,10 +114,19 @@ if ($l_row_display = mysql_fetch_row($l_result_display))
      $l_UR_State_display = $l_row_display[8];
      $l_UR_zip_display = $l_row_display[10];
      $l_UR_DOB_Y = date('Y',strtotime($l_row_display[11]));
+<<<<<<< HEAD
      $l_UR_DOB_MonthName = date('F',strtotime($l_row_display[11]));  // for showing month
      $l_UR_DOB_D = date('d',strtotime($l_row_display[11]));
    
 }
+=======
+$l_UR_DOB_MonthName = date('F',strtotime($l_row_display[11]));  // for showing month
+ $l_UR_DOB_D = date('d',strtotime($l_row_display[11]));
+   
+}
+
+
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 print('<div class="panel panel-primary" style="width:100%;">');
 print('<div class="panel-heading" style="width:100%;"> Edit Profile</div>');
 print('<div class="panel-body table-responsive table" style="width:100%;">');
@@ -125,7 +146,12 @@ for ($m=1; $m<=12; $m++)
       if($m<10)
          {
     print(' <option value="0'.$m.'" selected>'.date('F', mktime(0,0,0,$m)).'</option>') ;
+<<<<<<< HEAD
          }
+=======
+ 
+        }
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
       else
         {
     print(' <option value="'.$m.'" selected>'.date('F', mktime(0,0,0,$m)).'</option>') ;
@@ -210,9 +236,15 @@ print('<tr><td >Country</td><td colspan=3><input class="form-control ady-form" t
     print('<select class="form-control" id="s3" name="l_UR_State" >');
     
     
+<<<<<<< HEAD
     $l_States_arr   = array();
     $l_Cities_arr   = array();
     $l_state_sql    ='SELECT stateID, stateName FROM States WHERE countryID = "IND" and Org_id="'.$_SESSION['g_Org_id'].'"';
+=======
+    $l_States_arr           = array();
+    $l_Cities_arr   = array();
+    $l_state_sql      ='SELECT stateID, stateName FROM States WHERE countryID = "IND" and Org_id="'.$_SESSION['g_Org_id'].'"';
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     $l_state_result =mysql_query($l_state_sql);
     while ($l_data=mysql_fetch_row($l_state_result))
     {

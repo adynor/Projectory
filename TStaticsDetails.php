@@ -1,6 +1,10 @@
 <?php
 include ('db_config.php');
 include ('header.php');
+<<<<<<< HEAD
+=======
+error_reporting(0);
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 ?>
 <style type="text/css">
 .TFtableCol{
@@ -24,8 +28,13 @@ background: #dae5f4;
                color: #221E44;
 }
 </style>
+<<<<<<< HEAD
 <link href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" rel="stylesheet">
 <script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js" type="text/javascript"></script>
+=======
+ <link href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" rel="stylesheet">
+<script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js" type="text/javascript"></script> 
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <nav class="navbar nav-cus-top"></nav>
 <div class="container" >      
     <div class="row " style="padding:0px 0px">
@@ -82,6 +91,7 @@ background: #dae5f4;
         $i=1;
                   while($row=  mysql_fetch_row($students_query))
                    {
+<<<<<<< HEAD
 $query='select IT_Name from Institutes where IT_id='.$row[7];
                       $sql=mysql_query($query);
                       $itname=  mysql_fetch_row($sql);
@@ -91,6 +101,23 @@ $queryq='select PG_Name from Programs where PG_id='.$row[8];
                       $pgname=  mysql_fetch_row($sqlq);
                       
                    echo "<tr><td>".$i."</td><td>".$row[1].' '.$row[2].' '.$row[3]."</td><td>".$row[5].'@'.$row[6]."</td><td>".$itname[0]."</td><td>".$pgname[0]."</td><td>".$row[4]."</td></tr>";
+=======
+                   if($row[7]!=""){
+$query='select IT_Name from Institutes where IT_id='.$row[7];
+                      $sql=mysql_query($query);
+                      $itname=  mysql_fetch_row($sql);
+                    }
+                    else{
+                    $itname[0]="Not set";
+                    }
+                     
+                     if($row[8]!=""){
+$queryq='select PG_Name from Programs where PG_id='.$row[8];
+                       $sqlq=mysql_query($queryq);
+                      $pgname=  mysql_fetch_row($sqlq);
+                      }else{$pgname[0]="Not set";}
+                   echo "<tr><td>".$i."</td><td><a href='TStudentDetails.php?data=$row[0]'>".$row[1].' '.$row[2].' '.$row[3]."</a></td><td>".$row[5].'@'.$row[6]."</td><td>".$itname[0]."</td><td>".$pgname[0]."</td><td>".$row[4]."</td></tr>";
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
               $i++;
                    } 
                    echo'</tbody>';
@@ -99,10 +126,17 @@ $queryq='select PG_Name from Programs where PG_id='.$row[8];
             { 
             
             
+<<<<<<< HEAD
             $students_queryC=  mysql_query("SELECT UR_id,UR_FirstName,UR_MiddleName,UR_LastName,UR_RegistrationStatus,UR_Emailid,UR_EmailidDomain,IT_id,PG_id,UR_InsertDate FROM  Users WHERE UR_Type ='S' and UR_RegistrationStatus='C'");
                  
             ?><thead>
                    <tr><td>SL No.</td><td>Student Name</td><td>Email-ID</td><td>institute</td><td>Program</td><td>Reg. Date</td></tr>
+=======
+            $students_queryC=  mysql_query("SELECT UR_id,UR_FirstName,UR_MiddleName,UR_LastName,UR_RegistrationStatus,UR_Emailid,UR_EmailidDomain,IT_id,PG_id,UR_InsertDate FROM  Users WHERE UR_Type ='S' and UR_RegistrationStatus='C' ORDER BY UR_InsertDate DESC ");
+                 
+            ?><thead>
+                   <tr><td>SL No.</td><td>Student Name</td><td>Email-ID</td><td>institute</td><td>Program</td><td>Reg.Date</td></tr>
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                    </thead><tbody>
         <?php
          $i=1;
@@ -113,19 +147,31 @@ $queryq='select PG_Name from Programs where PG_id='.$row[8];
                       $sqlq=mysql_query('select PG_Name from Programs where PG_id='.$row[8]);
                       $pgname=  mysql_fetch_row($sqlq);
                       
+<<<<<<< HEAD
                       $date = new DateTime($row[9]);
  $cdate=$date->format('d-m-Y H:i');
   
 
                       
                    echo "<tr><td>".$i."</td><td>".$row[1].' '.$row[2].' '.$row[3]."</td><td>".$row[5].'@'.$row[6]."</td><td>".$itname[0]."</td><td>".$pgname[0]."</td><td>".$cdate."</td></tr>";
+=======
+                     $date = new DateTime($row[9]);
+ $cdate=$date->format('d-m-Y H:i');
+  
+
+                   echo "<tr><td>".$i."</td><td><a href='TStudentDetails.php?data=$row[0]'>".$row[1].' '.$row[2].' '.$row[3]."</a></td><td>".$row[5].'@'.$row[6]."</td><td>".$itname[0]."</td><td>".$pgname[0]."</td><td>".$cdate."</td></tr>";
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                 $i++;
                    } 
                     echo'</tbody>';
           }
           else if($reqkey==3)
             { 
+<<<<<<< HEAD
            $students_queryM=  mysql_query("SELECT UR_id,UR_FirstName,UR_MiddleName,UR_LastName,UR_RegistrationStatus,UR_Emailid,UR_EmailidDomain,IT_id FROM  Users WHERE UR_Type ='M' and UR_RegistrationStatus='C'");
+=======
+           $students_queryM=  mysql_query("SELECT UR_id,UR_FirstName,UR_MiddleName,UR_LastName,UR_RegistrationStatus,UR_Emailid,UR_EmailidDomain,IT_id FROM  Users WHERE UR_Type ='M' and UR_RegistrationStatus='C' ORDER BY UR_InsertDate DESC ");
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
             ?><thead>
                    <tr><td>SL. No.</td><td>Mentor Name</td><td>Email-ID</td><td>Reg. Status</td></tr>
                    </thead><tbody>
@@ -133,14 +179,25 @@ $queryq='select PG_Name from Programs where PG_id='.$row[8];
                   while($row=  mysql_fetch_row($students_queryM))
                    {
 
+<<<<<<< HEAD
 echo "<tr><td>".$i."</td><td>".$row[1].' '.$row[2].' '.$row[3]."</td><td>".$row[5].'@'.$row[6]."</td><td>".$row[4]."</td></tr>";
                 $i++;
+=======
+
+echo "<tr><td>".$i."</td><td><a href='TMentorDetails.php?data=$row[0]'>".$row[1].' '.$row[2].' '.$row[3]."</a></td><td>".$row[5].'@'.$row[6]."</td><td>".$row[4]."</td></tr>";
+                $i++;
+                  
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                    } 
                     echo'</tbody>';
             }
             else if($reqkey==4)
             { 
+<<<<<<< HEAD
            $students_queryG=  mysql_query("SELECT UR_id,UR_FirstName,UR_MiddleName,UR_LastName,UR_RegistrationStatus,UR_Emailid,UR_EmailidDomain,IT_id FROM  Users WHERE UR_Type ='G' and UR_RegistrationStatus='C'");
+=======
+           $students_queryG=  mysql_query("SELECT UR_id,UR_FirstName,UR_MiddleName,UR_LastName,UR_RegistrationStatus,UR_Emailid,UR_EmailidDomain,IT_id FROM  Users WHERE UR_Type ='G' and UR_RegistrationStatus='C' ORDER BY UR_InsertDate DESC ");
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
             ?><thead>
                    <tr><td>SL No.</td><td>Mentor Name</td><td>Email-ID</td><td>institute</td><td>Reg. Status</td></tr> 
                    </thead><tbody>
@@ -154,6 +211,33 @@ echo "<tr><td>".$i."</td><td>".$row[1].' '.$row[2].' '.$row[3]."</td><td>".$row[
                    } 
                     echo'</tbody>';
             }
+<<<<<<< HEAD
+=======
+            else if($reqkey==5)
+            {
+            
+            $students_queryC=  mysql_query("SELECT UR_id,UR_FirstName,UR_MiddleName,UR_LastName,UR_RegistrationStatus,UR_Emailid,UR_EmailidDomain,IT_id,PG_id FROM  Users WHERE UR_Type ='S' and PR_id is not NULL ORDER BY UR_InsertDate DESC ");
+                 
+            ?><thead>
+                   <tr><td>SL No.</td><td>Performing Student Name</td><td>Email-ID</td><td>institute</td><td>Program</td><td>Reg. Status</td></tr>
+                   </thead><tbody>
+        <?php
+         $i=1;
+                  while($row=  mysql_fetch_row($students_queryC))
+                   {
+                      $sql=mysql_query('select IT_Name from Institutes where IT_id='.$row[7]);
+                      $itname=  mysql_fetch_row($sql);
+                      $sqlq=mysql_query('select PG_Name from Programs where PG_id='.$row[8]);
+                      $pgname=  mysql_fetch_row($sqlq);
+                   echo "<tr><td>".$i."</td><td><a href='TStudentDetails.php?data=$row[0]'>".$row[1].' '.$row[2].' '.$row[3]."</a></td><td>".$row[5].'@'.$row[6]."</td><td>".$itname[0]."</td><td>".$pgname[0]."</td><td>".$row[4]."</td></tr>";
+                $i++;
+                   } 
+                    echo'</tbody>';
+            }
+            
+            
+            
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
           } 
         
         ?>

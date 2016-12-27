@@ -135,7 +135,11 @@
                         }
                         else{
                             //  echo $l_UR_Receiver ."|".$l_r_or_s_id;
+<<<<<<< HEAD
                             echo "<p style='color: red !important;text-align: center;'>Your Response Pending</p>";
+=======
+                            echo "";
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                         }
                     }
                     else if ($l_R_or_S_result[0] == $l_UR_id) {
@@ -157,6 +161,7 @@
             
         }
     }
+<<<<<<< HEAD
     if($l_TM_id == NULL || $l_TM_id == -99){
       $l_limitstudentque=mysql_query('SELECT PR.PR_No_Students  FROM  Projects PR WHERE PR_id='.$l_PR_id);
       $l_PR_limit=mysql_fetch_row($l_limitstudentque)[0];
@@ -252,4 +257,10 @@ $(function(){
     });
 });
 </script>
+=======
+    ?>
+</div>
+</div>
+</div>
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <?php include('footer.php')?>

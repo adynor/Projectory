@@ -508,12 +508,20 @@ $('#loading').show();
     var str = $('#user_type').val();
     
     if(str == ""){
+<<<<<<< HEAD
      window.location="https://www.zaireprojects.com/test/PaidCreateUser.php";
+=======
+     window.location="https://www.zaireprojects.com/PaidCreateUser.php";
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         
     } 
     else{
     
+<<<<<<< HEAD
    if( window.location="https://www.zaireprojects.com/test/PaidCreateUser.php?q="+str){
+=======
+   if( window.location="https://www.zaireprojects.com/PaidCreateUser.php?q="+str){
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
    $('#loading').show();
     window.setTimeout(function() {
      $('#loading').hide();

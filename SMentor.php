@@ -27,7 +27,10 @@
     $l_count_MStatus=mysql_num_rows($l_result_MStatus);
     }
     ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
        <div class="container" >
        <div class="row">
            <div class="col-md-12">
@@ -74,7 +77,11 @@
                     $l_countteam_row[0] = 0;
                 }
                 $l_TM_id = $l_countteam_row[0] + 1;
+<<<<<<< HEAD
                 $l_insert_Receiver = 'insert into Teams (TM_id, TM_Name, PR_id, TM_StartDate,Org_id,TM_PR_Type) values ('.$l_TM_id .',\' Team'.$l_TM_id.' \', \''.$l_PR_id.'\','.$l_CM_Datetime.',"'.$_SESSION['g_Org_id'].'","'.$_SESSION['g_UR_PR_Type'].'")';
+=======
+                $l_insert_Receiver = 'insert into Teams (TM_id, TM_Name, PR_id, TM_StartDate,Org_id) values ('.$l_TM_id .',\' Team'.$l_TM_id.' \', \''.$l_PR_id.'\','.$l_CM_Datetime.',"'.$_SESSION['g_Org_id'].'")';
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                 mysql_query( $l_insert_Receiver) or die(mysql_error());
             }
             
@@ -143,10 +150,17 @@
                 <th> Select Mentor </th>
               </tr>
               <?php
+<<<<<<< HEAD
               
                $mentorallowedquery=mysql_query('SELECT PR.PR_MentorAllowed ,UR.UR_CompanyName FROM Projects AS PR ,Users AS UR WHERE PR.UR_Owner=UR.UR_id and PR.PR_id="'.$l_PR_id.'"');
               $mentorAllowed_res=mysql_fetch_row($mentorallowedquery);
                $mentorAlW=$mentorAllowed_res[0];
+=======
+             
+              $mentorallowedquery=mysql_query('SELECT PR.PR_MentorAllowed ,UR.UR_CompanyName FROM Projects AS PR ,Users AS UR WHERE PR.UR_Owner=UR.UR_id and PR.PR_id="'.$l_PR_id.'"');
+              $mentorAllowed_res=mysql_query($mentorallowedquery);
+              $mentorAlW=$mentorAllowed_res[0];
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
               $company_id=$mentorAllowed_res[1];
               $l_sql_TargetOrg=  mysql_query('SELECT OC.TargetOrg,Org.Org_Name FROM Organisation_Customers AS OC,Organisations AS Org WHERE Org.Org_id=OC.TargetOrg AND OC.Org_id="'.$_SESSION['g_Org_id'].'"');
              While($l_TargetOrg_rows=  mysql_fetch_array($l_sql_TargetOrg)){
@@ -154,6 +168,7 @@
               
               <?php 
               
+<<<<<<< HEAD
               
                            $l_sql_mentors=mysql_query('SELECT distinct(US.UR_id) FROM UR_Subdomains AS US, Project_SubDomains AS PSD WHERE PSD.PR_id='.$l_PR_id.' and  PSD.SD_id=US.SD_id AND PSD.SD_Preference="R" and  US.Org_id = "'.$l_TargetOrg_rows['TargetOrg'].'"');
 
@@ -164,6 +179,15 @@
                  } else {
                  $l_sql_mentor_details=  mysql_query('select UR_id ,UR_FirstName, UR_LastName, UR_Emailid, UR_EmailidDomain,UR_Phno from Users where UR_id="'.$l_mentors_rows[0].'" and Org_id = "'.$l_TargetOrg_rows['TargetOrg'].'"' );
                //  echo $mentorAlW.$l_PR_id;
+=======
+                           $l_sql_mentors=mysql_query('SELECT distinct(US.UR_id) FROM UR_Subdomains AS US, Project_SubDomains AS PSD WHERE PSD.PR_id='.$l_PR_id.' and  PSD.SD_id=US.SD_id AND PSD.SD_Preference="R" and  US.Org_id = "'.$l_TargetOrg_rows['TargetOrg'].'"');
+
+              While($l_mentors_rows= mysql_fetch_row($l_sql_mentors)){
+              if($mentorAlW =='Y'){
+                 $l_sql_mentor_details=  mysql_query('select UR_id ,UR_FirstName, UR_LastName, UR_Emailid, UR_EmailidDomain,UR_Phno from Users where UR_id="'.$l_mentors_rows[0].'" and Org_id = "'.$l_TargetOrg_rows['TargetOrg'].'" AND UR_CompanyName="'.$company_id.'"' );
+                 } else {
+                 $l_sql_mentor_details=  mysql_query('select UR_id ,UR_FirstName, UR_LastName, UR_Emailid, UR_EmailidDomain,UR_Phno from Users where UR_id="'.$l_mentors_rows[0].'" and Org_id = "'.$l_TargetOrg_rows['TargetOrg'].'"' );
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                  }
               While($l_mentor_detailsrows= mysql_fetch_row($l_sql_mentor_details)){
               $l_UR_Receiver=$l_mentor_detailsrows[0];
@@ -180,6 +204,7 @@
            </div>
        </div>
     </div>
+<<<<<<< HEAD
     
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.js" integrity="sha256-xoE/2szqaiaaZh7goVyF5p9C/qBu9dM3V5utrQaiJMc=" crossorigin="anonymous"></script>
 
@@ -202,4 +227,6 @@ $('#stepExample2').timepicker({
 </script>
 
 
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <?php include('footer.php')?>

@@ -29,7 +29,11 @@ if(isset($_GET['PR_id']))
     $l_PR_id = $_GET['PR_id'];
 
 // nav adding new table project details from here.....
+<<<<<<< HEAD
 $l_PR_sql = 'select PR_Name,PR_Short_Desc, PR_SynopsisURL from Projects where PR_id='.$l_PR_id.' and Org_id = "'.$_SESSION['g_Org_id'].'"';
+=======
+$l_PR_sql = 'select PR_Name, PR_Short_Desc, PR_SynopsisURL from Projects where PR_id='.$l_PR_id.' and Org_id = "'.$_SESSION['g_Org_id'].'"';
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         
         $l_PR_res = mysql_query($l_PR_sql);
        

@@ -8,7 +8,12 @@
     ////////////////////////////////////////
     
     include ('db_config.php');
+<<<<<<< HEAD
    
+=======
+    
+    
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     $l_UR_id                 = $_SESSION['g_UR_id'];
     $l_PR_id=$_SESSION['g_PR_id'];
     $l_UR_Receiver               = $l_UR_id;
@@ -17,10 +22,17 @@
     $date = new DateTime();
     $date->setTimezone($timezone );
     $l_CM_Datetime = $date->format( 'YmdHi' );
+<<<<<<< HEAD
    $l_ur_sender_query ='select TT.UR_Sender, UR.UR_FirstName, CM.CM_Message from Teammate_Request as TT, Users as UR, Communications as CM where TT.TT_ResponseDateTime is NULL  and  TT.UR_Receiver ="'.$l_UR_Receiver.'" and UR.UR_id = TT.UR_Sender and CM.UR_Sender = TT.UR_Sender and CM.UR_Receiver ="'.$l_UR_Receiver.'" and UR.UR_id = CM.UR_Sender and UR.Org_id =TT.Org_id and UR.Org_id =CM.Org_id and UR.Org_id = "'.$_SESSION['g_Org_id'].'"';
     $l_UR_Sender_result = mysql_query($l_ur_sender_query);
     $l_UR_sender_row = mysql_fetch_row($l_UR_Sender_result);
    $l_UR_Sender = $l_UR_sender_row[0];
+=======
+    $l_ur_sender_query ='select TT.UR_Sender, UR.UR_FirstName, CM.CM_Message from Teammate_Request as TT, Users as UR, Communications as CM where TT.TT_ResponseDateTime is NULL  and  TT.UR_Receiver ="'.$l_UR_Receiver.'" and UR.UR_id = TT.UR_Sender and CM.UR_Sender = TT.UR_Sender and CM.UR_Receiver ="'.$l_UR_Receiver.'" and UR.UR_id = CM.UR_Sender and UR.Org_id =TT.Org_id and UR.Org_id =CM.Org_id and UR.Org_id = "'.$_SESSION['g_Org_id'].'"';
+    $l_UR_Sender_result = mysql_query($l_ur_sender_query);
+    $l_UR_sender_row = mysql_fetch_row($l_UR_Sender_result);
+    $l_UR_Sender = $l_UR_sender_row[0];
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     if($l_team_request_response=='Accept')
     {
         $l_msg_query = 'Select CM_Message from Communications  where UR_Sender ="'.$l_UR_Sender.'" and UR_Receiver="'.$l_UR_Receiver.'" AND Org_id = "'.$_SESSION['g_Org_id'].'"';
@@ -139,8 +151,11 @@
     }
     else if($l_team_request_response == 'Reject')
     {
+<<<<<<< HEAD
     
    
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         $l_CM_Message = 'Sorry ! ';
         $l_CM_Type = 'TR';
         
@@ -171,10 +186,17 @@
         $_SESSION['g_TM_id']=NULL;
         
         // Update Teammate_request table
+<<<<<<< HEAD
          $l_TM_query = 'Update Teammate_Request set TT_ResponseDateTime = '.$l_CM_Datetime.' where UR_Receiver  = "'.$l_UR_Receiver.'" and UR_Sender = "'.$l_UR_Sender.'" and Org_id = "'.$_SESSION['g_Org_id'].'"';
         mysql_query($l_TM_query);
         
       
+=======
+        $l_TM_query = 'Update Teammate_Request set TT_ResponseDateTime = '.$l_CM_Datetime.' where UR_Receiver  = "'.$l_UR_Receiver.'" and UR_Sender = "'.$l_UR_Sender.'" and Org_id = "'.$_SESSION['g_Org_id'].'"';
+        mysql_query($l_TM_query);
+        
+        
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         //Reject email send
         $l_query_ReceiverName = 'select UR_FirstName, UR_LastName from Users where UR_id = "'.$l_UR_Receiver.'" and Org_id = "'.$_SESSION['g_Org_id'].'"';
         $l_result_ReceiverName = mysql_query($l_query_ReceiverName) or die(mysql_error());
@@ -302,10 +324,14 @@
         
         
     }
+<<<<<<< HEAD
     //header("Location:'Shome'");  
     
     
      
+=======
+    //header("Location:'Shome'");
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     echo "<script>window.location.href='SHome.php'</script>";
     
     

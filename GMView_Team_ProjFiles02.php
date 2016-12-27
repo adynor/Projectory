@@ -134,12 +134,21 @@ print ('</tr>');
               $l_PD_FeedbackDate =$l_PD_FeedbackDate_str;
 
               $l_PD_FeedbackDate= date("d-M-Y", strtotime($l_PD_FeedbackDate));
+<<<<<<< HEAD
  if($GuideMentorSet[2]!="")
               {
               print( '<td style ="width:140px">' . $l_PD_Feedback.'</td>');            
               print( '<td>' . $l_PD_FeedbackDate.'</td>'); 
               print( '<td style="text-align:center">' . $l_PD_Rating.'</td>');
             
+=======
+
+       if($GuideMentorSet[2]!="")
+         {
+              print( '<td style ="width:140px">' . $l_PD_Feedback.'</td>');            
+              print( '<td>' . $l_PD_FeedbackDate.'</td>'); 
+              print( '<td style="text-align:center">' . $l_PD_Rating.'</td>');
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
              }
               //chek the feedback is  null or not
               if($l_PD_MFeedbackDate==NULL && $GuideMentorSet[1]!="")
@@ -150,7 +159,13 @@ print ('</tr>');
               }
               else
               {
+<<<<<<< HEAD
                     $l_Mlen = strlen($l_PD_MFeedbackDate)  - 4;
+=======
+                  
+                  
+                     $l_Mlen = strlen($l_PD_MFeedbackDate)  - 4;
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                   $l_PD_MFeedbackDate_str= substr($l_PD_MFeedbackDate, 0, $l_Mlen ) ;
                    $l_PD_MFeedbackDateStr =$l_PD_MFeedbackDate_str;
                         $l_PD_MFeedbackDate= date("d-M-Y", strtotime($l_PD_MFeedbackDateStr));
@@ -172,15 +187,22 @@ print ('</tr>');
               $l_PD_FeedbackDate =$l_PD_FeedbackDate_str;
 
               $l_PD_FeedbackDate= date("d-M-Y", strtotime($l_PD_FeedbackDate));
+<<<<<<< HEAD
 
              if($GuideMentorSet[2]!="")
               {
+=======
+if($GuideMentorSet[2]!=""){
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
               print( '<td style ="width:140px">' . $l_PD_Feedback.'</td>');            
               print( '<td>' . $l_PD_FeedbackDate.'</td>'); 
               print( '<td style="text-align:center">' . $l_PD_Rating.'</td>');
               }
+<<<<<<< HEAD
               
               
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
               //chek the feedback is  null or not
               if($l_PD_MFeedbackDate==NULL && $GuideMentorSet[1]!="")
               {
@@ -207,9 +229,19 @@ print ('</tr>');
                     $l_PD_StatusR='Pending' ;
                     print( '<td>' . $l_PD_StatusR.'</td>');
 
+<<<<<<< HEAD
               print( '<td style ="width:140px">Pending</td>');            
               print( '<td>Pending</td>'); 
               print( '<td style="text-align:center">Pending</td>');
+=======
+
+
+if($GuideMentorSet[2]!=""){
+              print( '<td style ="width:140px">Pending</td>');            
+              print( '<td>Pending</td>'); 
+              print( '<td style="text-align:center">Pending</td>');
+              }
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
               //chek the feedback is  null or not
               if($GuideMentorSet[1]!="")
               {

@@ -57,10 +57,13 @@ $l_checkrequest_result = mysql_query($l_checkrequest_query);
 $l_TM_id_row = mysql_fetch_row($l_checkrequest_result);
 $l_TM_id = $l_TM_id_row[0];
 
+<<<<<<< HEAD
 $notificationguide='select PD.PD_FeedbackDate,TM.TM_Name,PD.PD_Status from Project_Documents as PD,Teams as TM where PD.PD_FeedbackDate is NUll and PD.PD_Status="P"  and TM.TM_id=PD.TM_id  order by PD.PD_SubmissionDate DESC limit 0,1';
 $runnoti=  mysql_query($notificationguide);
 $runresult=  mysql_fetch_row($runnoti);
 
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
   ?>
 <div class="row alert alert-info" style="font-size: large;     margin-top: 14px;">
     <div class="col-md-5">
@@ -71,6 +74,7 @@ $runresult=  mysql_fetch_row($runnoti);
    logged in at <?php echo $l_LoginDate_res;?>
     </div>
 </div>
+<<<<<<< HEAD
        
 <?php if($runresult[0]==NULL && $runresult[2]=='P'){ ?>
 <div class="alert alert-warning alert-dismissible" role="alert">
@@ -80,6 +84,13 @@ $runresult=  mysql_fetch_row($runnoti);
  <?php
 } 
     
+=======
+        
+        
+       <?php
+
+
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 // check for pending request 
 if($l_TM_id == -99)
 {

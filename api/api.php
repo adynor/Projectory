@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
    require_once("rest.inc.php");
+=======
+    require_once("rest.inc.php");
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
 
  class api extends REST
@@ -25,6 +29,12 @@
             $this->db = mysql_connect(self::DB_SERVER,self::DB_USER,self::DB_PASSWORD);
             if($this->db)
                 mysql_select_db(self::DB,$this->db);
+<<<<<<< HEAD
+=======
+                else{
+                
+                echo "error";}
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         }
         
         //Public method for access api.
@@ -66,7 +76,11 @@
         $date->setTimezone($timezone );
         $l_PR_Date = $date->format( 'Ymd' );
             
+<<<<<<< HEAD
 $sql = mysql_query("SELECT PR.PR_id, PR.PR_Name,PR.PR_Desc,MO.MO_Amount as PR_Price FROM Projects as PR,Model as MO where PR.MO_id=MO.MO_id AND PR.PR_Status='C' and PR.PR_ExpiryDate >=".$l_PR_Date."", $this->db);
+=======
+$sql = mysql_query("SELECT PR.PR_id, PR.PR_Name,PR.PR_Short_Desc,MO.MO_Amount as PR_Price ,ID.IN_Name FROM Projects as PR,Model as MO,Industry as ID where PR.IN_id=ID.IN_id AND PR.Org_id='ALL' AND PR.MO_id=MO.MO_id AND PR.PR_Status='C' and PR.PR_ExpiryDate >=".$l_PR_Date."", $this->db);
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
             if(mysql_num_rows($sql) > 0)
             {
@@ -78,18 +92,51 @@ $sql = mysql_query("SELECT PR.PR_id, PR.PR_Name,PR.PR_Desc,MO.MO_Amount as PR_Pr
                 $result[$i]['Project_Name']=$rlt['PR_Name'];
                 $result[$i]['Project_Desc']=$rlt['PR_Desc'];
                 $result[$i]['Project_Price']=$rlt['PR_Price'];
+<<<<<<< HEAD
                   
                   $sql2 =mysql_query("SELECT SD.SD_Name FROM Project_SubDomains AS PS, SubDomain AS SD WHERE PS.SD_id = SD.SD_id AND PS.PR_id =".$rlt['PR_id']."", $this->db);
+=======
+                $result[$i]['Project_Industry']=$rlt['IN_Name'];
+                
+                  
+                  $sql2 =mysql_query("SELECT SD.SD_Name,SD_Preference FROM Project_SubDomains AS PS, SubDomain AS SD WHERE PS.SD_id = SD.SD_id AND PS.PR_id =".$rlt['PR_id']."", $this->db);
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                 // $technologies="";
                  $j=0;
 			while($rlt2 = mysql_fetch_array($sql2,MYSQL_ASSOC))
                 	{
                 	$result[$i]['Project_Technology'][$j]=$rlt2['SD_Name'];
+<<<<<<< HEAD
                 		         //       $technologies=$technologies.",".$rlt2[0];
                       $j++;
                 	}
               //$result[] = $rlt;
 /*((PR_id->1, PR_Name->Name1, Technologies->PHP,HTML,Mysql,),(PR_id->2, PR_Name->Name2, Technologies->.NET,HTML,Mysql))*/
+=======
+                	if($rlt2['SD_Preference'] == 'R'){
+                	$result[$i]['Prefered_Technology']=$rlt2['SD_Name'];
+                	}
+                		         //       $technologies=$technologies.",".$rlt2[0];
+                      $j++;
+                	}
+  				$sql2 =mysql_query("SELECT PG.PG_Name FROM PG_Projects AS PGP, Programs AS PG WHERE PG.PG_id = PGP.PG_id AND PGP.PR_id=".$rlt['PR_id']."",  $this->db);
+                // $technologies="";
+                 $k=0;
+			while($rlt3 = mysql_fetch_array($sql2,MYSQL_ASSOC))
+                	{
+                	$result[$i]['Project_Stream'][$k]=$rlt3['PG_Name'];
+                		         //       $technologies=$technologies.",".$rlt2[0];
+                      $k++;
+                	}
+                	$l=0;
+                	$sql4=mysql_query('SELECT SO.SO_Name FROM Project_Solution  as PS,Solution as SO WHERE SO.SO_id=PS.SO_id AND PS.PR_id ='.$rlt['PR_id'].'');
+                 while($rlt4 = mysql_fetch_array($sql4,MYSQL_ASSOC))
+                	{
+                	$result[$i]['Project_Solution'][$l]=$rlt4['SO_Name'];
+                	
+                      $l++;
+                	}
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
                    $i++; 
                 }
@@ -100,6 +147,7 @@ $sql = mysql_query("SELECT PR.PR_id, PR.PR_Name,PR.PR_Desc,MO.MO_Amount as PR_Pr
             $this->response('',204); // If no records "No Content" status
         }
         
+<<<<<<< HEAD
       private function users()
         {
             // Cross validation if the request method is GET else it will return "Not Acceptable" status
@@ -148,6 +196,44 @@ private function updateUsers()
        }
 }  */
         
+=======
+        
+        private function mentors(){
+      if($this->get_request_method() != "GET")
+            {
+                $this->response('',406);
+            }
+            // Get DateTime
+        $timezone = new DateTimeZone("Asia/Kolkata" );
+        $date = new DateTime();
+        $date->setTimezone($timezone );
+        $l_PR_Date = $date->format( 'Ymd' );
+        $sql = mysql_query("SELECT UR.UR_id,UR.UR_FirstName,UR.UR_ProfileInfo FROM Users as UR WHERE UR.Org_id='ZP' AND UR.UR_Type='M' AND UR.UR_RegistrationStatus='C'", $this->db);
+        if(mysql_num_rows($sql) > 0)
+            {
+             $result = array();
+                $i=0;
+                while($rlt1 = mysql_fetch_array($sql,MYSQL_ASSOC))
+                	{
+                	$result[$i]['Mentor']=$rlt1['UR_FirstName'];
+                	$result[$i]['MentorProfile']=$rlt1['UR_ProfileInfo'];
+                         $sql2 =mysql_query("SELECT SD.SD_Name FROM SubDomain as SD,UR_Subdomains as URS WHERE SD.SD_id=URS.SD_id AND `UR_id`='".$rlt1['UR_id']."'", $this->db);
+                // $technologies="";
+                 $j=0;
+			while($rlt2 = mysql_fetch_array($sql2,MYSQL_ASSOC))
+                	{
+                	$result[$i]['Mentor_Technology'][$j]=$rlt2['SD_Name'];
+                		         //       $technologies=$technologies.",".$rlt2[0];
+                      $j++;
+                	}
+                      $i++;
+                	}
+                        $this->response($this->json($result), 200);
+            }
+        $this->response('',204); 
+
+ }
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         public function json($data)
         {
             /*print_r($data);

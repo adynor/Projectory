@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 <?php session_start();
+=======
+<?php
+//echo "<h1 style='color:red; text-align:center;'>The server is under maintenance, please visit again few hours later</h1>";
+//exit();
+ session_start();
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 // echo $_COOKIE["user_id"];
   //      echo $_COOKIE["user_psw"];
    //     echo "set";
@@ -9,6 +16,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <title>Zaire Projectory</title>
      
@@ -54,11 +62,24 @@ s0.parentNode.insertBefore(s1,s0);
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <!--  ending -->
+=======
+     <link rel="shortcut icon" href="assets/images/favicon.ico">
+     
+     <link rel="shortcut icon" href="https://zaireprojects.com/assets/images/favicon.ico" type="image/x-icon" />
+    <title>Zaire Projectory</title>
+    
+     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+     <link href="assets/css/login.css" rel="stylesheet">
+ 
+ </head>
+<body>
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <div class="container">
         <div class="card card-container">
        <img id="profile-img" class="profile-img-card" src="assets/images/avatar_2x.png" />
             <p id="profile-name" class="profile-name-card"></p>
              <?php echo $_SESSION['error']; 
+<<<<<<< HEAD
             $_SESSION['error']="";
             
             if($_REQUEST['msg']== true){
@@ -68,6 +89,9 @@ s0.parentNode.insertBefore(s1,s0);
             }
             ?>
             
+=======
+            $_SESSION['error']="";?>
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
             <form class="form-signin" method="POST" action="logincheck.php">
                 <span id="reauth-email" class="reauth-email"></span>
                
@@ -85,6 +109,7 @@ s0.parentNode.insertBefore(s1,s0);
                         <input type="checkbox" name="remember_me" value="1"> Remember me
                     </label>
                 </div>-->
+<<<<<<< HEAD
                 
                  <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div>
                
@@ -93,6 +118,10 @@ s0.parentNode.insertBefore(s1,s0);
             
            
             <!-- /form -->
+=======
+                <button class="btn btn-lg btn-primary btn-block btn-signin" name="login" value="logincheck" type="submit">Sign in</button>
+            </form><!-- /form -->
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
             <a href="ForgotPassword01.php" class="forgot-password">
                 Forgot the password?
             </a>

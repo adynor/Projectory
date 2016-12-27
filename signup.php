@@ -185,7 +185,11 @@ else {
         print('<input type=hidden name=l_random_str  value="' . $l_random_str . '">  ');
         
        // $l_message = "Thank you for registering with us. <br>Your Verification Code is:".$l_random_str." <br><br>Sincerely, <br>Zaireprojects Support Team";
+<<<<<<< HEAD
     $l_message ='Hi '.$l_UR_FirstName.',<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/test/verify.php?uverify='.$l_random_str.'&&uid='.$l_UR_id.'&&utype='.$l_UR_Type.'">http://zaireprojects.com/test/verify.php</a><br><br>Sincerely, <br> Support Team';
+=======
+    $l_message ='Hi '.$l_UR_FirstName.',<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify='.$l_random_str.'&&uid='.$l_UR_id.'&&utype='.$l_UR_Type.'">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team';
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
        
        $l_subject = "Confirm Registration";
        $l_headers2 = "From: $l_webMaster\r\n";
@@ -429,12 +433,20 @@ $('#loading').show();
     var str = $('#user_type').val();
     
     if(str == ""){
+<<<<<<< HEAD
      window.location="https://www.zaireprojects.com/test/signup.php";
+=======
+     window.location="https://www.zaireprojects.com/signup.php";
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         
     } 
     else{
     
+<<<<<<< HEAD
    if( window.location="https://www.zaireprojects.com/test/signup.php?q="+str){
+=======
+   if( window.location="https://www.zaireprojects.com/signup.php?q="+str){
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
    $('#loading').show();
     window.setTimeout(function() {
      $('#loading').hide();

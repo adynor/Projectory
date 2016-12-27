@@ -77,15 +77,24 @@ $l_UR_NameReceiver = $l_row_ReceiverName[0];
         $l_TM_EndDate = $date->format( 'Ymd' );
 
         // Update Teams
+<<<<<<< HEAD
         if($_REQUEST['model'] != 1){
         $l_TM_upd_query = 'Update Teams set UR_id_Mentor = "'.$l_UR_Receiver.'" where TM_id = '.$l_TM_id.' ';
         mysql_query($l_TM_upd_query);
         }
+=======
+        $l_TM_upd_query = 'Update Teams set UR_id_Mentor = "'.$l_UR_Receiver.'" where TM_id = '.$l_TM_id.' ';
+        mysql_query($l_TM_upd_query);
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         // Update Guide_request table 
         
 //echo $l_TM_upd_query;
 ///////set the MR_ResponseDateTime 
+<<<<<<< HEAD
         $l_TM_query = 'Update Mentor_Requests set MR_ResponseDateTime = "'.$l_Datetime.'", MR_Status="A" where UR_id  = "'.$l_UR_id.'" and TM_id = '.$l_TM_id.' and Org_id = "'.$_SESSION['g_Org_id'].'"';
+=======
+        $l_TM_query = 'Update Mentor_Requests set MR_ResponseDateTime = "'.$l_Datetime.'" where UR_id  = "'.$l_UR_id.'" and TM_id = '.$l_TM_id.' and Org_id = "'.$_SESSION['g_Org_id'].'"';
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         mysql_query($l_TM_query);
 
 //echo $l_TM_query;
@@ -141,7 +150,11 @@ else if($l_choice == 'Reject')
     
     
     // Update Guide_Request 
+<<<<<<< HEAD
     $l_upd_guide = 'Update Mentor_Requests set MR_ResponseDateTime = "'.$l_Datetime.'",MR_Status="R" where TM_id = "'.$l_TM_id.'" and UR_id = "'.$l_UR_Receiver.'"';
+=======
+    $l_upd_guide = 'Update Mentor_Requests set MR_ResponseDateTime = "'.$l_Datetime.'" where TM_id = "'.$l_TM_id.'" and UR_id = "'.$l_UR_Receiver.'"';
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     mysql_query($l_upd_guide);
     
     

@@ -71,12 +71,38 @@ $sql = mysql_query("SELECT PR.PR_id, PR.PR_Name,PR.PR_Desc,MO.MO_Amount as PR_Pr
             if(mysql_num_rows($sql) > 0)
             {
                 $result = array();
+<<<<<<< HEAD
                 while($rlt = mysql_fetch_array($sql,MYSQL_ASSOC))
                 {
               $result[] = $rlt;
  
                     
                 }
+=======
+                $i=0;
+                while($rlt = mysql_fetch_array($sql,MYSQL_ASSOC))
+                {
+                $result[$i]['Project_id']=$rlt['PR_id'];
+                $result[$i]['Project_Name']=$rlt['PR_Name'];
+                $result[$i]['Project_Desc']=$rlt['PR_Desc'];
+                $result[$i]['Project_Price']=$rlt['PR_Price'];
+                  
+                  $sql2 =mysql_query("SELECT SD.SD_Name FROM Project_SubDomains AS PS, SubDomain AS SD WHERE PS.SD_id = SD.SD_id AND PS.PR_id =".$rlt['PR_id']."", $this->db);
+                // $technologies="";
+                 $j=0;
+			while($rlt2 = mysql_fetch_array($sql2,MYSQL_ASSOC))
+                	{
+                	$result[$i]['Project_Technology'][$j]=$rlt2['SD_Name'];
+                		         //       $technologies=$technologies.",".$rlt2[0];
+                      $j++;
+                	}
+              //$result[] = $rlt;
+/*((PR_id->1, PR_Name->Name1, Technologies->PHP,HTML,Mysql,),(PR_id->2, PR_Name->Name2, Technologies->.NET,HTML,Mysql))*/
+
+                   $i++; 
+                }
+               // print_r($result)   ;  
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                 // If success everythig is good send header as "OK" and return list of users in JSON format
                 $this->response($this->json($result), 200);
             }
@@ -153,4 +179,8 @@ private function updateUsers()
     // Initiiate Library
     $api = new API;
     $api->processApi();
+<<<<<<< HEAD
+=======
+   // print_r($result)   ; 
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     ?>

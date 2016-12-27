@@ -11,6 +11,7 @@
     include ('db_config.php');
     
     ?>
+<<<<<<< HEAD
     
     
     <style>
@@ -142,15 +143,29 @@ span{
     $backgroundDone= 'background: #14a76c';
     $backgroundProgress= 'background: rgba(255, 99, 71, 0.85)';
      // Get Team-id,User-type,User-id,Project id from session variables
+=======
+<div class="container" >
+<div class="row" style="padding:20px 0px">
+<div class="col-md-3"></div>
+<div class="col-md-6  ady-row">
+<?php
+    
+    // Get Team-id,User-type,User-id,Project id from session variables
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     $l_TM_id=$_SESSION['g_TM_id'];
     $l_UR_Type = $_SESSION['g_UR_Type'];
     $l_UR_id = $_SESSION['g_UR_id'];
     $l_PR_id=$_SESSION['g_PR_id'];
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     $timezone = new DateTimeZone("Asia/Kolkata" );
     $date = new DateTime();
     $date->setTimezone($timezone );
     $l_PD_SubmissionDate = $date->format( 'Ymd' );
     
+<<<<<<< HEAD
     ?>
   
     <?php 
@@ -224,6 +239,8 @@ span{
 <?php
     
    
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     
     // Checking if User loged-in
     if(is_null($l_UR_id) || $l_UR_Type!='S')
@@ -342,8 +359,13 @@ span{
                     $l_filesize = ($_FILES["file"]["size"] / 1024); // File size in KBs
                     
                     $iex= explode('&%',$_POST['l_AL_id']);
+<<<<<<< HEAD
                     $l_AL_Name=$iex[1];
             $l_AL_id=$iex[0];
+=======
+                 $l_AL_Name=$iex[1];
+                 $l_AL_id=$iex[0];
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                     
                     if($l_filesize > $l_max_filesize)
                     {
@@ -417,6 +439,7 @@ span{
                                 
                                 
                                 
+<<<<<<< HEAD
                                $l_insert_sql = 'insert into Project_Documents (AL_id, PD_Feedback, PD_FeedbackDate, PD_id, PD_Name, PD_Rating, PD_Status, PD_SubmissionDate,PD_Data, PR_id, TM_id ,Org_id,PD_Data_Size,PD_Data_Type,PD_Original_Name) values ("' . $l_AL_id . '",NULL, NULL, ' . $l_PD_id . ',  "' . $l_PD_Name . '", NULL, "' . $l_PD_Status . '",'.$l_PD_SubmissionDate.',"' .$filedata.'",'.$l_PR_id.',"'.$l_TM_id.'","'.$_SESSION['g_Org_id'].'",'.$filesize.',"'.$filetype.'","'.$filename.'")';
                                 $result=mysql_query($l_insert_sql) or die(mysql_error());
                                 if($result){print('<div class="alert alert-success">Document submitted successfully</div>');}
@@ -449,6 +472,13 @@ span{
                             
                             
                             
+=======
+                                $l_insert_sql = 'insert into Project_Documents (AL_id, PD_Feedback, PD_FeedbackDate, PD_id, PD_Name, PD_Rating, PD_Status, PD_SubmissionDate,PD_Data, PR_id, TM_id ,Org_id,PD_Data_Size,PD_Data_Type,PD_Original_Name) values ("' . $l_AL_id . '",NULL, NULL, ' . $l_PD_id . ',  "' . $l_PD_Name . '", NULL, "' . $l_PD_Status . '",'.$l_PD_SubmissionDate.',"' .$filedata.'",'.$l_PR_id.',"'.$l_TM_id.'","'.$_SESSION['g_Org_id'].'",'.$filesize.',"'.$filetype.'","'.$filename.'")';
+                                $result=mysql_query($l_insert_sql) or die(mysql_error());
+                                if($result){print('<div class="alert alert-success">Document submitted successfully</div>');}
+                                else{print('<div class="alert alert-danger">!!Sorry Please try again......</div>');}
+                                mysql_free_result($l_PD_id_res);
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                             } //else---if (file_exists("upload/" . $_FILES["file"]["name"]))
                             //header('location:EmailNotifications?g_query=Student|'.$l_TM_id.'|'.$l_AL_Desc.'');
                             
@@ -527,7 +557,11 @@ span{
         
         while ($l_data=mysql_fetch_row($l_result))
         {
+<<<<<<< HEAD
             print ('<option value = "'.$l_data[0].'&%'.$l_data[1] .'">'.$l_data[1]. '</option> ' ); // showing default access level whose sequence number is first
+=======
+            print ('<option value = "'.$l_data[0] .'" >'.$l_data[1]. '</option> ' ); // showing default access level whose sequence number is first
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         }
         print ('</select>');
         mysql_free_result($l_result);
@@ -537,7 +571,11 @@ span{
     {
         $l_Max_PS_id = max($l_PS_id_arr);
         $l_Max_PS_id = $l_Max_PS_id + 1;
+<<<<<<< HEAD
         print('<select class="form-control" name="l_AL_id" >');
+=======
+        print('<select name="l_AL_id" >');
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         
         for($inc = 1; $inc <= $l_Max_PS_id; $inc++)
         {

@@ -10,7 +10,11 @@ function url(){
     return $protocol . "://" . $_SERVER['HTTP_HOST'];
 }
 
+<<<<<<< HEAD
 $l_filehomepath= url().'/test'; 
+=======
+$l_filehomepath= url(); 
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 //if(!isset($_SESSION['g_UR_id']) && empty($_SESSION['g_UR_id'])) {
 
     //echo '<script>window.location.href="'.$l_filehomepath.'/Signout.php"</script>';

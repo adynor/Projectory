@@ -3,6 +3,7 @@
  include('db_config.php');
 
 ?>
+<<<<<<< HEAD
 <style>
 
 .circle {
@@ -174,6 +175,9 @@ span{
 
 <?php
 
+=======
+<?php
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
  if($_REQUEST['project'] !="" ){
 $_SESSION['g_PR_id']=$_REQUEST['project'];
 }
@@ -181,7 +185,11 @@ $_SESSION['g_PR_id']=$_REQUEST['project'];
 echo "<script>window.location.href='Projects.php'</script>";
 }
       
+<<<<<<< HEAD
    print('<div class="row" style="padding:10px"></div><div class="container" >'); 
+=======
+print('<div class="row" style="padding:10px"></div><div class="container" >'); 
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
  /*if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 899)) {
         // last request was more than 30 minutes ago
         $l_alert_statement =  ' <script type="text/javascript">
@@ -194,7 +202,11 @@ echo "<script>window.location.href='Projects.php'</script>";
    $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
     $l_UR_id = $_SESSION['g_UR_id'];
    $l_UR_Type = $_SESSION['g_UR_Type'];
+<<<<<<< HEAD
  $l_TM_id = $_SESSION['g_TM_id'];
+=======
+    $l_TM_id = $_SESSION['g_TM_id'];
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     $l_PR_id = $_SESSION['g_PR_id'];
     $l_UR_Receiver=$l_UR_id;
     //$l_UR_PR_Type=$_SESSION['g_UR_PR_Type'];
@@ -204,11 +216,19 @@ echo "<script>window.location.href='Projects.php'</script>";
      $l_UR_PR_Type_result= mysql_fetch_row($rowpr);
     $l_UR_PR_Type=$l_UR_PR_Type_result[0];
     $_SESSION['g_UR_PR_Type']=$l_UR_PR_Type;
+<<<<<<< HEAD
    
     $sql_freeprojects_check=mysql_query('SELECT MO.MO_Amount,MO.MO_id FROM Projects AS PR ,Model AS MO WHERE MO.MO_id=PR.MO_id AND PR.PR_id='.$l_PR_id.'');
     $Presult= mysql_fetch_row($sql_freeprojects_check);
     $l_PR_amount= $Presult[0];
     $l_MO_id=  $Presult[1];
+=======
+    
+    
+ 
+    $sql_freeprojects_check=mysql_query('SELECT MO_Amount FROM Projects AS PR ,Model AS MO WHERE MO.MO_id=PR.MO_id AND PR.PR_id='.$l_PR_id.'');
+  $l_PR_amount=  mysql_fetch_row($sql_freeprojects_check)[0];
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
      // query for project completion 
     $l_project_complete ='select TM_EndDate from Teams where TM_id = "'.$l_TM_id .'"';
     $l_project_complete_result = mysql_query($l_project_complete);
@@ -238,6 +258,7 @@ echo "<script>window.location.href='Projects.php'</script>";
     
     $l_PR_finalDate = date('d-M-Y',strtotime($l_TM_StartDate) + (24*3600*$l_PR_Duration)); //my preferred method
     
+<<<<<<< HEAD
     // profile picture query 
    $q ="SELECT UR_image from Users WHERE UR_id='". $l_UR_id."'";
     $row =mysql_query($q);
@@ -245,6 +266,20 @@ echo "<script>window.location.href='Projects.php'</script>";
  $imagename= $imgresult[0];
     
 
+=======
+    
+    
+//    if(is_null($l_UR_id) || $l_UR_Type!='S')
+//    {
+//        $l_alert_statement =  ' <script type="text/javascript">
+//        window.alert("You have not logged in as a student. Please login correctly")
+//        window.location.href="login.php"; </script> ';
+//        
+//        print($l_alert_statement );
+//    }
+//    else
+//    {
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
      // For date and time
         $l_LastLoginDate_query = 'select  UR_LastLogin from Users where UR_id = "'.$l_UR_id.'"' ;
         $l_LastLoginDate = mysql_query($l_LastLoginDate_query);
@@ -253,11 +288,14 @@ echo "<script>window.location.href='Projects.php'</script>";
         
         $l_LoginDate_res= date("d-M-Y h:i A", strtotime($l_LoginDate_res));
       
+<<<<<<< HEAD
       if(!empty($l_TM_id)){
       $query='select PS.PD_id,PS.PD_Seen,PD.PD_FeedbackDate from PRdoc_Seen as PS,Project_Documents as PD where PS.PD_TM_id='.$l_TM_id.' and       PS.PD_TM_id=PD.TM_id and PS.PD_id=PD.PD_id and PS.UR_Id="'.$l_UR_id.'" order by PS.PD_id DESC limit 0,1';
     $queryrun=mysql_query($query);
     $runquery=mysql_fetch_row($queryrun);
     }
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     
        /* print('<div  class="row alert alert-info " style="font-size: large;     margin-top: 14px;
 }"><b align="center">Welcome to Projectory :<font color="ff6347"> '.$l_UR_FName.'</font><span style="float:right; color:#4682b4;">logged in at ' .$l_LoginDate_res. '</span></div>');
@@ -265,6 +303,7 @@ echo "<script>window.location.href='Projects.php'</script>";
        
         */
           ?>
+<<<<<<< HEAD
 <div class="row alert alert-info" style="font-size: large;        margin-top: 23px;">
     <div class="col-md-5">
     <b>Welcome to Projectory:&nbsp;</b><font color="ff6347">
@@ -323,6 +362,21 @@ echo "<script>window.location.href='Projects.php'</script>";
         } ?>
        <?php
     
+=======
+<div class="row alert alert-info" style="font-size: large;     margin-top: 14px;">
+    <div class="col-md-5">
+    <b>Welcome to Projectory:&nbsp;</b><font color="ff6347"><?php echo $l_UR_FName;?></font>
+    </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-4 ady-logged-in" >
+   logged in at <?php echo $l_LoginDate_res;?>
+    </div>
+</div>
+        
+        
+       <?php
+        
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         if($l_TM_id == -99)
         {
             $count = 'select count(*) from Teammate_Request as TT where TT.TT_ResponseDateTime is NULL and TT.UR_Receiver ="'.$l_UR_id.'"';
@@ -366,8 +420,13 @@ echo "<script>window.location.href='Projects.php'</script>";
                         print ( "<input   type='button' class='btn btn-primary'  value='Reject' onClick=\"window.location='SUpdateComm.php?g_updSQL=Reject'\"/> ");
                         
                         
+<<<<<<< HEAD
                    }
                                         
+=======
+                    }
+                    
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                     print ('</p></div>');
                    
                     
@@ -377,12 +436,17 @@ echo "<script>window.location.href='Projects.php'</script>";
                 mysql_free_result($count_query);
                 
             } ///////////-------if team id count is -99----end--------///////////////
+<<<<<<< HEAD
         } 
           function getNotification($notify){
       $arr=array('a','b','c');
       return $notify;
       }
 
+=======
+        }
+        
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         /*
          //milestones
          
@@ -453,6 +517,7 @@ echo "<script>window.location.href='Projects.php'</script>";
         }
         ?>
 <div class="row">
+<<<<<<< HEAD
     <div class="col-md-3" style="color:red;"> <div class="circle" style=" background-color: #14a76c;">Accept</div><div class="circle" style=" background-color: #6a6969;">Reject</div><div class="circle" style=" background-color: #ff7a62;">Pending</div><div class="circle" style=" background-color: #7790af;">Default</div>
         </div>
     <div class="col-md-6">
@@ -464,14 +529,22 @@ echo "<script>window.location.href='Projects.php'</script>";
     	<p>The project needs to be completed by:<?php echo $l_PR_finalDate;?></p>
     <?php }?>
         
+=======
+    <div class="col-md-3" style="color:red;"></div>
+    <div class="col-md-6">
+        <p>The project needs to be completed by:<?php echo $l_PR_finalDate;?></p>
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         <div class="progress" style="background-color: rgba(111, 85, 91, 0.32)">
             <div class="progress-bar " role="progressbar" aria-valuenow="<?php echo $percentage; ?>" aria-valuemin="2" aria-valuemax="100" style="min-width: 2em; width:<?php echo $percentage.'%'; ?>;">
                 <?php echo $percentage; ?>%
                 
             </div>
         </div>
+<<<<<<< HEAD
         
     
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     <?php    if($l_PR_complete!=NULL)
     {
     ?>
@@ -482,6 +555,7 @@ echo "<script>window.location.href='Projects.php'</script>";
   <?php  } ?>
     </div>
     <div class="col-md-3">
+<<<<<<< HEAD
         
     </div>
 </div>
@@ -589,6 +663,10 @@ echo "<script>window.location.href='Projects.php'</script>";
 </div>
         
 
+=======
+         </div>
+</div>
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
        <?php
          $l_sql_PR='select PR.PR_Name,PR.PR_Desc,PR_AllowedSynopsis from Projects as PR where PR.PR_id='.$_SESSION['g_PR_id'].'';
@@ -617,9 +695,12 @@ echo "<script>window.location.href='Projects.php'</script>";
         }
         if($l_PR_amount != 0){
         print('<tr><td><a class="btn btn-primary ady-btn" href="SMentor.php">Add a Mentor</a></td></tr>');
+<<<<<<< HEAD
         } else if(isset($_SESSION['g_TM_id'])){?>
          <tr><td><a class="btn btn-primary ady-btn" href="PaymentMentorhr.php">Hire A Mentor</a></td></tr>
         <?php
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         }
         print('<tr><td><a class="btn btn-primary ady-btn" href="SDocSubmit.php">Submit a Document</a></td></tr>');
         
@@ -628,6 +709,7 @@ echo "<script>window.location.href='Projects.php'</script>";
       //  print('<tr><td> <a class="btn btn-primary ady-btn" href="completedprojects.php">View Completed Projects</a></td></tr>');
 
         print('</table></div>');
+<<<<<<< HEAD
         ?>
         <div class="col-md-4 ">
        
@@ -637,6 +719,13 @@ echo "<script>window.location.href='Projects.php'</script>";
         
         
         <?php
+=======
+        print('<div class="col-md-4 ">sss</div></div>');
+        
+        
+        
+        
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         
         print('<br><div class="row"><div class="col-md-12  ady-row"> <table class="ady-table-dashboard" style="width:100%; border:1px solid #134D69;" >');
         print ('<tr><th align="center" colspan=2>Details </th></tr>');
@@ -779,7 +868,10 @@ echo "<script>window.location.href='Projects.php'</script>";
        
 if( $l_completed_count >0){
  ?>
+<<<<<<< HEAD
  
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <div class="container">
 <div class="panel panel-primary ">
     <div class="panel-heading">
@@ -797,6 +889,7 @@ if( $l_completed_count >0){
 </div>
 <?php } ?>
  </div>
+<<<<<<< HEAD
  
  
 
@@ -833,6 +926,8 @@ if( $l_completed_count >0){
 
  
  
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <?php include('footer.php')?>
 <script>
     $(document).ready(function(){
@@ -842,6 +937,7 @@ if( $l_completed_count >0){
         $(this).css("background-color", "#FFFFFF");
     });
 });
+<<<<<<< HEAD
     </script>
     
             <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
@@ -910,3 +1006,6 @@ $("#message").dialog({
 
 </script>
 
+=======
+    </script>
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac

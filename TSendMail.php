@@ -41,10 +41,15 @@ if(isset($_POST['Submit']))
 
         while($l_mail_row = mysql_fetch_row($l_mail_res))
         {
+<<<<<<< HEAD
           $to  = array($l_mail_row[0] .'@'. $l_mail_row[1]);
             sendmail($to,$subject,$l_Message);
            //mail( $l_UR_mailid, $l_subject, $l_Message, $l_headers2);
         
+=======
+            $l_UR_mailid    = $l_mail_row[0] .'@'. $l_mail_row[1];
+            mail( $l_UR_mailid, $l_subject, $l_Message, $l_headers2);
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         }
     }
    

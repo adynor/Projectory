@@ -66,6 +66,7 @@ else if ($l_PR_Name != 'Dummyname' and $l_SD_Name=='Dummyname')///////// n o fil
     // current applications will be known from
     }      // if ($l_PR_Name != null)
 
+<<<<<<< HEAD
  else if ($l_PR_Name != 'Dummyname' && $l_SD_Name!='Dummyname')
     {
        /* $l_query='Select distinct PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR.PR_NoOfPastAttempts, UR.UR_FirstName, UR.UR_LastName from Users as UR, Projects as PR,Project_SubDomains as PS,SubDomain as SD
@@ -78,6 +79,14 @@ else if ($l_PR_Name != 'Dummyname' and $l_SD_Name=='Dummyname')///////// n o fil
 $l_query= 'Select  PR.PR_id, PR.PR_Name, PR.PR_Short_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR.PR_NoOfPastAttempts, UR.UR_FirstName, UR.UR_LastName from Users as UR, Projects as PR, SubDomain as SD,Project_SubDomains as PS where  PR.PR_Name like "%'.$l_PR_Name.'%" and PR.PR_id=PS.PR_id and PS.SD_id=SD.SD_id and SD.SD_id ="'.$l_SD_Name.'" and PR.UR_Owner = UR.UR_id and PR.UR_Owner = "'.$l_UR_id.'" and PR.Org_id = "'.$_SESSION['g_Org_id'].'"';
 
 
+=======
+ else if ($l_PR_Name != 'Dummyname' && $l_SD_Name !='Dummyname')
+    {
+    $l_query= 'Select  PR.PR_id, PR.PR_Name, PR.PR_Short_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR.PR_NoOfPastAttempts, UR.UR_FirstName, UR.UR_LastName from Users as UR, Projects as PR, SubDomain as SD,Project_SubDomains as PS where  PR.PR_Name like "%'.$l_PR_Name.'%" and PR.PR_id=PS.PR_id and PS.SD_id=SD.SD_id and SD.SD_id ="'.$l_SD_Name.'" and PR.UR_Owner = UR.UR_id and PR.UR_Owner = "'.$l_UR_id.'" and PR.Org_id = "'.$_SESSION['g_Org_id'].'"';
+                            
+
+ 
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     }       // if ($l_PR_Name != null)
 
 

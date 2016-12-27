@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD
+=======
+
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 include ('db_config.php');
 
 $l_UR_USN             = $_SESSION['g_UR_USN']; // this is needed by the SQLs that run in this php
@@ -10,6 +14,11 @@ $l_UR_Receiver = $l_UR_id;
 $g_updSQL	=$_REQUEST['g_updSQL'];
 $g_updSQL	=str_replace("\\","",$g_updSQL);
 $l_arry = explode("|",$g_updSQL);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 $l_choice = $l_arry[0];
 $l_TM_id = $l_arry[1];
 
@@ -161,9 +170,20 @@ $l_message = $l_UR_NameReceiver." has rejected your team request. <br><br>Sincer
         $l_headers2 = "From: $l_webMaster\r\n";
         $l_headers2 .= "Content-type:  text/html\r\n";
    mail($l_UR_EmailidTeammate.'@'.$l_UR_EmailidDomainTeammate, $l_subject, $l_message, $l_headers2);
+<<<<<<< HEAD
     }
    }
 }
 echo "<script> window.location.href = 'GHome.php'</script>";
+=======
+
+
+}
+
+}
+}
+
+header('Location:GHome.php');
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
 ?>

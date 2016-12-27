@@ -10,6 +10,7 @@
 include ('db_config.php');
 include ('header.php');  
 ?>
+<<<<<<< HEAD
 
 
 <div class="container" >
@@ -38,6 +39,9 @@ border: 1px solid rgba(128, 128, 128, 0.34) !important;
 
 
 
+=======
+<div class="container" >
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
  <?php   
 
@@ -84,6 +88,7 @@ $l_TM_id = $l_TM_id_row[0];
 
 
 print('<div align="center"><font color="#4682b4">logged in at '.$l_LoginDate_res. '</font></div>');*/
+<<<<<<< HEAD
 $days=array('....','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'); 
 
 function getDayvalue($date_m){
@@ -118,6 +123,9 @@ function getDayvalue($date_m){
 
 ?>
 
+=======
+?>
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <div class="row alert alert-info" style="font-size: large;     margin-top: 14px;">
     <div class="col-md-5">
     <b>Welcome to Projectory:&nbsp;</b><font color="ff6347"><?php echo $l_UR_FName;?></font>
@@ -128,6 +136,7 @@ function getDayvalue($date_m){
     </div>
 </div>
 
+<<<<<<< HEAD
 <?php 
 
 $hours=array('12:00 AM','01:00 AM','02:00 AM', '03:00 AM', '04:00 AM', '05:00 AM', '06:00 AM', '07:00 AM', '08:00 AM','09:00 AM','10:00 AM','11:00 AM','12:00 PM', '01:00 PM','02:00 PM', '03:00 PM', '04:00 PM', '05:00 PM', '06:00 PM', '07:00 PM', '08:00 PM','09:00 PM','10:00 PM','11:00 PM','12:00 AM');
@@ -193,6 +202,8 @@ $dayname = $dayarray[$day]; ?>
 </div><?php $k++; } ?>  ' data-html="true"  data-placement="right"></span>
    
  
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <?php
 //Check the  pending Request
 if($l_TM_id == -99)
@@ -217,7 +228,11 @@ print('<tr><td><a  class="btn btn-primary ady-btn"  href="GMPendingRequest.php">
 //-- display the Dashboard --------------------------------//
     $l_sql_UR = 'Select UR.UR_ProfileInfo from Users as UR where UR.UR_id="' . $l_UR_id . '" and UR.Org_id = "'.$_SESSION['g_Org_id'].'"';
    //Display the User Profile Details
+<<<<<<< HEAD
 $l_sql_CompanyName = 'Select  UR.UR_FirstName , UR.UR_MiddleName , UR.UR_LastName from Users as UR where UR.UR_id = (select innerUR.UR_CompanyName from Users as innerUR where innerUR.UR_id="' . $l_UR_id . '") and UR.Org_id = "'.$_SESSION['g_Org_id'].'" ';
+=======
+$l_sql_CompanyName = 'Select  UR.UR_FirstName , UR.UR_MiddleName , UR.UR_LastName from Users as UR where UR.UR_id = (select innerUR.UR_CompanyName from Users as innerUR where innerUR.UR_id="' . $l_UR_id . '")';
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
  $l_result_UR = mysql_query($l_sql_UR) or die(mysql_error);
  $l_result_CN = mysql_query($l_sql_CompanyName);   
@@ -273,6 +288,7 @@ $l_sql_CompanyName = 'Select  UR.UR_FirstName , UR.UR_MiddleName , UR.UR_LastNam
 
 ?>
  </div> 
+<<<<<<< HEAD
  
  
  <script>
@@ -330,5 +346,7 @@ $(document).ready(function(){
 
 </script>
 
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
 <?php include('footer.php')?>

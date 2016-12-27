@@ -15,6 +15,7 @@
     $l_TM_id =$_SESSION['g_TM_id'];
     
    print('<div style="clear:left">');
+<<<<<<< HEAD
    
    if($_REQUEST['flag'] && $_REQUEST['pd_id']){
        
@@ -25,6 +26,8 @@
        mysql_query($updatenotification);
    }
    
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     
 if(is_null($l_UR_id) || $l_UR_Type!='S')
     {

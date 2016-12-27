@@ -40,7 +40,10 @@ else
 $l_UR_USN          = $_SESSION['g_UR_USN'];  // this is needed by the SQLs that run in this php
 $l_UR_id                = $_SESSION['g_UR_id'];  // For the communication table we need the from id
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 if (is_null( $l_UR_id ))  // send the control back to login page - just in case some hacker is trying to run the program directly
         { header('Location:login.php'); }
 if(isset($_POST['submit']) )
@@ -57,7 +60,10 @@ if(isset($_POST['submit']) )
         $l_PD_FeedbackDate = $date->format( 'YmdHi' );
         
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         if($l_UR_Type=='G')
         {
         // Set the Guide Feedback for Teams
@@ -68,6 +74,7 @@ $l_sql = 'update Project_Documents set PD_Feedback = "'.$l_PD_Feedback.'", PD_Fe
 
  }
         else if($l_UR_Type=='M')
+<<<<<<< HEAD
         {   
 
               // Set the Mentor Feedback for Teams
@@ -76,6 +83,11 @@ $l_sql = 'update Project_Documents set PD_Feedback = "'.$l_PD_Feedback.'", PD_Fe
               $l_sql .= 'PD_Status = "'.$l_PD_Status.'",';
               endif;
               $l_sql .= 'PD_MRating = "'.$l_PD_Rating.'" where PD_id = '.$l_PD_id.'';
+=======
+        {
+         // Set the Mentor Feedback for Teams
+              $l_sql = 'update Project_Documents set PD_MFeedback = "'.$l_PD_Feedback.'", PD_MFeedbackDate = '.$l_PD_FeedbackDate.', PD_MRating = "'.$l_PD_Rating.'" where PD_id = '.$l_PD_id.'';
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                mysql_query($l_sql);
     //header('Location:EmailNotifications.php?g_query=Mentor|'.$l_TM_id.'|'.$l_PD_id.'|'.$l_PD_Feedback.'');
     echo "<script>window.location.href='EmailNotifications.php?g_query=Mentor|".$l_TM_id."|".$l_PD_id."|".$l_PD_Feedback."'</script>";
@@ -97,10 +109,16 @@ $l_sql = 'update Project_Documents set PD_Feedback = "'.$l_PD_Feedback.'", PD_Fe
   
 
         //to check if the authorised person is giving feedback
+<<<<<<< HEAD
         $l_Teamcheck_query = 'select TM.TM_id  from Teams as TM, Project_Documents as PD where TM.TM_id='.$l_TM_id.' and PD.PD_id='.$l_PD_id.' and PD.TM_id=TM.TM_id and (UR_id_Guide ="'.$l_UR_id.'" or UR_id_Mentor="'.$l_UR_id.'")';
 
         $l_Teamcheck_result = mysql_query($l_Teamcheck_query);
         
+=======
+        $l_Teamcheck_query = 'select TM.TM_id from Teams as TM, Project_Documents as PD where TM.TM_id='.$l_TM_id.' and PD.PD_id='.$l_PD_id.' and PD.TM_id=TM.TM_id and (UR_id_Guide ="'.$l_UR_id.'" or UR_id_Mentor="'.$l_UR_id.'")';
+
+        $l_Teamcheck_result = mysql_query($l_Teamcheck_query);
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         $l_Teamcheck_count = mysql_num_rows($l_Teamcheck_result);
         if($l_Teamcheck_count==0)
         {
@@ -129,12 +147,22 @@ $l_PDname_Query = 'select PD_Name  from Project_Documents where  PD_id='.$l_PD_i
  $l_PDname_result = mysql_query($l_PDname_Query);
 $l_PDName_row = mysql_fetch_row($l_PDname_result);
 $l_PDName =$l_PDName_row[0];
+<<<<<<< HEAD
 
 $l_TMname_Query = 'select TM_Name ,TM_PR_Type from Teams where TM_id='.$l_TM_id ;
  $l_TMname_result = mysql_query($l_TMname_Query);
 $l_TMName_row = mysql_fetch_row($l_TMname_result);
 $l_TMName = $l_TMName_row[0];
 $l_TMPR_Type = $l_TMName_row[1];
+=======
+// Select the Team Name
+$l_TMname_Query = 'select TM_Name  from Teams where TM_id='.$l_TM_id ;
+ $l_TMname_result = mysql_query($l_TMname_Query);
+$l_TMName_row = mysql_fetch_row($l_TMname_result);
+$l_TMName = $l_TMName_row[0];
+
+
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 ?>
     <div class="panel panel-success">
         <div class="panel-heading"><h4>You are giving feedback to <?php echo $l_PDName.' from '.$l_TMName; ?></h4></div>
@@ -154,8 +182,13 @@ print ('<tr><td>Rating</td><td><select class="form-control" name="l_rating_sel" 
         print ('<option value="4">4</option>' );
         print ('<option value="5">5</option>' );
         
+<<<<<<< HEAD
         print('</select> </td></tr>');  
         if($l_UR_Type=='G' || $l_TMPR_Type == 'N')
+=======
+        print('</select> </td></tr>');    
+        if($l_UR_Type=='G')
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         {
              print ('<tr><td>Status</td><td><select  class="form-control" name="l_status_sel" align="left">');
 
@@ -165,7 +198,10 @@ print ('<tr><td>Rating</td><td><select class="form-control" name="l_rating_sel" 
              print('</select> </td></tr>');
         }
         print('<tr><td>Feedback:</td><td><textarea class="form-control"  name="l_feedback"></textarea></td></tr>');
+<<<<<<< HEAD
          print('<input type="hidden" name=l_TMPR_Type  value="'.$l_TMPR_Type.'" >');
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         print('<input type="hidden" name=l_PD_id  value="'.$l_PD_id.'" >');
         print('<input type="hidden" name=l_TM_id  value="'.$l_TM_id.'" >');
 

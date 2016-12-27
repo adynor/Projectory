@@ -1,6 +1,10 @@
 <?php include('header.php');
 if(!isset($_SESSION['g_UR_id'])) {
+<<<<<<< HEAD
 echo "<script>window.location.href='https://www.zaireprojects.com/test'</script>";
+=======
+echo "<script>window.location.href='https://www.zaireprojects.com'</script>";
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 exit();
 }?>
 <?php  include ('db_config.php');
@@ -473,12 +477,20 @@ $('#loading').show();
     var str = $('#user_type').val();
     
     if(str == ""){
+<<<<<<< HEAD
      window.location="https://www.zaireprojects.com/test/TCreateUser.php";
+=======
+     window.location="https://www.zaireprojects.com/TCreateUser.php";
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         
     } 
     else{
     
+<<<<<<< HEAD
    if( window.location="https://www.zaireprojects.com/test/TCreateUser.php?q="+str){
+=======
+   if( window.location="https://www.zaireprojects.com/TCreateUser.php?q="+str){
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
    $('#loading').show();
     window.setTimeout(function() {
      $('#loading').hide();

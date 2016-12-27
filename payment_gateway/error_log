@@ -10,6 +10,7 @@
 [04-Mar-2016 10:21:36 UTC] PHP Warning:  extract() expects parameter 1 to be array, boolean given in /home/zaireprojects/public_html/payment_gateway/testpayment.php on line 14
 [04-Mar-2016 10:21:37 UTC] PHP Warning:  extract() expects parameter 1 to be array, boolean given in /home/zaireprojects/public_html/payment_gateway/testpayment.php on line 14
 [04-Mar-2016 10:25:19 UTC] PHP Warning:  extract() expects parameter 1 to be array, boolean given in /home/zaireprojects/public_html/payment_gateway/testpayment.php on line 14
+<<<<<<< HEAD
 [12-May-2016 12:02:40 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/zaireprojects/public_html/test/payment_gateway/testpayment.php:2) in /home/zaireprojects/public_html/test/payment_gateway/testpayment.php on line 3
 [12-May-2016 12:02:40 UTC] PHP Warning:  extract() expects parameter 1 to be array, boolean given in /home/zaireprojects/public_html/test/payment_gateway/testpayment.php on line 17
 [12-May-2016 12:53:17 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/zaireprojects/public_html/test/payment_gateway/testpayment.php on line 15
@@ -39,3 +40,10 @@
 [23-Sep-2016 09:18:22 UTC] PHP Warning:  extract() expects parameter 1 to be array, boolean given in /home/zaireprojects/public_html/test/payment_gateway/testpayment.php on line 21
 [21-Nov-2016 12:42:31 UTC] PHP Warning:  extract() expects parameter 1 to be array, boolean given in /home/zaireprojects/public_html/test/payment_gateway/testpayment.php on line 22
 [21-Nov-2016 12:44:23 UTC] PHP Warning:  extract() expects parameter 1 to be array, boolean given in /home/zaireprojects/public_html/test/payment_gateway/testpayment.php on line 22
+=======
+[19-May-2016 09:53:39 UTC] PHP Parse error:  syntax error, unexpected 'alert' (T_STRING), expecting ',' or ';' in /home/zaireprojects/public_html/payment_gateway/ccavResponseHandler.php on line 78
+[19-May-2016 09:54:37 UTC] PHP Parse error:  syntax error, unexpected 'alert' (T_STRING), expecting ',' or ';' in /home/zaireprojects/public_html/payment_gateway/ccavResponseHandler.php on line 78
+[21-Nov-2016 10:28:17 UTC] PHP Warning:  extract() expects parameter 1 to be array, boolean given in /home/zaireprojects/public_html/payment_gateway/testpayment.php on line 21
+[27-Nov-2016 17:28:10 UTC] PHP Warning:  extract() expects parameter 1 to be array, boolean given in /home/zaireprojects/public_html/payment_gateway/testpayment.php on line 21
+[22-Dec-2016 16:35:44 UTC] PHP Warning:  extract() expects parameter 1 to be array, boolean given in /home/zaireprojects/public_html/payment_gateway/testpayment.php on line 21
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac

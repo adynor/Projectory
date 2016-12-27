@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 TO:ankur@adynor.com
 Subject:-SMTP mail It will boot your system
 Body:-everything doesnot have body
@@ -425,3 +426,758 @@ Body:- Team18  has sent you a Guide Request. Please login and view them in http:
 TO:adynorguide1@outlook.com
 Subject:-
 Body:- Team19  has sent you a Guide Request. Please login and view them in http://www.zaireprojects.com/GHome. <br><br>Sincerely, <br>Zaireprojects Support Team
+=======
+TO:gynendra@adynor.com
+Subject:-
+Body:-Hi Gyanendra,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=642190&&uid=gyana2016_1&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:gyanendra@adynor.com
+Subject:-
+Body:-Hi gyanendra,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=739691&&uid=gyana2016_2&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:Umang1611.annes@gmail.com
+Subject:-
+Body:-Hi Umang,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=206183&&uid=Umang1611&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:sandeepreddy3339@gmail.com
+Subject:-
+Body:-Hi Sandeep,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=466095&&uid=Sandeep1369&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:Ajmalmulla60@gmail.com
+Subject:-
+Body:-Hi Ajmal,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=370991&&uid=Ajmal60&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:1992.gyana@gmail.com
+Subject:-Confirm Registration
+Body:-Hi chulbul,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=979702&&uid=chulbul01&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namechulbul pande<br>Email1992.gyana<br>Mobile4545454545<br>Cityvidisha<br>Statel_UR_State<br>
+TO:shat@gmail.com
+Subject:-
+Body:-Hi Shat,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=669453&&uid=shat@gmail.com&&utype=M">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:gynendra@adynor.com
+Subject:-
+Body:-Hi Gyanendra,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=338899&&uid=gyanco01&&utype=M">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:gyanendra@adynor.com
+Subject:-
+Body:-Hi Gyanendra,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=806536&&uid=gyanco01&&utype=M">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:parsanamitu@gmail.com
+Subject:-
+Body:-Hi mitwa,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=591125&&uid=mitwa&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:honeyraghu24@outlook.com
+Subject:-
+Body:-Hi RAGHU,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=441882&&uid=honeyraghu&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:pagaremrunali123@gmail.com
+Subject:-
+Body:-Hi mrunali,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=928433&&uid=pagaremrunali123@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:manoj96.hicet@gmail.com
+Subject:-
+Body:-Hi MANOJ,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=698877&&uid=manoj96.hicet@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:siddhithakkar241195@gmail.com
+Subject:-
+Body:-Hi siddhi,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=891240&&uid=siddhi123&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:swamipawade25@gmail.com
+Subject:-
+Body:-Hi Swami,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=995426&&uid=swamipawade25@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:aki.mohd81@gmail.com
+Subject:-
+Body:-Hi MD,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=408850&&uid=aki.alam93&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:test@gmail.com
+Subject:-Confirm Registration
+Body:-Hi testmentor,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=722112&&uid=testmentor&&utype=M">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nametestmentor<br>Emailtest@gmail.com<br>Mobile08050753534<br>Citymentor<br>Statel_UR_State<br>
+TO:nselvipriya@yahoo.com
+Subject:-Confirm Registration
+Body:-Hi priyadarshini,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=907282&&uid=nselvipriya&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namepriyadarshini<br>Emailnselvipriya@yahoo.com<br>Mobile9442541109<br>Citymayiladuthurai<br>Statel_UR_State<br>
+TO:pranavnaik1117@gmail.com
+Subject:-Confirm Registration
+Body:-Hi pranav,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=322058&&uid=pranavnaik1117&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namepranav naik<br>Emailpranavnaik1117@gmail.com<br>Mobile8600854467<br>Citykolhapur<br>Statel_UR_State<br>
+TO:pranalikk94@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Pranali,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=516983&&uid=pranalikk94@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NamePranali Kamble<br>Emailpranalikk94@gmail.com<br>Mobile09175363798<br>Citykolhapur<br>Statel_UR_State<br>
+TO:keerthikj95@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Kiruthika,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=921280&&uid=keerthi&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameKiruthika K J<br>Emailkeerthikj95@gmail.com<br>Mobile8220528754<br>CityMadurai<br>Statel_UR_State<br>
+TO:pratikchowdhury666@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Pratik,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=693589&&uid=kalihat&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NamePratik Chowdhury<br>Emailpratikchowdhury666@gmail.com<br>Mobile9609832272<br>CityMalda<br>Statel_UR_State<br>
+TO:sumitech25@gmail.com
+Subject:-Confirm Registration
+Body:-Hi S.Sumithra,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=682394&&uid=sumitech25@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameS.Sumithra<br>Emailsumitech25@gmail.com<br>Mobile9894059953<br>CityKarur<br>Statel_UR_State<br>
+TO:roshnidalvi.nsk@rediffamil.com
+Subject:-Confirm Registration
+Body:-Hi Roshani,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=896132&&uid=roshanidalvi.nsk@rediffmail.com&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameRoshani Dalvi<br>Emailroshnidalvi.nsk@rediffamil.com<br>Mobile9850058227<br>CityNashik<br>Statel_UR_State<br>
+TO:naveenkumarg2895@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Naveen,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=692266&&uid=Naveen kumar G&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameNaveen Kumar G<br>Emailnaveenkumarg2895@gmail.com<br>Mobile9688866890<br>Citysalem<br>Statel_UR_State<br>
+TO:deebika777@gmail.com
+Subject:-Confirm Registration
+Body:-Hi DEEBIKA,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=348439&&uid=DEEBIKA&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameDEEBIKA<br>Emaildeebika777@gmail.com<br>Mobile9442939573<br>CityMADURAI<br>Statel_UR_State<br>
+TO:thasmiyananu@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Thasmiya,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=953362&&uid=thasmiya&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameThasmiya Nazaneen<br>Emailthasmiyananu@gmail.com<br>Mobile9066997422<br>CityBangalore <br>Statel_UR_State<br>
+TO:kanaga5304@gmail.com
+Subject:-Confirm Registration
+Body:-Hi kanaga,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=847227&&uid=kanaga5304@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namekanaga<br>Emailkanaga5304@gmail.com<br>Mobile9865051145<br>Citysalem<br>Statel_UR_State<br>
+TO:monikasah25@gmail.com
+Subject:-Confirm Registration
+Body:-Hi monika,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=472493&&uid=monika&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namemonika<br>Emailmonikasah25@gmail.com<br>Mobile7839272698<br>Cityjhansi<br>Statel_UR_State<br>
+TO:sathish@qiscet.edu.in
+Subject:-
+Body:-Hi sathish,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=216320&&uid=tsathish&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:rinaveeranan@gmail.com
+Subject:-Confirm Registration
+Body:-Hi rina,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=175898&&uid=rina&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namerina<br>Emailrinaveeranan@gmail.com<br>Mobile9999999999<br>Citychennai<br>Statel_UR_State<br>
+TO:prashant.dhole90@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Prashant,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=541467&&uid=Prashant1&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NamePrashant<br>Emailprashant.dhole90@gmail.com<br>Mobile8390420160<br>CityPune<br>StateMaharashtra<br>
+TO:pruthviraj855@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Pruthviraj,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=996615&&uid=pruthviraj855@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NamePruthviraj Polepally<br>Emailpruthviraj855@gmail.com<br>Mobile8985610205<br>CityKamareddy<br>StateAndhra Pradesh<br>
+TO:premk102gi@gmail.com
+Subject:-Confirm Registration
+Body:-Hi premkumar.s,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=589016&&uid=premk&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namepremkumar.s<br>Emailpremk102gi@gmail.com<br>Mobile9600052132<br>Citymahabalipuram<br>StateTamil Nadu<br>
+TO:ABDULR500@GMAIL.COM
+Subject:-Confirm Registration
+Body:-Hi shaikh,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=683489&&uid=abdulrahman&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nameshaikh abdul raheman<br>EmailABDULR500@GMAIL.COM<br>Mobile9850319977<br>CityNANDED<br>StateMaharashtra<br>
+TO:seemasinhasan@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Seema,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=126175&&uid=seemasinhasan&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameSeema Sinhasan<br>Emailseemasinhasan@gmail.com<br>Mobile7276555682<br>CitySolapur<br>StateMaharashtra<br>
+TO:96deepakripahi@gmail.com
+Subject:-Confirm Registration
+Body:-Hi deepak,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=492257&&uid=96deepakripahi@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namedeepak <br>Email96deepakripahi@gmail.com<br>Mobile8423938275<br>Citygorakhpur<br>StateUttar Pradesh<br>
+TO:surajpendhare71@gmail.com
+Subject:-Confirm Registration
+Body:-Hi suraj,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=763090&&uid=suraj p&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namesuraj pendhare<br>Emailsurajpendhare71@gmail.com<br>Mobile8380930145<br>Cityjalgaon<br>StateMaharashtra<br>
+TO:kapil.korada@gmail.com
+Subject:-
+Body:-Hi Kapil,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=880971&&uid=kapil056&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:poojagaur510@gmail.com
+Subject:-Confirm Registration
+Body:-Hi pooja,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=176113&&uid=poojagaur1997@&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namepooja<br>Emailpoojagaur510@gmail.com<br>Mobile7837348083<br>Citybathinda<br>StatePunjab<br>
+TO:vaijuarote.15@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Vaijayanti,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=535168&&uid=vaijuarote.15@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameVaijayanti<br>Emailvaijuarote.15@gmail.com<br>Mobile9664742807<br>CityNavi Mumbai<br>StateMaharashtra<br>
+TO:test11@gmail.com
+Subject:-Confirm Registration
+Body:-Hi test11,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=457851&&uid=test11&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nametest11<br>Emailtest11@gmail.com<br>Mobile121221212121212<br>Cityvidisha<br>StateAndhra Pradesh<br>
+TO:test12@gmail.com
+Subject:-Confirm Registration
+Body:-Hi test12,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=224454&&uid=test12&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nametest12<br>Emailtest12@gmail.com<br>Mobile08050753534<br>Citybangalore<br>StateKarnataka<br>
+TO:sureshbodugam08@gmail.com
+Subject:-Confirm Registration
+Body:-Hi suresh,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=735785&&uid=sureshtq&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namesuresh bodugam<br>Emailsureshbodugam08@gmail.com<br>Mobile7799400394<br>Cityhyderabad<br>StateAndhra Pradesh<br>
+TO:kiranselvam95.s@gmail.com
+Subject:-Confirm Registration
+Body:-Hi KIRAN,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=305205&&uid=kiran1995&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameKIRAN S<br>Emailkiranselvam95.s@gmail.com<br>Mobile9865983230<br>CityCHENNAI<br>StateTamil Nadu<br>
+TO:mail.supriya19@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Supriya,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=218461&&uid=mail.supriya19@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameSupriya <br>Emailmail.supriya19@gmail.com<br>Mobile09458131382<br>CityBangalore<br>StateKarnataka<br>
+TO:jangirv491@gmail.com
+Subject:-Confirm Registration
+Body:-Hi vikash,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=927399&&uid=jangirv491@gmail.com&&utype=C">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namevikash kumar jangir<br>Emailjangirv491@gmail.com<br>Mobile09057395802<br>Citypilani<br>StateRajasthan<br>
+TO:ananya2812@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Ananya,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=874883&&uid=ananyapal&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameAnanya Pal<br>Emailananya2812@gmail.com<br>Mobile8582993436<br>CityKolkata<br>StateWest Bengal<br>
+TO:testtoday@gmail.com
+Subject:-Confirm Registration
+Body:-Hi testtoday,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=646869&&uid=testtoday&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nametesttoday<br>Emailtesttoday@gmail.com<br>Mobile9066774750<br>CityHyderabad<br>StateAndhra Pradesh<br>
+TO:testtoday@gmail.com
+Subject:-Confirm Registration
+Body:-Hi testtoday,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=543271&&uid=testtoday&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nametesttoday<br>Emailtesttoday@gmail.com<br>Mobile9066774750<br>CityHyderabad<br>StateAndhra Pradesh<br>
+TO:gyanendra.adynor@gmail.com
+Subject:-Confirm Registration
+Body:-Hi testtoday1,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=871575&&uid=testtoday1&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nametesttoday1<br>Emailgyanendra.adynor@gmail.com<br>Mobile9066774750<br>CityHyderabad<br>StateAndhra Pradesh<br>
+TO:juliejosep@gmail.com
+Subject:-Confirm Registration
+Body:-Hi julie,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=309809&&uid=juliejoseph&&utype=G">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namejulie<br>Emailjuliejosep@gmail.com<br>Mobile9994266382<br>Citychennai<br>StateTamil Nadu<br>
+TO:ritumu127@rediffmail.com
+Subject:-Confirm Registration
+Body:-Hi ritu,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=925412&&uid=ritumu127@rediffmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nameritu muneshwar<br>Emailritumu127@rediffmail.com<br>Mobile9028248358<br>Citypusad<br>StateMaharashtra<br>
+TO:mayankkumarsit@gmail.com
+Subject:-Confirm Registration
+Body:-Hi mayank,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=894791&&uid=mayank@94&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namemayank singh<br>Emailmayankkumarsit@gmail.com<br>Mobile8792166392<br>Citybangalore<br>StateKarnataka<br>
+TO:thiyakamuthusamy@gmail.com
+Subject:-Confirm Registration
+Body:-Hi M.thiya,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=327592&&uid=thiya&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameM.thiya<br>Emailthiyakamuthusamy@gmail.com<br>Mobile9500712830<br>Citykarur<br>StateTamil Nadu<br>
+TO:deepthi.kavuluru@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Deepthi,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=280820&&uid=deepthi.kavuluru@gmail.com&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameDeepthi<br>Emaildeepthi.kavuluru@gmail.com<br>Mobile7382069691<br>CityHyderabad<br>StateAndhra Pradesh<br>
+TO:mahasp70@gmail.com
+Subject:-Confirm Registration
+Body:-Hi lakshmi,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=517087&&uid=lakshmi A&&utype=M">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namelakshmi<br>Emailmahasp70@gmail.com<br>Mobile7339637433<br>Citycoimbatore<br>StateTamil Nadu<br>
+TO:supervivek1001@gmail.com
+Subject:-Confirm Registration
+Body:-Hi vivek,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=610896&&uid=vivekojha272&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namevivek kumar<br>Emailsupervivek1001@gmail.com<br>Mobile7537840388<br>Citysahibganj<br>StateJharkhand<br>
+TO:suchirgukt@gmail.com
+Subject:-Confirm Registration
+Body:-Hi A.S.SUCHITHRA,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=832369&&uid=A.S.SUCHITHRA&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameA.S.SUCHITHRA<br>Emailsuchirgukt@gmail.com<br>Mobile9160113277<br>Cityanantapur<br>StateAndhra Pradesh<br>
+TO:mukeshvarma045@mail.com
+Subject:-Confirm Registration
+Body:-Hi Mukesh,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=968977&&uid=9160062099&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameMukesh Varma<br>Emailmukeshvarma045@mail.com<br>Mobile9160062099<br>Cityhyderabad<br>StateAndhra Pradesh<br>
+TO:narain2829@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Narendiranath,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=513297&&uid=narencse&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameNarendiranath Amuthan<br>Emailnarain2829@gmail.com<br>Mobile07867983739<br>CityDharapuram<br>StateTamil Nadu<br>
+TO:bhagyareddy1995@gmail.com
+Subject:-Confirm Registration
+Body:-Hi bhagya,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=769656&&uid=bhagyareddy&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namebhagya<br>Emailbhagyareddy1995@gmail.com<br>Mobile9492186050<br>Cityhydrabad<br>StateAndhra Pradesh<br>
+TO:bhavanibandlamudi777@gmail.com
+Subject:-Confirm Registration
+Body:-Hi bhavani,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=788566&&uid=bhavanibandlamudi777&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namebhavani<br>Emailbhavanibandlamudi777@gmail.com<br>Mobile7416837337<br>Cityhyderabad<br>StateAndhra Pradesh<br>
+TO:mondalsumit888@gmail.com
+Subject:-Confirm Registration
+Body:-Hi sumit,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=858098&&uid=mondalsumit888@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namesumit mondal<br>Emailmondalsumit888@gmail.com<br>Mobile8116655718<br>Citykolkata<br>StateWest Bengal<br>
+TO:swetharam911@gmail.com
+Subject:-Confirm Registration
+Body:-Hi SWETHA,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=818175&&uid=swetharam911@gmail.com&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameSWETHA R<br>Emailswetharam911@gmail.com<br>Mobile917845869535<br>CityChennai<br>StateTamil Nadu<br>
+TO:pavitra.alubilli97@gmail.com
+Subject:-Confirm Registration
+Body:-Hi alubilli.pavitra,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=761261&&uid=pavitra.alubilli97&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namealubilli.pavitra<br>Emailpavitra.alubilli97@gmail.com<br>Mobile7659071171<br>Cityvizag<br>StateAndhra Pradesh<br>
+TO:manoj16791@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Manoj,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=873041&&uid=manoj16791@gmail.com&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameManoj Thorat<br>Emailmanoj16791@gmail.com<br>Mobile9762692340<br>CitySangamner<br>StateMaharashtra<br>
+TO:shukladivyanshu28@gmail.com
+Subject:-Confirm Registration
+Body:-Hi divyanshu,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=416973&&uid=divyanshu28&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namedivyanshu shukla<br>Emailshukladivyanshu28@gmail.com<br>Mobile9496775996<br>Citykochi<br>StateKerala<br>
+TO:chaitraha7@gmail.com
+Subject:-Confirm Registration
+Body:-Hi chaitra,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=877724&&uid=chaitraha7@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namechaitra<br>Emailchaitraha7@gmail.com<br>Mobile8792452018<br>Cityhassan<br>StateKarnataka<br>
+TO:nandini.sharma3991@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Raj,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=222983&&uid=nandini78733&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameRaj Nandini Sharma<br>Emailnandini.sharma3991@gmail.com<br>Mobile7873390015<br>CityBhubaneswar<br>StateOrissa<br>
+TO:priyankahalpatrao1995@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Priyanka,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=271602&&uid=priyankahalpatrao1995@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NamePriyanka Halpatrao<br>Emailpriyankahalpatrao1995@gmail.com<br>Mobile9766580777<br>CityKALYAN<br>StateMaharashtra<br>
+TO:swatipatilsakapa@gmail.com
+Subject:-Confirm Registration
+Body:-Hi swati,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=383298&&uid=swatipatil&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nameswati patil<br>Emailswatipatilsakapa@gmail.com<br>Mobile8888359423<br>Cityjaysingpur<br>StateMaharashtra<br>
+TO:hiravatipal96@gmail.com
+Subject:-Confirm Registration
+Body:-Hi hiravati,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=905463&&uid=hiravati&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namehiravati<br>Emailhiravatipal96@gmail.com<br>Mobile9594320186<br>Citymumbai suburban<br>StateMaharashtra<br>
+TO:airpurnima8@gmail.com
+Subject:-Confirm Registration
+Body:-Hi purnima,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=402838&&uid=purnima8&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namepurnima air<br>Emailairpurnima8@gmail.com<br>Mobile9897277968<br>Citydehradun<br>StateUttarakhand<br>
+TO:amrapali.v.pawar@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Amrapali,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=203024&&uid=amrapali26pawar@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameAmrapali Vishvanath Pawar<br>Emailamrapali.v.pawar@gmail.com<br>Mobile7249062609<br>Citypandharpur<br>StateMaharashtra<br>
+TO:manumanutha199@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Manutha,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=985049&&uid=manumanutha&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameManutha<br>Emailmanumanutha199@gmail.com<br>Mobile9443218547<br>Cityhosur<br>StateTamil Nadu<br>
+TO:vidyasdurgad22@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Vidyashree,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=235922&&uid=vidyasdurgad22@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameVidyashree S D<br>Emailvidyasdurgad22@gmail.com<br>Mobile09743798806<br>CityGulbarga<br>StateKarnataka<br>
+TO:rukhsarbano0066@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Rukhsar,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=258377&&uid=rockstar786&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameRukhsar<br>Emailrukhsarbano0066@gmail.com<br>Mobile9795201786<br>Citykanpur<br>StateUttar Pradesh<br>
+TO:Crpreethi.rajam@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Preethi,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=298759&&uid=crpreethi&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NamePreethi<br>EmailCrpreethi.rajam@gmail.com<br>Mobile9994331886<br>CityTrichy<br>StateTamil Nadu<br>
+TO:ravi_dcivil@yahoo.com
+Subject:-Confirm Registration
+Body:-Hi S.RAVI,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=310826&&uid=ravishiva&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameS.RAVI<br>Emailravi_dcivil@yahoo.com<br>Mobile9952210093<br>CityCHENNAI<br>StateTamil Nadu<br>
+TO:Mowllikha267@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Mowllikha,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=663713&&uid=mowllikha267@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameMowllikha<br>EmailMowllikha267@gmail.com<br>Mobile08465896360<br>Cityhyderabad<br>StateAndhra Pradesh<br>
+TO:dharmveerrraj288@gmail.com
+Subject:-Confirm Registration
+Body:-Hi DHARMVEER,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=142091&&uid=DKBHARTI&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameDHARMVEER KUMAR<br>Emaildharmveerrraj288@gmail.com<br>Mobile9386485019<br>CityBATHINDA<br>StatePunjab<br>
+TO:preetirathore2121@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Preeti,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=893761&&uid=preetirathore&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NamePreeti Rathore<br>Emailpreetirathore2121@gmail.com<br>Mobile9936300875<br>CityLucknow<br>StateUttar Pradesh<br>
+TO:jadhav.amruta999@gmail.com
+Subject:-Confirm Registration
+Body:-Hi amruta,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=824363&&uid=amruta&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nameamruta<br>Emailjadhav.amruta999@gmail.com<br>Mobile7066123688<br>Citypune<br>StateMaharashtra<br>
+TO:ashhem14@gmail.com
+Subject:-Confirm Registration
+Body:-Hi ashwini,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=353381&&uid=ashhem&&utype=C">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nameashwini<br>Emailashhem14@gmail.com<br>Mobile9049546769<br>Citypune<br>StateMaharashtra<br>
+TO:sudhanshuthakur.st@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Sudhanshu,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=515533&&uid=sudhanshuthakur.st@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameSudhanshu thakur<br>Emailsudhanshuthakur.st@gmail.com<br>Mobile7042900856<br>CityDelhi<br>StateDelhi<br>
+TO:aishwarya.aa.anil@gmail.com
+Subject:-Confirm Registration
+Body:-Hi aishwarya,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=182184&&uid=aishanil&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nameaishwarya anil<br>Emailaishwarya.aa.anil@gmail.com<br>Mobile7338082937<br>Cityhubli<br>StateKarnataka<br>
+TO:vijayvijju0412@gmail.com
+Subject:-Confirm Registration
+Body:-Hi vijaykumar,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=413096&&uid=vijayvijju0412@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namevijaykumar<br>Emailvijayvijju0412@gmail.com<br>Mobile8185970557<br>Cityhyderabad<br>StateAndhra Pradesh<br>
+TO:sathya.naran05@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Sathyanarayanan,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=994354&&uid=sathya.naran05&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameSathyanarayanan Arulmani<br>Emailsathya.naran05@gmail.com<br>Mobile9677421307<br>Citysalem<br>StateTamil Nadu<br>
+TO:hilman8736@gmail.com
+Subject:-Confirm Registration
+Body:-Hi bhupendra,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=747899&&uid=hilman8736&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namebhupendra singh<br>Emailhilman8736@gmail.com<br>Mobile917275718969<br>Citylucknow<br>StateUttar Pradesh<br>
+TO:sriram.kannan92@gmail.com
+Subject:-Confirm Registration
+Body:-Hi sriram,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=505924&&uid=sriram.kannan&&utype=C">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namesriram prabhu<br>Emailsriram.kannan92@gmail.com<br>Mobile7339446622<br>CityMadurai<br>StateTamil Nadu<br>
+TO:jeetkmr179@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Jeet,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=268603&&uid=jeetkmr179@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameJeet Kumar<br>Emailjeetkmr179@gmail.com<br>Mobile08220572443<br>CityVellore<br>StateTamil Nadu<br>
+TO:sandhyaravi1996@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Sandhya,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=625274&&uid=SandyRavi96&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameSandhya Rav<br>Emailsandhyaravi1996@gmail.com<br>Mobile7299084328<br>Citychennai<br>StateTamil Nadu<br>
+TO:msharshitha18@gmail.com
+Subject:-Confirm Registration
+Body:-Hi chandan,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=129681&&uid=msharshitha18gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namechandan<br>Emailmsharshitha18@gmail.com<br>Mobile8197406142<br>Citydavangere<br>StateKarnataka<br>
+TO:rananya15@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Ananya.R,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=585082&&uid=rananya15&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameAnanya.R<br>Emailrananya15@gmail.com<br>Mobile7204493009<br>CityBengaluru<br>StateKarnataka<br>
+TO:shaw.sunil1719@gmail.com
+Subject:-Confirm Registration
+Body:-Hi sunil,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=963337&&uid=shaw.sunil1719@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namesunil kumar shaw<br>Emailshaw.sunil1719@gmail.com<br>Mobile7278674682<br>Citykolkata<br>StateWest Bengal<br>
+TO:rk21430@gmail.com
+Subject:-Confirm Registration
+Body:-Hi raju,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=357113&&uid=1813129&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nameraju kumar chaudhary <br>Emailrk21430@gmail.com<br>Mobile7206416282<br>Cityjagadhri<br>StateHaryana<br>
+TO:kruthikapalleda@gmail.com
+Subject:-Confirm Registration
+Body:-Hi kruthika,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=375656&&uid=kruthika palleda&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namekruthika n<br>Emailkruthikapalleda@gmail.com<br>Mobile9008782556<br>Citychitradurga<br>StateKarnataka<br>
+TO:chetankashyap.kashyap@gmail.com
+Subject:-Confirm Registration
+Body:-Hi chetan,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=402802&&uid=chetan&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namechetan<br>Emailchetankashyap.kashyap@gmail.com<br>Mobile8884688763<br>Citybangalore<br>StateKarnataka<br>
+TO:svs55776@gmail.com
+Subject:-Confirm Registration
+Body:-Hi sanjana,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=655294&&uid=sanju&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namesanjana v s<br>Emailsvs55776@gmail.com<br>Mobile8722016072<br>Citymysore<br>StateKarnataka<br>
+TO:singhdishant.0091@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Dishant,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=269989&&uid=dishant2807&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameDishant singh<br>Emailsinghdishant.0091@gmail.com<br>Mobile9455122245<br>CityDehradun<br>StateUttarakhand<br>
+TO:rahul11@gmail.com
+Subject:-Confirm Registration
+Body:-Hi rahul,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=529237&&uid=rahul11@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namerahul<br>Emailrahul11@gmail.com<br>Mobile9756873687<br>Citynashik<br>StateMaharashtra<br>
+TO:umesh@voyageup.com
+Subject:-Confirm Registration
+Body:-Hi Umesh,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=504172&&uid=umesh.joshi&&utype=C">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameUmesh Joshi<br>Emailumesh@voyageup.com<br>Mobile9886756968<br>CityBangalore<br>StateKarnataka<br>
+TO:paulrajmechrit@gmail.com
+Subject:-Confirm Registration
+Body:-Hi PAULRAJ,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=583302&&uid=paulrajmechrit@gmail.com&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NamePAULRAJ M<br>Emailpaulrajmechrit@gmail.com<br>Mobile9994874854<br>Citysivakasi<br>StateTamil Nadu<br>
+TO:meghanavadnikoppa@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Meghana,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=465234&&uid=meghanavadnnikoppa@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameMeghana Vadnikoppa<br>Emailmeghanavadnikoppa@gmail.com<br>Mobile8050058778<br>CityDavangere<br>StateKarnataka<br>
+TO:Dinesh15wadbude@gmail.com
+Subject:-Confirm Registration
+Body:-Hi DINESH,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=829985&&uid=dinesh15wadbude@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameDINESH MADHUKAR WADBUDHE<br>EmailDinesh15wadbude@gmail.com<br>Mobile8390331834<br>Citynarkhed<br>StateMaharashtra<br>
+TO:bagul.amol.b@gmail.com
+Subject:-
+Body:-Hi amol,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=375226&&uid=amol6789&&utype=C">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:roashlnii36@mail.com
+Subject:-Confirm Registration
+Body:-Hi roshni,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=111026&&uid=roshni&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nameroshni begum<br>Emailroashlnii36@mail.com<br>Mobile9066598215<br>Citybangalore<br>StateKarnataka<br>
+TO:9595vyas@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Bharath,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=575837&&uid=vyas95&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameBharath Vyas<br>Email9595vyas@gmail.com<br>Mobile8867889428<br>CityBangalore<br>StateKarnataka<br>
+TO:test@test.com
+Subject:-Confirm Registration
+Body:-Hi test,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=916904&&uid=test01&&utype=M">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Nametest<br>Emailtest@test.com<br>Mobile1241251613<br>Citytest<br>StateKarnataka<br>
+TO:mgsaha8@gmail.com
+Subject:-Confirm Registration
+Body:-Hi sana,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=593949&&uid=sana&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namesana<br>Emailmgsaha8@gmail.com<br>Mobile9894012969<br>Citychennai<br>StateTamil Nadu<br>
+TO:sathyadamodaranraju@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Sathya,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=862344&&uid=sathyadamodaran&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameSathya Damodaran<br>Emailsathyadamodaranraju@gmail.com<br>Mobile8056292237<br>Citychennai<br>StateTamil Nadu<br>
+TO:student001-001@yahoo.com
+Subject:-
+Body:-Hi Student001,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=507972&&uid=student001-001&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:mahesh8416@gmail.com
+Subject:-Confirm Registration
+Body:-Hi mahesh,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=660267&&uid=mahesh&&utype=C">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namemahesh<br>Emailmahesh8416@gmail.com<br>Mobile9963279997<br>Citysecunderabad<br>StateAndhra Pradesh<br>
+TO:vishwanath2226@gmail.com77
+Subject:-Confirm Registration
+Body:-Hi vishwanath,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=686633&&uid=vishwa&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namevishwanath <br>Emailvishwanath2226@gmail.com77<br>Mobile7760750508<br>CityBangalore <br>StateKarnataka<br>
+TO:srikanta046@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Srikanteshwara,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=440669&&uid=Srikanta&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameSrikanteshwara Rao.M<br>Emailsrikanta046@gmail.com<br>Mobile8884698683<br>CityBangalore<br>StateKarnataka<br>
+TO:kiranvasishta1@gmal.com
+Subject:-Confirm Registration
+Body:-Hi Kiran,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=313757&&uid=Kiran Vasishta&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameKiran Vasishta TS<br>Emailkiranvasishta1@gmal.com<br>Mobile9844287635<br>CityBangalore<br>StateKarnataka<br>
+TO:akshayrajakshayraj12@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Akshay,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=401572&&uid=akshayrajakshayraj12@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameAkshay<br>Emailakshayrajakshayraj12@gmail.com<br>Mobile9538006002<br>CityChickaballapur<br>StateKarnataka<br>
+TO:thidiyas3d@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Thidesh,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=622624&&uid=thidiyas3d&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameThidesh Limbu<br>Emailthidiyas3d@gmail.com<br>Mobile9900226551<br>Citybangalore<br>StateKarnataka<br>
+TO:kiranvasishta123@gmal.com
+Subject:-Confirm Registration
+Body:-Hi Kiran,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=866328&&uid=Kiran Vasishta TS&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameKiran Vasishta TS<br>Emailkiranvasishta123@gmal.com<br>Mobile9844287635<br>CityBangalore<br>StateKarnataka<br>
+TO:smangalas2013@gmal.com
+Subject:-Confirm Registration
+Body:-Hi Kiran,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=855660&&uid=Kiran@Programming&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameKiran Vasishta TS<br>Emailsmangalas2013@gmal.com<br>Mobile9844287635<br>CityBangalore<br>StateKarnataka<br>
+TO:kiranvasishta123@gmail.com
+Subject:-
+Body:-Hi Kiran,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=817667&&uid=Kiran@Coding&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:kiranvasishta8@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Kiran,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=936167&&uid=Kiran Vasishta 1234&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameKiran Vasishta TS<br>Emailkiranvasishta8@gmail.com<br>Mobile9844287635<br>CityBangalore<br>StateKarnataka<br>
+TO:harshitharajnagraj@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Harshitha,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=917576&&uid=Harshitha&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameHarshitha N<br>Emailharshitharajnagraj@gmail.com<br>Mobile8553119098<br>CityBanglore<br>StateKarnataka<br>
+TO:sssatendra51@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Satendra,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=790810&&uid=sssatendra51&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameSatendra Kumar . R<br>Emailsssatendra51@gmail.com<br>Mobile8553109910<br>CityBangalore<br>StateKarnataka<br>
+TO:bibidhakv14@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Bibidha,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=824621&&uid=bibi14&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameBibidha K V<br>Emailbibidhakv14@gmail.com<br>Mobile7411783496<br>CityBangalore<br>StateKarnataka<br>
+TO:chitta2019@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Chittaranjan,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=922272&&uid=chitta2019&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameChittaranjan Kumar<br>Emailchitta2019@gmail.com<br>Mobile9714902072<br>CityGandhinagar<br>StateGujarat<br>
+TO:udaypadaganur@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Uday,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=312063&&uid=udaypadaganur&&utype=A">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameUday<br>Emailudaypadaganur@gmail.com<br>Mobile8747831303<br>CityBangalore<br>StateKarnataka<br>
+TO:Mhtshrm61@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Mohit,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=749631&&uid=Mohit&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameMohit sharma<br>EmailMhtshrm61@gmail.com<br>Mobile9538635401<br>CityBengalore<br>StateKarnataka<br>
+TO:poojaadvathi@gmail.com
+Subject:-Confirm Registration
+Body:-Hi pooja,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=311491&&uid=poojaadvathi@gmail.com&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namepooja m<br>Emailpoojaadvathi@gmail.com<br>Mobile9731123573<br>Citybangalore<br>StateKarnataka<br>
+TO:Venuhegde6@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Venugopal,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=961913&&uid=Venuhegde&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameVenugopal Hegde<br>EmailVenuhegde6@gmail.com<br>Mobile9632968298<br>CityBangalore<br>StateKarnataka<br>
+TO:abbasgulabiwala@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Abbasali,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=287988&&uid=abbazz_&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameAbbasali Gulabiwala<br>Emailabbasgulabiwala@gmail.com<br>Mobile9978712144<br>CityVadodara<br>StateGujarat<br>
+TO:sukumar.sachin09@gmail.com
+Subject:-
+Body:-Hi sukumar,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=584714&&uid=sukumar.sachin&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:rakshu96r@gmail.com
+Subject:-Confirm Registration
+Body:-Hi Rakshitha,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=125289&&uid=rakshitha&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameRakshitha <br>Emailrakshu96r@gmail.com<br>Mobile9483966455<br>CityBangalore<br>StateKarnataka<br>
+TO:vijaykumarbhumappa1995@gmail.com
+Subject:-Confirm Registration
+Body:-Hi vijay,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=308620&&uid=13091a05B0&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>Namevijay kumar B<br>Emailvijaykumarbhumappa1995@gmail.com<br>Mobile9908626385<br>CityNandyal<br>StateAndhra Pradesh<br>
+TO:pramodhm.pramodh@yahoo.com
+Subject:-Confirm Registration
+Body:-Hi M,<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify=334564&&uid=pramodh&&utype=S">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team
+TO:info@adynor.com
+Subject:-New User Registered Through Adynor
+Body:-User Information<br>NameM PRAMODH PRABHU<br>Emailpramodhm.pramodh@yahoo.com<br>Mobile9790965322<br>Citychennai<br>StateTamil Nadu<br>
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac

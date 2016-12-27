@@ -135,7 +135,11 @@
                     $l_countteam_row[0] = 0;
                 }
                 $l_TM_id = $l_countteam_row[0] + 1;
+<<<<<<< HEAD
                 $l_insert_Receiver = 'insert into Teams (TM_id, TM_Name, PR_id, TM_StartDate,Org_id,TM_PR_Type) values ('.$l_TM_id .',\' Team'.$l_TM_id.' \', \''.$l_PR_id.'\','.$l_CM_Datetime.',\''.$_SESSION['g_Org_id'].'\', \''.$_SESSION['g_UR_PR_Type'].'\')';
+=======
+                $l_insert_Receiver = 'insert into Teams (TM_id, TM_Name, PR_id, TM_StartDate,Org_id) values ('.$l_TM_id .',\' Team'.$l_TM_id.' \', \''.$l_PR_id.'\','.$l_CM_Datetime.',\''.$_SESSION['g_Org_id'].'\')';
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                 mysql_query( $l_insert_Receiver) or die(mysql_error());
             }
             

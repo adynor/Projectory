@@ -82,7 +82,11 @@ else if($l_UR_Type=='T'){
 
 }
 //select the Details of Projects and Owner Name
+<<<<<<< HEAD
 $query='SELECT PR.PR_Name,PR.PR_Desc,PR.PR_ReleaseDate,PR.PR_ExpiryDate,PR.PR_Duration,PR.PR_SynopsisURL,PR.MO_id ,UR.UR_FirstName,UR.UR_LastName,PR.PR_Status FROM Projects as PR , Users as UR WHERE UR.UR_id = PR.UR_Owner AND PR.PR_id='.$pid_encode.'';
+=======
+$query='SELECT PR.PR_Name,PR.PR_Desc,PR.PR_ReleaseDate,PR.PR_ExpiryDate,PR.PR_Duration,PR.PR_SynopsisURL,PR.MO_id ,UR.UR_FirstName,UR.UR_LastName,PR.PR_Status,PR.PR_id FROM Projects as PR , Users as UR WHERE UR.UR_id = PR.UR_Owner AND PR.PR_id='.$pid_encode.'';
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 $l_Pro_Details_Query=mysql_query($query);
 $l_Pro_Details=mysql_fetch_array($l_Pro_Details_Query);
 $l_SD_sql = 'select SD.SD_id, SD.SD_Name from SubDomain as SD, Project_SubDomains as PS where PS.SD_id = SD.SD_id and PS.PR_id = '.$pid_encode;
@@ -108,7 +112,11 @@ print('<table class="ady-table-content" border=1 style="width:100%" >');
 print('<tr><th colspan="2" style="text-align:center;">Project Details</th></tr>');
 print('<tr><th class="ady-cus-th" >Project Name</th><td>'.$l_Pro_Details[0].'</td></tr>');
 print('<tr><th class="ady-cus-th" > Project Description</th><td>'.htmlspecialchars_decode($l_Pro_Details[1]).'</td></tr>');
+<<<<<<< HEAD
 print('<tr><th class="ady-cus-th" >Project Synopsis</th><td><a class="btn btn-primary" role="button" href="'.$l_filehomepath.'/ViewSynopsis.php?prid='.$pid_encode.'">View Synopsis</a></td></tr>');
+=======
+print('<tr><th class="ady-cus-th" >Project Synopsis</th><td><a class="btn btn-primary" role="button" href="'.$l_filehomepath.'/ViewSynopsis.php?prid='.$l_Pro_Details[10].'">View Synopsis</a></td></tr>');
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 print('<tr><th class="ady-cus-th" >Project ReleaseDate</th><td>'.$l_Pro_ReleaseDate.'</td></tr>');
 print('<tr><th class="ady-cus-th" >Project ExpiryDate</th><td>'.$l_Pro_ExpiryDate.'</td></tr>');
 print('<tr><th class="ady-cus-th" >Project Duration</th><td>'.$l_Pro_Details[4].' days</td></tr>');
@@ -243,7 +251,11 @@ $(".checkprogramme").click(function(){
       if(this.checked){
           var flagdata="insert";
          $.ajax({
+<<<<<<< HEAD
                 url: "Updelete.php",
+=======
+                url: "http://localhost:8888/Projectory_Test_server/Updelete.php",
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                 type: "GET",
                 
                 data: {pgid:sendpgid,prid:sendprid,flag:flagdata},
@@ -259,7 +271,11 @@ $(".checkprogramme").click(function(){
             var flagdata="delete";
             $.ajax({
                 type: "GET",
+<<<<<<< HEAD
                url: 'Updelete.php',
+=======
+               url: 'http://localhost:8888/Projectory_Test_server/Updelete.php',
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                
                data: {pgid:sendpgid,prid:sendprid,flag:flagdata},
                 success: function(data) {

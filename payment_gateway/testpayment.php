@@ -1,7 +1,11 @@
 <?php
 session_start();
 //print_r($_SESSION);
+<<<<<<< HEAD
 
+=======
+//exit();
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 $l_Amount= $_SESSION['payment'];
 $l_PR_id_pay=$_SESSION['g_PR_id_pay'];
 $l_UR_id=$_SESSION['g_UR_id'];
@@ -15,10 +19,16 @@ echo "<center style='color:red'>Please Wait..........</center>";
 //mysql_select_db('zairepro_Projectory_test');
 include('../db_config.php');
 //Select the User Details for billing
+<<<<<<< HEAD
  echo $sql='select UR_FirstName,UR_MiddleName,UR_LastName,UR_Emailid,UR_EmailidDomain,UR_Phno,UR_Address,UR_City,UR_State,UR_Country,UR_Zipcode from Users WHERE UR_id="'.$l_UR_id.'" AND Org_id="'.$_SESSION['g_Org_id'].'"';
 $l_query=mysql_query($sql);
 $l_user_result=mysql_fetch_array($l_query);
 
+=======
+ $sql='select UR_FirstName,UR_MiddleName,UR_LastName,UR_Emailid,UR_EmailidDomain,UR_Phno,UR_Address,UR_City,UR_State,UR_Country,UR_Zipcode from Users WHERE UR_id="'.$l_UR_id.'" AND Org_id="'.$_SESSION['g_Org_id'].'"';
+$l_query=mysql_query($sql);
+$l_user_result=mysql_fetch_array($l_query);
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 extract($l_user_result);
 /*Generate the order id*/
 function generateRandomString($length =4) {
@@ -30,7 +40,10 @@ function generateRandomString($length =4) {
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
     return $randomString;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 }
 
 
@@ -71,8 +84,13 @@ $count_order_id=mysql_num_rows($query_order_id);
    <tr><td>Order ID:</td><td><input type="text" name="order_id" value="<?php echo $zporderid; ?>" /></td></tr>
    <tr><td>Amount	:</td><td><input type="text" name="amount" value="<?php echo $l_Amount; ?>"/></td></tr>
    <tr><td>currency	:</td><td><input type="hidden" name="currency" value="INR"/></td></tr>
+<<<<<<< HEAD
    <tr><td>Redirect Url	:</td><td><input type="hidden" name="redirect_url" value="https://zaireprojects.com/test/payment_gateway/ccavResponseHandler.php" /></td></tr>       
    <tr><td>Cancel Url	:</td><td><input type="hidden" name="cancel_url" value="https://zaireprojects.com/test/Projects.php" /></td></tr>
+=======
+   <tr><td>Redirect Url	:</td><td><input type="hidden" name="redirect_url" value="https://zaireprojects.com/payment_gateway/ccavResponseHandler.php" /></td></tr>       
+   <tr><td>Cancel Url	:</td><td><input type="hidden" name="cancel_url" value="https://zaireprojects.com/Projects.php" /></td></tr>
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     <tr><td>language:</td><td><input type="hidden" name="language" value="EN" /><td></tr>
     <tr><td colspan="2">Billing information(optional):</td></tr>
     <tr><td>Billing Name	:</td><td><input type="text" name="billing_name" value="<?php echo $UR_FirstName.' '.$UR_MiddleName.' '.$UR_LastName ;?>"/></td></tr>
@@ -122,9 +140,12 @@ $count_order_id=mysql_num_rows($query_order_id);
       <tr>
        <td>Merchant Param5 UR_PR_Type:</td><td><input type="text" name="merchant_param5" value="<?php echo $l_UR_PR_Type ;?>"/></td>
     </tr>
+<<<<<<< HEAD
      <tr>
        <td>Merchant Param5 UR_PR_Type:</td><td><input type="text" name="merchant_param6" value="<?php echo "sdsd" ;?>"/></td>
     </tr>
+=======
+>>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                                                                                                                                           
     <tr>
        <td></td><td><INPUT TYPE="submit" value="CheckOut"></td>
