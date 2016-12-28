@@ -46,9 +46,7 @@ echo'<div class="alert alert-success"><b>'.$Accept_Pro_Count.'</b> project confi
 }
 }
 //Display the pending projects 
-<<<<<<< HEAD
-$Pro_query=mysql_query('SELECT PR.PR_id,PR.PR_Name,MO.MO_Name FROM Projects as PR,Model as MO WHERE PR.MO_id=MO.MO_id and PR_Status="P"');
-=======
+
 $Pro_query=mysql_query('SELECT PR.PR_id, PR.PR_Name, MO.MO_Name, SD.SD_Name
 FROM Projects AS PR, Model AS MO, SubDomain AS SD, Project_SubDomains AS PS
 WHERE PR.MO_id = MO.MO_id
@@ -56,7 +54,6 @@ AND SD.SD_id = PS.SD_id
 AND PR.PR_id = PS.PR_id
 AND PS.SD_Preference =  "R"
 AND PR.PR_Status =  "P"');
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 $Pro_Count_Query=mysql_num_rows($Pro_query);
   // check the pending projects available
 if($Pro_Count_Query > 0){
@@ -70,10 +67,7 @@ if($Pro_Count_Query > 0){
             <tr>
             <th >SL No.</th>
             <th >Project  Name </th>
-<<<<<<< HEAD
-=======
             <th >Prefered Domain </th>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
             <th >Project Model </th>
             <th >Select Project</th>
             </tr>
@@ -89,14 +83,10 @@ $pid_encode=md5(162).'=='.base64_encode($Prow[0]);
 <tr>
     <td style><?php echo $i ;?></td>
 <td>
-<<<<<<< HEAD
-    <a href="PAProjectDetails.php?PID=<?php echo $pid_encode; ?>"><?php echo $Prow[1] ;?></a>
-</td>
-=======
+
     <a href="PAProjectDetails.php?PID=<?php echo $pid_encode; ?>" target="new"><?php echo $Prow[1] ;?></a>
 </td>
-    <td><?php echo $Prow[3]; ?></td>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+<td><?php echo $Prow[3]; ?></td>
 <td><?php echo $Prow[2] ;?></td>
 <td style="text-align:center;">
 <input type="checkbox" name="pid[]" value="<?php echo $Prow[0]; ?>">

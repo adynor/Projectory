@@ -85,14 +85,9 @@ $l_message = "Your team has sent a Mentor Request to ".$l_UR_NameReceiver.". <br
         $l_subject = "Mentor Request";
         $l_headers2 = "From: $l_webMaster\r\n";
         $l_headers2 .= "Content-type:  text/html\r\n";
-<<<<<<< HEAD
   $to=array($l_UR_EmailidTeammate.'@'.$l_UR_EmailidDomainTeammate);
              sendmail($to,$subject,$l_message);
-  
-  // mail($l_UR_EmailidTeammate.'@'.$l_UR_EmailidDomainTeammate, $l_subject, $l_message, $l_headers2);
-=======
    mail($l_UR_EmailidTeammate.'@'.$l_UR_EmailidDomainTeammate, $l_subject, $l_message, $l_headers2);
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
 }
 }

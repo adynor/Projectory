@@ -10,8 +10,6 @@
 include ('db_config.php');
 include ('header.php');  
 ?>
-<<<<<<< HEAD
-
 
 <div class="container" >
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.js" integrity="sha256-xoE/2szqaiaaZh7goVyF5p9C/qBu9dM3V5utrQaiJMc=" crossorigin="anonymous"></script>
@@ -35,13 +33,6 @@ border: 1px solid rgba(128, 128, 128, 0.34) !important;
     }
 </style>
 
-
-
-
-
-=======
-<div class="container" >
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
  <?php   
 
@@ -88,44 +79,8 @@ $l_TM_id = $l_TM_id_row[0];
 
 
 print('<div align="center"><font color="#4682b4">logged in at '.$l_LoginDate_res. '</font></div>');*/
-<<<<<<< HEAD
-$days=array('....','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'); 
-
-function getDayvalue($date_m){
-  $days=array('','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'); 
-   return $currentvalue= array_search(date('l', strtotime($date_m)),$days);
- }
-
-  function getSlot($day)
-  {
-  $sql="SELECT * FROM Mentor_Calendar WHERE UR_id='$_SESSION[g_UR_id]' AND MC_DayNo='$day'" ;
-  $que=mysql_query($sql);
-  $slots=array();
- While($row=mysql_fetch_array($que)){
- //print_r($row);
-  $a=$row['MC_StartTime'];
-  $b=$row['MC_EndTime'];
- $hours=array('12:00 AM','01:00 AM','02:00 AM', '03:00 AM', '04:00 AM', '05:00 AM', '06:00 AM', '07:00 AM', '08:00 AM','09:00 AM','10:00 AM','11:00 AM','12:00 PM', '01:00 PM','02:00 PM', '03:00 PM', '04:00 PM', '05:00 PM', '06:00 PM', '07:00 PM', '08:00 PM','09:00 PM','10:00 PM','11:00 PM','12:00 AM');
-	 for($a;$a < $b;$a++){
-	 $c=$a+1;
-	 $kV=$a.'-'.$c;
-	 $slots[$kV]= $hours[$a].'-'.$hours[$c];
-	 //array_push($slots,$sol);
-	 
-	
-	 }
-
-
-
- }
- return $slots;
- }
 
 ?>
-
-=======
-?>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <div class="row alert alert-info" style="font-size: large;     margin-top: 14px;">
     <div class="col-md-5">
     <b>Welcome to Projectory:&nbsp;</b><font color="ff6347"><?php echo $l_UR_FName;?></font>
@@ -136,74 +91,6 @@ function getDayvalue($date_m){
     </div>
 </div>
 
-<<<<<<< HEAD
-<?php 
-
-$hours=array('12:00 AM','01:00 AM','02:00 AM', '03:00 AM', '04:00 AM', '05:00 AM', '06:00 AM', '07:00 AM', '08:00 AM','09:00 AM','10:00 AM','11:00 AM','12:00 PM', '01:00 PM','02:00 PM', '03:00 PM', '04:00 PM', '05:00 PM', '06:00 PM', '07:00 PM', '08:00 PM','09:00 PM','10:00 PM','11:00 PM','12:00 AM');
-
-$dayarray= array("0"=>"","1"=>"Monday","2"=>"Tuesday","3"=>"Wednesday","4"=>"Thursday","5"=>"Friday","6"=>"Saturday","7"=>"Sunday");
-$M_Time_req_query=mysql_query("select * from Booking_Slots where BS_Mentor_id='$l_UR_id' and BS_Status='P'");
-echo $result=mysql_num_rows($M_Time_req_query);
-/*if($result>0){
-while($row=mysql_fetch_array($M_Time_req_query))
-{
-
-$requestStartTime= $row['BS_Start_Time'];
- $requestEndTime=$row['BS_End_Time'];
- echo $FianlReqTime= $hours[$requestStartTime].'-'.$hours[$requestEndTime];
- 
-$day=getDayvalue($row['BS_Date']);
-$dayname = $dayarray[$day];
- 
-
-}
-} */
-?>
-<span style="background-color: #f8b334;
-    width: 22px;
-    height: 22px;
-    padding: 4px;     border: 1px solid #373c38;" class=" glyphicon glyphicon-pencil" title="Change Availability Time" data-toggle="popover" data-placement="right" data-content='
-    <?php $k=1;
-    while($row=mysql_fetch_array($M_Time_req_query))
-{
-
-$requestStartTime= $row['BS_Start_Time'];
- $requestEndTime=$row['BS_End_Time'];
- $FianlReqTime= $hours[$requestStartTime].'-'.$hours[$requestEndTime];
- 
-$day=getDayvalue($row['BS_Date']);
-$dayname = $dayarray[$day]; ?>
- <span class="label label-primary"><?php echo $row['BS_ST_id']; ?></span> <?php
-?>
- <div id="">
-   <select class="mystyle" id="pre<?php echo $k ?>" disabled="disabled">
-    <?php $ji=0;
-   foreach($days as $data){  ?>
-  <option value="<?php echo $ji; ?>" <?php if($dayname==$data){echo 'selected';}?>><?php echo $data;?></option>
-<?php $ji++;
-} ?>
-
-</select> 
-<select style="width: 153px !important;" class="mystyle changer" id="changedata<?php echo $k ?>" disabled="disabled">
-  <?php $ji=0;
-  foreach(getSlot(4) as $keys => $data)
-   {  
-   
-   $key=explode('-',$keys);?>
-   
-  <option  data-startdate="<?php echo $key[0]; ?>" data-enddate="<?php echo $key[1]; ?>" <?php if($FianlReqTime==$data){echo 'selected';}?>><?php echo $data;?></option>
-  
-<?php $ji++;
-
-} ?>
-</select> 
-<span class="btn btn-danger glyphicon glyphicon-pencil btn-sm" style="border-radius: 50%;border: 2px solid #cdcbc7;" onclick="change(<?php echo $k ?>);"></span><span style="border-radius: 50%;border: 2px solid #cdcbc7;" class="btn btn-success glyphicon glyphicon-ok btn-sm" onclick="confirm(<?php echo $k ?>)"></span>
-<hr>
-</div><?php $k++; } ?>  ' data-html="true"  data-placement="right"></span>
-   
- 
-=======
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <?php
 //Check the  pending Request
 if($l_TM_id == -99)
@@ -228,11 +115,8 @@ print('<tr><td><a  class="btn btn-primary ady-btn"  href="GMPendingRequest.php">
 //-- display the Dashboard --------------------------------//
     $l_sql_UR = 'Select UR.UR_ProfileInfo from Users as UR where UR.UR_id="' . $l_UR_id . '" and UR.Org_id = "'.$_SESSION['g_Org_id'].'"';
    //Display the User Profile Details
-<<<<<<< HEAD
 $l_sql_CompanyName = 'Select  UR.UR_FirstName , UR.UR_MiddleName , UR.UR_LastName from Users as UR where UR.UR_id = (select innerUR.UR_CompanyName from Users as innerUR where innerUR.UR_id="' . $l_UR_id . '") and UR.Org_id = "'.$_SESSION['g_Org_id'].'" ';
-=======
-$l_sql_CompanyName = 'Select  UR.UR_FirstName , UR.UR_MiddleName , UR.UR_LastName from Users as UR where UR.UR_id = (select innerUR.UR_CompanyName from Users as innerUR where innerUR.UR_id="' . $l_UR_id . '")';
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+
 
  $l_result_UR = mysql_query($l_sql_UR) or die(mysql_error);
  $l_result_CN = mysql_query($l_sql_CompanyName);   
@@ -288,65 +172,4 @@ $l_sql_CompanyName = 'Select  UR.UR_FirstName , UR.UR_MiddleName , UR.UR_LastNam
 
 ?>
  </div> 
-<<<<<<< HEAD
- 
- 
- <script>
- 
-
- //$('.mystyle').attr('disabled', 'disabled');
-//$(".mystyle").attr("disabled", true);
-function change(k){
-var kar1='#pre'+k;
-var kar='#changedata'+k;
-
-$(kar).addClass( "yourstyle" );
-$(kar).removeAttr('disabled');
-$(kar).removeClass( "mystyle" );
-
-$(kar1).addClass( "yourstyle" );
-$(kar1).removeAttr('disabled');
-$(kar1).removeClass( "mystyle" );
-
-    
-}
-function confirm(k){
-//a = $('.mystyle').data('startdate');
-//b = $('.mystyle').data('enddate');
-var kar='#changedata'+k;
-
-       var selected = $(kar).find('option:selected');
-       var extra = selected.data('startdate'); 
-       var extra1 = selected.data('enddate'); 
-       alert(extra+'---'+extra1);
-   
-
-}
-
- </script>
-<script>
-  $('#stepExample1').timepicker({ 'step': 15 });
-$('#stepExample2').timepicker({
-   'step': function(i) {
-       return (i%2) ? 15 : 45;
-   }
-});
-</script>
-
-</script>
-
-<script>
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover();
-   
-
-});
-
-
-
-</script>
-
-=======
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
-
 <?php include('footer.php')?>

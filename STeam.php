@@ -135,11 +135,8 @@
                         }
                         else{
                             //  echo $l_UR_Receiver ."|".$l_r_or_s_id;
-<<<<<<< HEAD
                             echo "<p style='color: red !important;text-align: center;'>Your Response Pending</p>";
-=======
-                            echo "";
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+
                         }
                     }
                     else if ($l_R_or_S_result[0] == $l_UR_id) {
@@ -161,7 +158,6 @@
             
         }
     }
-<<<<<<< HEAD
     if($l_TM_id == NULL || $l_TM_id == -99){
       $l_limitstudentque=mysql_query('SELECT PR.PR_No_Students  FROM  Projects PR WHERE PR_id='.$l_PR_id);
       $l_PR_limit=mysql_fetch_row($l_limitstudentque)[0];
@@ -223,44 +219,6 @@ if(mysql_num_rows($teamsql) >0){
        <?php } } ?>
 </div>
 </div>
-  <div>
-    <label >Invite Friends</label>
-    <input type="text" name="InvtFrnd" style="width: 300px;height: 33px;"id="InvtFrnd" >
-    <input type="submit" name="go"  class="btn btn-primary " id="InvtFrndGo" value="go"> 
-  </div>
 </div>
-<script>
-$(function(){
-    $("#InvtFrndGo").on('click',function(){
-    var dataval=$("#InvtFrnd").val();
-    alert();
-      $.ajax({
-         url: "InviteFrnd.php?fun=checkEmail",
-         type: "POST",
-         data: {email:dataval},
-         dataType: "json",
-         success: function (data) {
-             alert(data.count);},
-            complete:function(){
-             $.ajax({
-                 url: "InviteFrnd.php?fun=sendEmail",
-                 type: "POST",
-                 data: {email:dataval},
-                 dataType: "json",
-                 success: function (data1) {
-                 alert();
-                   
-                 }
-             });
-         },
-       });
-    });
-});
-</script>
-=======
-    ?>
-</div>
-</div>
-</div>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+
 <?php include('footer.php')?>

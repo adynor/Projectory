@@ -16,13 +16,7 @@ include ('header.php');
                     window.location.href="'.$l_filehomepath.'/login"; </script> ';
                     print($l_alert_statement );
             }
-<<<<<<< HEAD
             ?>
-=======
-            
-            ?>
-           
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
             <div class="panel panel-primary" style="max-width: 400px;">
                 <div class="panel-heading">
                     Zaire Statistics
@@ -34,13 +28,9 @@ include ('header.php');
                    
                    $students_query=  mysql_query("SELECT UR_id,UR_FirstName,UR_MiddleName,UR_LastName,UR_RegistrationStatus,UR_Emailid,UR_EmailidDomain,IT_id FROM  Users WHERE UR_Type ='S'");
                    $students=  mysql_num_rows($students_query);
-                   
-<<<<<<< HEAD
-=======
+
                    $performingstudents_query=  mysql_query("SELECT UR_id FROM  Users WHERE PR_id is not NULL and UR_Type ='S'");
                    $performingstudents=  mysql_num_rows($performingstudents_query);
-                   
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                    $guide_query=  mysql_query("SELECT UR_id FROM  Users WHERE `UR_Type` ='G'" );
                    $guides=  mysql_num_rows($guide_query);
                    
@@ -52,13 +42,8 @@ include ('header.php');
                    
                    $project_query=  mysql_query("SELECT `PR_id` FROM `Projects` ");
                    $projects=  mysql_num_rows($project_query);
-<<<<<<< HEAD
-                   $performing_students_query=mysql_query("SELECT UR_id FROM  Users WHERE PR_id IS NOT NULL AND UR_Type ='S'");
-                   $performing_students=mysql_num_rows($performing_students_query);
-=======
                    $Confirmed_students_query=mysql_query("SELECT UR_id FROM  Users WHERE UR_RegistrationStatus='C' AND UR_Type ='S'");
                    $Confirmed_students=mysql_num_rows($Confirmed_students_query);
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                    $performed_students_query=mysql_query("SELECT DISTINCT(`UR_Student`) FROM Student_Results");
                    $performed_students=mysql_num_rows($performed_students_query);
                     ?>
@@ -71,38 +56,27 @@ include ('header.php');
                         </li>
                         <li class="list-group-item list-group-item-info">
                             <h4> 
-<<<<<<< HEAD
-                                 <a href="http://zaireprojects.com/test/TStaticsDetails.php?req=1" >No of Students</a><span class="glyphicon glyphicon-hand-right"></span>
-=======
+
                                  <a href="<?php  echo $l_filehomepath;?>/TStaticsDetails.php?req=1" >No of Students</a><span class="glyphicon glyphicon-hand-right"></span>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                                <span class="label label-success label-pill pull-xs-right" style="float:right"><?php echo $students?></span>
                             </h4>
                         </li>
                         <li class="list-group-item list-group-item-info">
                             <h4> 
-<<<<<<< HEAD
-=======
                                  <a href="<?php  echo $l_filehomepath;?>/TStaticsDetails.php?req=5" >No of Performing Students</a><span class="glyphicon glyphicon-hand-right"></span>
                                <span class="label label-success label-pill pull-xs-right" style="float:right"><?php echo $performingstudents?></span>
                             </h4>
                         </li>
                         <li class="list-group-item list-group-item-info">
                             <h4> 
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                                 No of Projects  <span class="glyphicon glyphicon-hand-right"></span>
                                <span class="label label-success label-pill pull-xs-right" style="float:right"><?php echo $projects;?></span>
                             </h4>
                         </li>
                          <li class="list-group-item list-group-item-info">
                             <h4> 
-<<<<<<< HEAD
-                                <a href="http://zaireprojects.com/test/TStaticsDetails.php?req=2" > Confirmed Students</a><span class="glyphicon glyphicon-hand-right"></span>
-                               <span class="label label-success label-pill pull-xs-right" style="float:right"><?php echo $performing_students;?></span>
-=======
                                 <a href="<?php  echo $l_filehomepath;?>/TStaticsDetails.php?req=2" > Confirmed Students</a><span class="glyphicon glyphicon-hand-right"></span>
                                <span class="label label-success label-pill pull-xs-right" style="float:right"><?php echo $Confirmed_students;?></span>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                             </h4>
                         </li>
                          <li class="list-group-item list-group-item-info">
@@ -113,21 +87,15 @@ include ('header.php');
                         </li>
                          <li class="list-group-item list-group-item-info">
                             <h4> 
-<<<<<<< HEAD
-                               <a href="http://zaireprojects.com/test/TStaticsDetails.php?req=3" >No of Mentors </a><span class="glyphicon glyphicon-hand-right"></span>
-=======
+
                                <a href="<?php  echo $l_filehomepath;?>/TStaticsDetails.php?req=3" >No of Mentors </a><span class="glyphicon glyphicon-hand-right"></span>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+
                                <span class="label label-success label-pill pull-xs-right" style="float:right"><?php echo $mentors;?></span>
                             </h4>
                         </li>
                          <li class="list-group-item list-group-item-info">
                             <h4> 
-<<<<<<< HEAD
-                        <a href="http://zaireprojects.com/test/TStaticsDetails.php?req=4" > No of Guides</a><span class="glyphicon glyphicon-hand-right"></span>
-=======
                         <a href="<?php  echo $l_filehomepath;?>/TStaticsDetails.php?req=4" > No of Guides</a><span class="glyphicon glyphicon-hand-right"></span>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                                <span class="label label-success label-pill pull-xs-right" style="float:right"><?php echo $guides;?></span>
                             </h4>
                         </li>
@@ -145,8 +113,4 @@ include ('header.php');
         
     </div>
 </div>
-<<<<<<< HEAD
 <?php include('footer.php')?>
-=======
-<?php include('footer.php')?>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac

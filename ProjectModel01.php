@@ -30,13 +30,10 @@ display: none;
             width: 100%;
         }
 
-<<<<<<< HEAD
-        .hamariclass thead, .hamariclass tbody, .hamariclass tr,.hamariclass td,.hamariclass th { display: block; }
-=======
+
         .hamariclass thead, .hamariclass tbody, .hamariclass tr,.hamariclass td,.hamariclass th { display: block;
          border: 1px solid rgba(2, 2, 2, 0.05) !important;
          }
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
        .hamariclass tr:after {
             content: ' ';
@@ -65,27 +62,16 @@ display: none;
             width: 20%;
             float: left;
         }
-        0em;
-}
-<<<<<<< HEAD
-
-=======
+  
 thead, tbody, td, th {
     border: 1px solid rgba(2, 2, 2, 0.05) !important;
 }
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
 </style>
 
 <?php
-<<<<<<< HEAD
-=======
-
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 include('header.php');
 include ('db_config.php');
-
-
 print('<div class="row" style="padding:10px"></div><div class="container" >'); 
 
 $l_projects=array();
@@ -99,22 +85,11 @@ $date->setTimezone($timezone );
 $l_currentDate = $date->format( 'Ymd' );
 
     $l_sql=$_REQUEST['g_MO_id'];
-<<<<<<< HEAD
     $l_sql=str_replace("\\","",$l_sql);
     $l_arry = explode("|",$l_sql);
     $l_MO_id= $l_arry[0];
     $l_MO_amount= $l_arry[1];
     $l_PR_id_ended= array();
-=======
-     $l_sql=str_replace("\\","",$l_sql);
-    $l_arry = explode("|",$l_sql);
-    $l_MO_id= $l_arry[0];
-    $l_MO_amount= $l_arry[1];
-     $l_PR_id_ended= array();
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
-    
-
-  
  $l_UR_FName=$_SESSION['UR_FirstName'];
  
                             $l_query_PR_ended='select ST.PR_id from Student_Results as ST where ST.UR_student ="'.$l_UR_id.'" and ST.Org_id="'.$_SESSION['g_Org_id'].'"';
@@ -167,17 +142,9 @@ print('<br><br><h2><b> Welcome to Projectory : '.$l_UR_FName.'</b></h2>');
        }
 $sql_tagetorg= 'select OC.TargetOrg from Organisation_Customers  as OC WHERE OC.Org_id="'.$_SESSION['g_Org_id'].'"';
  $res_target=mysql_query($sql_tagetorg);
-<<<<<<< HEAD
  while($row_taget =  mysql_fetch_row($res_target)){
      $TargetOrg=$row_taget[0];
 $sql= 'select  PR.PR_id, PR.PR_Name, PR.PR_Short_Desc, PR.PR_SynopsisURL,PR.PR_Duration,MO.MO_Name from Projects  as PR,Model as MO';
-=======
-  
- while($row_taget =  mysql_fetch_row($res_target)){
-
-     $TargetOrg=$row_taget[0];
- $sql= 'select  PR.PR_id, PR.PR_Name, PR.PR_Short_Desc, PR.PR_SynopsisURL,PR.PR_Duration,MO.MO_Name from Projects  as PR,Model as MO';
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 if($l_SD_Name!='Dummyname'){
   $sql.=',SubDomain as SD ,Project_SubDomains as PS ';
 }
@@ -225,14 +192,8 @@ $l_count_project=count($l_projects);
  //echo  "<pre>";
 //print_r($l_projects);
 //exit();
-<<<<<<< HEAD
 ?>
- <div class="alert alert-info"><table  class="ady-table-content" style="width:100%" cellpadding=1px  cellspacing=1px >
-=======
-
-?>
- <div class="alert alert-info"><table  class="ady-table-content" style="width:100% " border:0px cellpadding=1px  cellspacing=1px>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+ <div class="alert alert-info"><table  class="ady-table-content" style="width:100%;border:0px"  cellpadding=1px  cellspacing=1px>
 <tr>
     
     <td >
@@ -350,29 +311,14 @@ $l_count_project=count($l_projects);
     </td>
         <td style ="text-align:center" colspan=4>
             <input class="btn btn-primary" type=submit name="SaveRec"   accesskey=Alt-S value="Search Projects" >
-<<<<<<< HEAD
-           
-        </td>
-        </tr>
-       </table>
-       <a  href="advanceprojectsearch.php" >Advance Search</a>
- </div>
- <br> 
-       <div class="table-responsive col-md-12 "><?php echo 'Total Projects : ' . $l_count_project;  ?>
-       
-       
-        <table border=1 class="ady-table-content hamariclass" style="width:100%">
-=======
+
         </td>
         </tr>
        </table>
  </div>
  <br>
        <div class="table-responsive col-md-12 "><?php echo 'Total Projects : ' . $l_count_project;  ?>
-       
-       
         <table border="" class="ady-table-content hamariclass" style="width:100%;    border: none;">
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <?php 
 
 $l_count_project = count($l_projects);

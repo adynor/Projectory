@@ -29,11 +29,8 @@ if(isset($_GET['PR_id']))
     $l_PR_id = $_GET['PR_id'];
 
 // nav adding new table project details from here.....
-<<<<<<< HEAD
 $l_PR_sql = 'select PR_Name,PR_Short_Desc, PR_SynopsisURL from Projects where PR_id='.$l_PR_id.' and Org_id = "'.$_SESSION['g_Org_id'].'"';
-=======
-$l_PR_sql = 'select PR_Name, PR_Short_Desc, PR_SynopsisURL from Projects where PR_id='.$l_PR_id.' and Org_id = "'.$_SESSION['g_Org_id'].'"';
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+
         
         $l_PR_res = mysql_query($l_PR_sql);
        
@@ -83,7 +80,7 @@ print('</table></form>');   // nav  new table ending till here.....
      <div class="panel panel-primary">
         <div class="panel-heading"><h4>Student performing this projects</h4></div>
         <div class="panel-body table-responsive table">
-    <?
+    <?php
          print('<br><br><table class="ady-table-content" border=1 style="width:100%"  id="StudentsList"> ');
        
          print ('<tr style="align:centre; color:#4682b4;" >');

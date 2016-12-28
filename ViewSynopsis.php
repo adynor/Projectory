@@ -17,18 +17,6 @@ $l_PR_id=$_SESSION['g_PR_id'];
 $Query=mysql_query('select PR_Name,PR_Desc,PR_Objective,PR_Background,PR_Functional_Requirement,PR_Non_Functional_Requirement from Projects where PR_id='.$l_PR_id.'');
 
 $l_PR_Result=  mysql_fetch_row($Query);
-<<<<<<< HEAD
-//echo "<pre>";
-//print_r($l_PR_Result);
-//echo "</pre>";
-
-$Query1=mysql_query('select PR_ExtraDoc_Size,PR_ExtraDoc_Name from Project_Synopsis where PR_id='.$l_PR_id.'');
-$l_PR_Result1=  mysql_fetch_row($Query1);
-?>
-<br> <br><br>
-<div class="container">
-    <?php if($_SESSION['g_UR_Type'] == 'M'):?>
-=======
 
 //$Query1=mysql_query('select PR_ExtraDoc_Size,PR_ExtraDoc_Name from Project_Synopsis where PR_id='.$l_PR_id.'');
 //$l_PR_Result1=  mysql_fetch_row($Query1);
@@ -36,7 +24,6 @@ $l_PR_Result1[0]=NULL;
 ?><br> <br><br>
 <div class="container">
     <?php if($_SESSION['g_UR_Type'] == 'M' || $_SESSION['g_UR_Type'] == 'T'):?>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     <div class="col-md-4 col-md-offset-6" ><a class="btn btn-block btn-primary" href="iframetest.php">View PDF </a></div>
     <?php endif;?>
     <div class="col-md-8 col-md-offset-2" style="border: 1px solid grey;
@@ -52,15 +39,9 @@ box-shadow: 0px 0px 23px 3px grey;">
         <h3>Objective:</h3>
         <div><?php  echo htmlspecialchars_decode($l_PR_Result[2]);?></div>
     </div>
-<<<<<<< HEAD
   <?php if(isset($l_PR_Result1[0])){?>
    <div class="row"> 
         <div><a class="btn btn-primary btn-block"> Download <?php echo $l_PR_Result1[1] ?></a></div>
-=======
-    <?php if(isset($l_PR_Result1[0])){?>
-     <div class="row"> 
-        <div><a class="btn btn-primary btn-block"> Download <?php echo $l_PR_Result1[1] ?><a></div>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     </div>
     <?php } ?>
       <div class="row">
@@ -77,9 +58,4 @@ box-shadow: 0px 0px 23px 3px grey;">
     </div>
       </div>
 </div>
-
-<<<<<<< HEAD
 <?php include('footer.php');?>
-=======
-<?php include('footer.php');?>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac

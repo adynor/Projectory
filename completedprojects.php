@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 <style>
     .panel-heading:after {
-=======
 
-<style>
-.panel-heading:after 
-    {
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     content: '\02795';
     font-size: 13px;
     color: #777;
@@ -14,12 +8,9 @@
     margin-left: 5px;
 }
 
-<<<<<<< HEAD
-.panel-heading.active:after {
-=======
+
 .panel-heading.active:after 
 {
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     content: "\2796";
 }
 
@@ -29,13 +20,6 @@ include('header.php');
 include ('db_config.php');
 print('<div class="row" style="padding:10px"></div><div class="container" >'); 
 $current_url= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 $timezone = new DateTimeZone("Asia/Kolkata");
 $date = new DateTime();
 $date->setTimezone($timezone);
@@ -66,23 +50,14 @@ if($l_PR_id=="" ||$l_PR_id==NULL)
   <div id="<?php echo $i; ?>" class="panel-body panel-collapse collapse">
 <table border=1 class="ady-table-content" style="width:100%">
 <tr><th>Project Name:</th><td><?php echo $results[0]; ?></td></tr>    
-<<<<<<< HEAD
 <tr><th>Project Description:</th><td><?php echo htmlspecialchars_decode($results[1]); ?></td></tr>  
-=======
-<tr><th>Project Description:</th><td><?php echo $results[1]; ?></td></tr>  
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 <tr><th>Project Duration:</th><td><?php echo $results[3]; ?> days</td></tr> 
 <tr><th>Project Result Date:</th><td><?php echo date("d-M-Y ", strtotime($results[4])); ?></td></tr>  
 <tr><th>Marks obtained:</th><td><?php echo $results[5]; ?></td></tr>
 <tr><th>Feedback:</th><td><?php echo $results[6]; ?></td></tr>
 </table>
      </div>
-<<<<<<< HEAD
-</div>
-=======
-
   </div>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
  
 <br>
 <script>
@@ -105,13 +80,6 @@ for (i = 0; i < acc.length; i++) {
 else
 {
 // query to find completed projects by the user.
-    
-<<<<<<< HEAD
-    
-    
-=======
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
-
 print('<br><br><br><br><br><div class="panel panel-primary">
   <div class="panel-heading">Performed Project Marks Obtained</div>
   <div class="panel-body table-responsive">');

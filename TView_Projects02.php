@@ -80,22 +80,14 @@ include ('header.php');
         
         if ($l_PR_Name == 'Dummyname' && $l_SD_Name=='Dummyname')/////// filter
         {
-<<<<<<< HEAD
             $l_query='Select distinct PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR.PR_NoOfPastAttempts, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR, Projects as PR where PR.PR_id>30 and PR.PR_Status="C" and PR.UR_Owner = (select UR.UR_id from Users as UR where UR.UR_CompanyName = "'.$l_co_UR_id.'" and outerUR.UR_id = UR.UR_id) order by PR.PR_Name';
-=======
-            $l_query='Select distinct PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR.PR_NoOfPastAttempts, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR, Projects as PR where PR.UR_Owner = (select UR.UR_id from Users as UR where UR.UR_CompanyName = "'.$l_co_UR_id.'" and outerUR.UR_id = UR.UR_id) order by PR.PR_Name';
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
-            
+
         }       // if ($l_PR_Name != null)
         
         else if ($l_PR_Name == 'Dummyname' && $l_SD_Name!='Dummyname')
         {
             $l_query='Select distinct PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR.PR_NoOfPastAttempts, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR,  Projects as PR, SubDomain SD,Project_SubDomains PS
-<<<<<<< HEAD
             where PR.PR_id>30 and PR.PR_Status="C" and PR.PR_id=PS.PR_id
-=======
-            where PR.PR_id=PS.PR_id
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
             and PS.SD_id=SD.SD_id
             and SD.SD_Name like "%'.$l_SD_Name.'%"
             and PR.UR_Owner = (select UR.UR_id from Users as UR where UR.UR_CompanyName = "'.$l_co_UR_id.'" and outerUR.UR_id = UR.UR_id) order by PR.PR_Name';
@@ -106,11 +98,7 @@ include ('header.php');
         
         else if ($l_PR_Name != 'Dummyname' and $l_SD_Name=='Dummyname')///////// n o filters
         {
-<<<<<<< HEAD
             $l_query='Select PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR_SynopsisURL, PR_NoOfPastAttempts, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR,  Projects as PR where PR.PR_id>30 and PR.PR_Status="C" and PR.PR_Name like "%'.$l_PR_Name.'%" and PR.UR_Owner = (select UR.UR_id from Users as UR where UR.UR_CompanyName = "'.$l_co_UR_id.'" and outerUR.UR_id = UR.UR_id) order by PR.PR_Name';
-=======
-            $l_query='Select PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR_SynopsisURL, PR_NoOfPastAttempts, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR,  Projects as PR where PR.PR_Name like "%'.$l_PR_Name.'%" and PR.UR_Owner = (select UR.UR_id from Users as UR where UR.UR_CompanyName = "'.$l_co_UR_id.'" and outerUR.UR_id = UR.UR_id) order by PR.PR_Name';
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
             
             // get the current applications and past applications
             // current applications will be known from
@@ -119,11 +107,7 @@ include ('header.php');
         else if ($l_PR_Name != 'Dummyname' && $l_SD_Name!='Dummyname')
         {
             $l_query='Select distinct PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR.PR_NoOfPastAttempts, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR, Projects as PR,Project_SubDomains PS,SubDomain SD
-<<<<<<< HEAD
             where PR.PR_id>30 and PR.PR_Status="C" and PR.PR_id=PS.PR_id
-=======
-            where PR.PR_id=PS.PR_id
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
             and PS.SD_id=SD.SD_id
             and PR.PR_Name like "%'.$l_PR_Name.'%"
             and SD.SD_Name like "%'.$l_SD_Name.'%"

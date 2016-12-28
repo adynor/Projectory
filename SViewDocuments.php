@@ -15,8 +15,6 @@
     $l_TM_id =$_SESSION['g_TM_id'];
     
    print('<div style="clear:left">');
-<<<<<<< HEAD
-   
    if($_REQUEST['flag'] && $_REQUEST['pd_id']){
        
       $PD_Status=$_REQUEST['flag'];
@@ -25,9 +23,6 @@
     $updatenotification='update PRdoc_Seen set PD_Seen="S" where PD_id='.$PD_id.' and UR_Id="'.$l_UR_id.'" and PD_TM_id='. $l_TM_id.'';
        mysql_query($updatenotification);
    }
-   
-=======
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
     
 if(is_null($l_UR_id) || $l_UR_Type!='S')
     {

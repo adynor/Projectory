@@ -59,8 +59,6 @@ display: none;
             width: 50%;
             float: left;
         }
-        0em;
-}
 
 
 </style>

@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 <?php
 include('header.php');
 include ('db_config.php');
 print('<div class="row" style="padding:10px"></div><div class="container" >'); 
-=======
 
-<?php
-include('header.php');
-include ('db_config.php');
-
-
- print('<div class="row" style="padding:10px"></div><div class="container" >'); 
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 $current_url= "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
 
 $timezone = new DateTimeZone("Asia/Kolkata");
 $date = new DateTime();
@@ -218,64 +208,36 @@ print('</table><br>');
 
 ?>
 <!--<tr><td>Do you wish to perform this project? </td>-->
-<<<<<<< HEAD
 <div class="modal fade" id="myModal3" role="dialog">
     <div class="modal-dialog modal-sm">
-=======
-<div class="modal fade " id="myModal3"  role="dialog">
-    <div class="modal-dialog ">
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
-    
       <!-- Modal content-->
       <div class="modal-content">
         <!-- <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">×</button>
           
         </div>-->
-<<<<<<< HEAD
-=======
-        
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
         <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal">×</button>
           <p><input type="hidden" name="l_ur_pr_type"></p>
             
-<<<<<<< HEAD
-            <p> Existing balance will be deducted for this action (non reversible) </p>
-            
-=======
+
             <p> <b>Existing balance will be deducted for this action (non reversible) </b></p>
             <hr><br>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
                         <div class="">
             <div id="payerror"> </div>
             <p>Project Name:- <?php echo $l_PR_Name; ?></p>
 
                 <p>Payment amount: <strong><i style="font-size:12px" class="fa fa-inr"></i> <?php echo $_SESSION['payment']; ?></strong></p>
-<<<<<<< HEAD
                 <p>Available credits: <strong><i style="font-size:12px" class="fa fa-inr"></i> <?php echo $_SESSION['g_Credits']; ?></strong></p>
                 <p>select payment mode:</p>
                 <a type="button" class="btn btn-primary btn-color btn-bg-color btn-sm" id="payby" > Pay By Wallet</a>
                 <a type="button" class="btn btn-primary btn-color btn-bg-color btn-sm " href="payment_gateway/testpayment.php">Pay By Card</a>
-=======
-                <p>Available Credits: <strong><i style="font-size:12px" class="fa fa-inr"></i> <?php echo $_SESSION['g_Credits']; ?></strong></p>
-               <b> <p>Select Payment Mode:</p></b>
-                
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
-                
-          
-        </div>
-            
-             
+        </div>  
         </div>
          <div class="modal-footer">
          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
         <!-- <input class="btn btn-primary" type=submit value="yes" name="yes">-->
-<<<<<<< HEAD
-=======
-        <a type="button" class="btn btn-primary btn-color btn-bg-color btn-sm" id="payby" > Pay By Wallet</a>
-                <a type="button" class="btn btn-primary btn-color btn-bg-color btn-sm " href="payment_gateway/testpayment.php">Pay By Card</a>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+
         </div>
       </div>
       
@@ -346,9 +308,4 @@ $(function(){
 		
 	});
 });
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 </script>

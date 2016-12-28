@@ -1,10 +1,7 @@
-<<<<<<< HEAD
+
 <?php   ob_start();
 //require_once('tcpdf/tcpdf.php');
-=======
-<?php   
 
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 include ('db_config.php');
 include ('header.php');
 
@@ -53,20 +50,7 @@ if(isset($_POST['submit']) )
 
         }
     }
-    }
-<<<<<<< HEAD
-    
- $l_select_sql = 'Select UR.UR_id, UR.UR_FirstName, UR.UR_MiddleName, UR.UR_LastName, UR.UR_Emailid, UR.UR_EmailidDomain,PG.PG_Name,IT.IT_Name from Users as UR, Institutes as IT, Programs as PG where UR.UR_Type = "S" and UR.UR_RegistrationStatus = "P" and UR.PG_id = PG.PG_id and UR.IT_id = IT.IT_id and UR.IT_id = IT.IT_id and UR.PG_id<>"" and UR.IT_id<>""' ;
-
-$l_result = mysql_query($l_select_sql);
-$l_UR_count = mysql_num_rows($l_result);
-  
-
-        
-print('<body>');
-=======
-
-        
+    }      
 print('<body>');
 
 // Update the existing the query to UR.IN_id = Admins id and UR.Sem_id = Admins sem id
@@ -74,8 +58,6 @@ $l_select_sql = 'Select UR.UR_id, UR.UR_FirstName, UR.UR_MiddleName, UR.UR_LastN
 
 $l_result = mysql_query($l_select_sql);
 $l_UR_count = mysql_num_rows($l_result);
-        
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 
 print('<form action="" method="POST">');
 print ('<table class="ady-table-content" border=1 style="width:100%">');
@@ -112,44 +94,23 @@ print('<td>');
             print('<center><input type="checkbox" class="g_checkbox_select_AL" value="'.$l_row[0].'" name="l_UR_id_sel[]"></center></td>');
 
 print('</tr>');            
-<<<<<<< HEAD
-        
-=======
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
          }
         
         print('<tr>'); 
         print('<td colspan="5" style="text-align:center;"><input class=" btn-primary ady-req-btn" type="submit" name="submit" value="Submit" ></td>');
-<<<<<<< HEAD
-       
-        print( '</tr>');
-        
-        
+       print( '</tr>');
         }
 
-print('</form>');
+
  print('<tr>'); 
 print('<td><form id="idForm" action="exportexcel.php" method="POST"><input class=" btn-success ady-req-btn" type="submit" name="getexcel" value="Export to Excel" ></form></td>');
 print('<td><form id="iForm" action="getpdf.php" method="POST"><input class=" btn-success ady-req-btn" type="submit" name="getpdf" value="Export to Pdf" ></form></td>');
  print('</tr>'); 
 print('</table>');   
-
-=======
-        print( '</tr>');
-        }
-
-print('</table>');   
-
 print('</form>');
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 print('</body>');
 
 mysql_free_result($l_result);
 ?>
 </div></div></div>
-<<<<<<< HEAD
-
 <?php include('footer.php')?>
-=======
-<?php include('footer.php')?>
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac

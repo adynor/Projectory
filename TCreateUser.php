@@ -1,10 +1,6 @@
 <?php include('header.php');
 if(!isset($_SESSION['g_UR_id'])) {
-<<<<<<< HEAD
-echo "<script>window.location.href='https://www.zaireprojects.com/test'</script>";
-=======
 echo "<script>window.location.href='https://www.zaireprojects.com'</script>";
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
 exit();
 }?>
 <?php  include ('db_config.php');
