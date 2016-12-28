@@ -185,15 +185,11 @@ else {
         print('<input type=hidden name=l_random_str  value="' . $l_random_str . '">  ');
         
        // $l_message = "Thank you for registering with us. <br>Your Verification Code is:".$l_random_str." <br><br>Sincerely, <br>Zaireprojects Support Team";
-<<<<<<< HEAD
-    $l_message ='Hi '.$l_UR_FirstName.',<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/test/verify.php?uverify='.$l_random_str.'&&uid='.$l_UR_id.'&&utype='.$l_UR_Type.'">http://zaireprojects.com/test/verify.php</a><br><br>Sincerely, <br> Support Team';
-=======
+
     $l_message ='Hi '.$l_UR_FirstName.',<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify='.$l_random_str.'&&uid='.$l_UR_id.'&&utype='.$l_UR_Type.'">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team';
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
-       
-       $l_subject = "Confirm Registration";
-       $l_headers2 = "From: $l_webMaster\r\n";
-        $l_headers2 .= "Content-type:  text/html\r\n";
+    $l_subject = "Confirm Registration";
+    $l_headers2 = "From: $l_webMaster\r\n";
+    $l_headers2 .= "Content-type:  text/html\r\n";
        
 
   $l_query = "insert into Users (UR_id, UR_Khufiya, UR_Emailid, UR_EmailidDomain, UR_Type, UR_USN, UR_Salutation,UR_FirstName, UR_MiddleName,UR_LastName,UR_CompanyName,UR_ProfileInfo,UR_InsertDate,UR_RegistrationStatus,UR_VerifyCode,UR_Semester,IT_id,PG_id,Org_id) values

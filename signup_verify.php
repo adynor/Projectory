@@ -42,7 +42,7 @@ if(empty($l_UR_Type)||empty($l_UR_id))
         print('<input type=hidden name=l_random_str  value="' . $l_random_str . '">  ');
         
        // $l_message = "Thank you for registering with us. <br>Your verification Code is:".$l_random_str." 
-<br><br>Sincerely,<br >Zaireprojects Support Team";
+//<br><br>Sincerely,<br >Zaireprojects Support Team";
         
         $l_message ='<a href="www.adynor.com/test/experiment/verify.php?uverify='.$l_random_str.'">www.adynor.com/test/experiment/verify.php</a>';
 

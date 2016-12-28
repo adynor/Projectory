@@ -128,15 +128,10 @@ background: #dae5f4;
 
 .ady-table-content,.ady-table-content th,.ady-table-content td 
 {
- 
-     font-size: auto;
+    font-size: auto;
     font-family: Arial, Helvetica, sans-serif;
     padding:7px;
-<<<<<<< HEAD
-        border-color: rgba(34, 36, 39, 0.05);
-=======
-
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+    border-color: rgba(34, 36, 39, 0.05);
 
 }
 
