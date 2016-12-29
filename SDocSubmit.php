@@ -134,9 +134,6 @@ span{
 
 <div class="row" style="padding:20px 0px">
 <div class="col-md-1"></div>
-<div class="col-md-12">
-<div class="bar"></div>
-<div class="timeline">
  <?php  
     $backgroundDone= 'background: #14a76c';
     $backgroundProgress= 'background: rgba(255, 99, 71, 0.85)';
@@ -150,9 +147,18 @@ span{
     $date = new DateTime();
     $date->setTimezone($timezone );
     $l_PD_SubmissionDate = $date->format( 'Ymd' );
-
+   $l_TM_StartDate_query ='select TM_StartDate from Teams where TM_id = "'.$l_TM_id.'"';   // query for TM_startDate
+    $l_TM_result = mysql_query($l_TM_StartDate_query);
+    $l_TM_row = mysql_fetch_row($l_TM_result);
+     $l_TM_StartDate = $l_TM_row[0];
+     if(strtotime($l_TM_StartDate) < strtotime($l_PD_SubmissionDate)){
+     echo "<h3 style='color:red;margin:0 auto;text-align:center'>Sorry !! Your Project Duration is Over</h3>";
+     }
+     else {
     ?>
-  
+  <div class="col-md-12">
+<div class="bar"></div>
+<div class="timeline">
     <?php 
      
        $l_PS_Seq_sql  ='select max(PS.PS_Seq_No) from  ProjectDocument_Sequence as PS where  PS.PR_id='.$l_PR_id.'';
@@ -647,4 +653,4 @@ span{
 </div>
 </div>
 </div>
-<?php include('footer.php')?>
+     <?php }include('footer.php')?>
