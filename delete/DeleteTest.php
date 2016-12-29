@@ -7,9 +7,9 @@
 
 // Create connection
 
-$conn=  mysql_connect('localhost','zairepro_test','test@123');
-$db=mysql_select_db("zairepro_projectory_test",$conn);
-
+//$conn=  mysql_connect('localhost','zairepro_test','test@123');
+//$db=mysql_select_db("zairepro_projectory_test",$conn);
+include '../db_config.php';
 $student_ids= array('tests9','tests10');
 print_r($student_ids);
 
