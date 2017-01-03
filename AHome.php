@@ -47,7 +47,7 @@ include ('header.php');
     //options to navigate to other pages
     
     //print('<tr><td><a href="'./Aview_SPayments02.'">Check Payments for Webinar </a></td></tr>');
-    print('<tr><td><a class="btn btn-primary ady-btn"  href="AView_NewStudent.php">Check New students</a></td></tr>');
+    print('<tr><td><a class="btn btn-primary ady-btn"  href="AView_NewStudent.php">Check New Students</a></td></tr>');
     print('<tr><td><a class="btn btn-primary ady-btn"  href="AView_NewGuide.php">Check New Guides</a></td></tr>');
     print('<tr><td><a class="btn btn-primary ady-btn"  href="AStudent_Result.php">Student Results</a></td></tr>');
     
