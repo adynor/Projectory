@@ -12,7 +12,10 @@ box-shadow: 7px 10px 14px 1px rgba(148,204,242,1);
 <?php
 @session_start();
 
- include('Crypto.php')?>
+ include('Crypto.php');
+ include('LinkHeader.php');
+ ?>
+
 
 <?php
        
@@ -107,18 +110,18 @@ mysql_query($l_Tque);
 	else if($order_status==="Aborted")
 	{
 		echo "<br ><span style='color:orange;font-size:18px;'>Thank you  us.We will keep you posted regarding the status of your order through e-mail</span>";
-	$url= 'https://www.zaireprojects.com/test/PaymentMentorhr.php';
+	$url= $l_filehomepath.'/PaymentMentorhr.php';
 	}
 	else if($order_status==="Failure")
 	{
 		echo "<br><span style='color:red;font-size:18px;'>Thank you .However,the transaction has been declined.</span>";
-	$url= 'https://www.zaireprojects.com/test/PaymentMentorhr.php';
+	$url= $l_filehomepath.'/PaymentMentorhr.php';
 	}
 	else
 	{
 		echo "<br><span style='color:red;font-size:18px;'>Security Error. Illegal access detected</span>";
 	
-	$url= 'https://www.zaireprojects.com/test/PaymentMentorhr.php';
+	$url= $l_filehomepath.'/PaymentMentorhr.php';
 	}
 
 
@@ -140,5 +143,5 @@ mysql_query($l_Tque);
     width: 100%;
     height: 50%;
     padding: 9px;
-    border-radius: 12px; text-decoration:none;" href="https://www.zaireprojects.com/test/SHome.php">Back To Home </a>
+    border-radius: 12px; text-decoration:none;" href="<?php echo $l_filehomepath; ?>/SHome.php">Back To Home </a>
         </center>

@@ -1,5 +1,7 @@
 <?php
-$local_files = explode('https://www.zaireprojects.com/',$_GET['file']);
+
+include('LinkHeader.php');
+$local_files = explode($l_filehomepath.'/',$_GET['file']);
 $arr_files=explode('/',$local_files[1]);
 $count=count($arr_files)-1;
  $local_file =ltrim($local_files[1]);

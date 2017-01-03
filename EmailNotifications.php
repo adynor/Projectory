@@ -7,8 +7,9 @@
     // Calls: multiple pages
     //////////////////////////////////////////////
     
-   include ('db_config.php');
-    //include ('header.php');
+   include ('db_config.php');    
+   include ('LinkHeader.php');
+    
     
     //get request from the previous page
     $l_Details=$_REQUEST['g_query'];
@@ -65,7 +66,7 @@
         
         $subject= 'Team Document Submit';
         
-        $l_message       = 'Hi, <br><br>'.$l_TM_Name.' has submitted a/an '.$l_AccessType.'. Please give your feedback by logging into your account and view them in http://www.zaireprojects.com/GMview_Team_ProjFiles01 <br><br>  Regards, <br>Zaireprojects Team';
+        $l_message       = 'Hi, <br><br>'.$l_TM_Name.' has submitted a/an '.$l_AccessType.'. Please give your feedback by logging into your account and view them in '.$l_filehomepath.'/GMview_Team_ProjFiles01 <br><br>  Regards, <br>Zaireprojects Team';
         $l_headers2 = "From: $l_webMaster\r\n";
         $l_headers2 .= "Content-type:  text/html\r\n";
         
@@ -81,7 +82,7 @@
         
         $subject= 'Team Document Submit';
         
-        $l_message       = 'Hi, <br><br>'.$l_TM_Name.' has submitted a/an '.$l_AccessType.'. Please give your feedback by logging into your account and view them in http://www.zaireprojects.com/GMview_Team_ProjFiles01 <br><br>  Regards, <br>Zaireprojects Team';
+        $l_message       = 'Hi, <br><br>'.$l_TM_Name.' has submitted a/an '.$l_AccessType.'. Please give your feedback by logging into your account and view them in '.$l_filehomepath.'/GMview_Team_ProjFiles01 <br><br>  Regards, <br>Zaireprojects Team';
         $l_headers2 = "From: $l_webMaster\r\n";
         $l_headers2 .= "Content-type:  text/html\r\n";
         
@@ -151,7 +152,7 @@ echo "<script>window.location.href='SHome.php'</script>";
         $l_webMaster = 'support@zaireprojects.com';
         $l_MentorMail = $l_mentor_row[0] . '@' . $l_mentor_row[1];
         $subject= 'Team Document Submit';
-        $l_message     = 'Hi, <br><br>'.$l_TM_Name.' has got a feedback from their Guide. You can view them at http://www.zaireprojects.com/GMview_Team_ProjFiles01 and give your feedback.<br><br>  Regards, <br>Zaireprojects Team';
+        $l_message     = 'Hi, <br><br>'.$l_TM_Name.' has got a feedback from their Guide. You can view them at '.$l_filehomepath.'/GMview_Team_ProjFiles01 and give your feedback.<br><br>  Regards, <br>Zaireprojects Team';
         $l_headers2 = "From: $l_webMaster\r\n";
         $l_headers2 .= "Content-type:  text/html\r\n";
         
@@ -213,7 +214,7 @@ echo "<script>window.location.href='GHome.php'</script>";
         $l_webMaster = 'support@zaireprojects.com';
         $l_GuideMail = $l_guide_row[0] . '@' . $l_guide_row[1];
         $subject= 'Team Document Submit';
-        $l_message     = 'Hi, <br><br>'.$l_TM_Name.' has got a feedback from their Mentor. You can view them at http://www.zaireprojects.com/GMview_Team_ProjFiles01 and give your feedback.<br><br>  Regards, <br>Zaireprojects Team';
+        $l_message     = 'Hi, <br><br>'.$l_TM_Name.' has got a feedback from their Mentor. You can view them at '.$l_filehomepath.'/GMview_Team_ProjFiles01 and give your feedback.<br><br>  Regards, <br>Zaireprojects Team';
         $l_headers2 = "From: $l_webMaster\r\n";
         $l_headers2 .= "Content-type:  text/html\r\n";
         

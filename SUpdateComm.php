@@ -124,7 +124,7 @@
             $l_UR_ReceiverName = $l_row_ReceiverName[0].' '.$l_row_ReceiverName[1];
             
             $l_webMaster = 'support@zaireprojects.com';
-            $l_message = $l_UR_ReceiverName." has accepted your teammate request. Please login and view them in http://www.zaireprojects.com/SHome. <br><br>Sincerely, <br>Zaireprojects Support Team";
+            $l_message = $l_UR_ReceiverName." has accepted your teammate request. Please login and view them in '.$l_filehomepath.'/SHome. <br><br>Sincerely, <br>Zaireprojects Support Team";
             $l_subject = "Team Request Accepted";
             $l_headers2 = "From: $l_webMaster\r\n";
             $l_headers2 .= "Content-type:  text/html\r\n";
@@ -187,7 +187,7 @@
         $l_UR_ReceiverName = $l_row_ReceiverName[0].' '.$l_row_ReceiverName[1];
         
         $l_webMaster = 'support@zaireprojects.com';
-        $l_message = $l_UR_ReceiverName." has rejected your teammate request. Please login and view them in http://www.zaireprojects.com/SHome. <br><br>Sincerely, <br>Zaireprojects Support Team";
+        $l_message = $l_UR_ReceiverName." has rejected your teammate request. Please login and view them in '.$l_filehomepath.'/SHome. <br><br>Sincerely, <br>Zaireprojects Support Team";
         $l_subject = "Team Request Rejected";
         $l_headers2 = "From: $l_webMaster\r\n";
         $l_headers2 .= "Content-type:  text/html\r\n";
@@ -245,7 +245,7 @@
         $l_UR_senderName = $l_row_ReceiverName[0].' '.$l_row_ReceiverName[1];
         
         $l_webMaster = 'support@zaireprojects.com';
-        $l_message = $l_UR_senderName." has canceled your teammate request. Please login and view them in http://www.zaireprojects.com/SHome. <br><br>Sincerely, <br>Zaireprojects Support Team";
+        $l_message = $l_UR_senderName." has canceled your teammate request. Please login and view them in '.$l_filehomepath.'/SHome. <br><br>Sincerely, <br>Zaireprojects Support Team";
         $l_subject = "Team Request Canceled";
         $l_headers2 = "From: $l_webMaster\r\n";
         $l_headers2 .= "Content-type:  text/html\r\n";

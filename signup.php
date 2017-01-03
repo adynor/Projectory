@@ -186,7 +186,7 @@ else {
         
        // $l_message = "Thank you for registering with us. <br>Your Verification Code is:".$l_random_str." <br><br>Sincerely, <br>Zaireprojects Support Team";
 
-    $l_message ='Hi '.$l_UR_FirstName.',<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="http://zaireprojects.com/verify.php?uverify='.$l_random_str.'&&uid='.$l_UR_id.'&&utype='.$l_UR_Type.'">http://zaireprojects.com/verify.php</a><br><br>Sincerely, <br> Support Team';
+    $l_message ='Hi '.$l_UR_FirstName.',<br>Thank you for registering with us. Please click on the link below to complete email verification<br> <a href="'.$l_filehomepath.'/verify.php?uverify='.$l_random_str.'&&uid='.$l_UR_id.'&&utype='.$l_UR_Type.'">'.$l_filehomepath.'/verify.php</a><br><br>Sincerely, <br> Support Team';
     $l_subject = "Confirm Registration";
     $l_headers2 = "From: $l_webMaster\r\n";
     $l_headers2 .= "Content-type:  text/html\r\n";
@@ -418,7 +418,8 @@ if($l_URPR_Type=='S'){
         <div class="col-md-3 ">  </div>
     </div>
     <div id="loading">
-  <img id="loading-image" src="<?php echo $l_filehomepath;?>/assets/ajax-loader.gif" alt="Loading..." />
+
+  <img id="loading-image" src="<?php echo $l_filehomepath; ?>/assets/ajax-loader.gif" alt="Loading..." />
 </div>
 </div>
 <?php include('footer.php'); ?>
@@ -429,11 +430,10 @@ $('#loading').show();
     var str = $('#user_type').val();
     
     if(str == ""){
-
-     window.location="<?php echo $l_filehomepath;?>/signup.php";
+     window.location="<?php echo $l_filehomepath; ?>/signup.php";
     } 
     else{
-   if( window.location="<?php echo $l_filehomepath;?>/signup.php?q="+str){
+   if( window.location="<?php echo $l_filehomepath; ?>/signup.php?q="+str){
    $('#loading').show();
     window.setTimeout(function() {
      $('#loading').hide();

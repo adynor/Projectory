@@ -10,7 +10,9 @@ box-shadow: 7px 10px 14px 1px rgba(148,204,242,1);
 <?php
 @session_start();
 
- include('Crypto.php')?>
+ include('Crypto.php');
+include('LinkHeader.php');
+?>
 
 <?php
     error_reporting(0);
@@ -114,10 +116,10 @@ mysql_query($l_query_insert_PR_Pay);
 	//print_r($_SESSION);
 
       if($adminFlag=="yes"){
-	$url= 'https://www.zaireprojects.com/PaidCreateUser.php';
+	$url= $l_filehomepath.'/PaidCreateUser.php';
 	}
 	else{
- $url= 'https://www.zaireprojects.com/SHome.php';
+ $url= $l_filehomepath.'/SHome.php';
 	}
      
       
@@ -125,18 +127,18 @@ mysql_query($l_query_insert_PR_Pay);
 	else if($order_status==="Aborted")
 	{
 		echo "<br ><span style='color:orange;font-size:18px;'>Thank you for shopping with us.We will keep you posted regarding the status of your order through e-mail</span>";
-	$url= 'https://www.zaireprojects.com/Projects.php';
+	$url= $l_filehomepath.'/Projects.php';
 	}
 	else if($order_status==="Failure")
 	{
 		echo "<br><span style='color:red;font-size:18px;'>Thank you for shopping with us.However,the transaction has been declined.</span>";
-	$url= 'https://www.zaireprojects.com/Projects.php';
+	$url= $l_filehomepath.'/Projects.php';
 	}
 	else
 	{
 		echo "<br><span style='color:red;font-size:18px;'>Security Error. Illegal access detected</span>";
 
-	$url= 'https://www.zaireprojects.com/Projects.php';
+	$url= $l_filehomepath.'/Projects.php';
 	}
 
 

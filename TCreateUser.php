@@ -1,6 +1,6 @@
 <?php include('header.php');
 if(!isset($_SESSION['g_UR_id'])) {
-echo "<script>window.location.href='https://www.zaireprojects.com'</script>";
+echo "<script>window.location.href='".$l_filehomepath."'</script>";
 exit();
 }?>
 <?php  include ('db_config.php');
@@ -462,7 +462,7 @@ if($l_URPR_Type=='S'){
         </div>
       
     <div id="loading">
-  <img id="loading-image" src="https://www.zaireprojects.com/test/assets/ajax-loader.gif" alt="Loading..." />
+  <img id="loading-image" src="<?php echo $l_filehomepath; ?>/test/assets/ajax-loader.gif" alt="Loading..." />
 </div>
 </div>
 <?php include('footer.php'); ?>
@@ -473,20 +473,15 @@ $('#loading').show();
     var str = $('#user_type').val();
     
     if(str == ""){
-<<<<<<< HEAD
-     window.location="https://www.zaireprojects.com/test/TCreateUser.php";
-=======
-     window.location="https://www.zaireprojects.com/TCreateUser.php";
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
-        
+
+     window.location="<?php echo $l_filehomepath; ?>/TCreateUser.php";
+
     } 
     else{
     
-<<<<<<< HEAD
-   if( window.location="https://www.zaireprojects.com/test/TCreateUser.php?q="+str){
-=======
-   if( window.location="https://www.zaireprojects.com/TCreateUser.php?q="+str){
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+
+   if( window.location="<?php echo $l_filehomepath; ?>/TCreateUser.php?q="+str){
+
    $('#loading').show();
     window.setTimeout(function() {
      $('#loading').hide();

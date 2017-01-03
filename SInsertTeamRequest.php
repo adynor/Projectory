@@ -1,6 +1,6 @@
 <?php
    include ('db_config.php');
-    
+    include('LinkHeader.php');
   // get date and time
     $timezone = new DateTimeZone("Asia/Kolkata" );
     $date = new DateTime();
@@ -80,7 +80,7 @@
             
             //send intimation email to reciever on recieving teammate request
             $l_webMaster = 'support@zaireprojects.com';
-            $l_message = $l_UR_SenderName." has sent you teammate Request. Please login and view them in http://www.zaireprojects.com/SHome. <br><br>Sincerely, <br>Zaireprojects Support Team";
+            $l_message = $l_UR_SenderName." has sent you teammate Request. Please login and view them in '.$l_filehomepath.'/SHome. <br><br>Sincerely, <br>Zaireprojects Support Team";
             $l_subject = "Pending Request";
             $l_headers2 = "From: $l_webMaster\r\n";
             $l_headers2 .= "Content-type:  text/html\r\n";
