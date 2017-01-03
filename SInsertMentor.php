@@ -9,7 +9,7 @@
 ////////////////////////////////////////
 
 include ('db_config.php');
-session_start();
+include('LinkHeader.php');
 $l_sql=$_REQUEST['g_query'];
 $l_arry = explode('|',$l_sql); 
 // split data coming from query string
@@ -62,7 +62,7 @@ $l_UR_TeamName = $l_row_TeamName[0];
 
   // send email to Mentor on recieving Mentor request from teams
 $l_webMaster = 'support@zaireprojects.com';
-$l_message = $l_UR_TeamName." has sent you a Mentor Request. Please login and view them in http://www.zaireprojects.com/GHome. <br><br>Sincerely, <br>Zaireprojects Support Team";
+$l_message = $l_UR_TeamName." has sent you a Mentor Request. Please login and view them in '.$l_filehomepath.'/GHome. <br><br>Sincerely, <br>Zaireprojects Support Team";
         $l_subject = "Pending Request";
         $l_headers2 = "From: $l_webMaster\r\n";
         $l_headers2 .= "Content-type:  text/html\r\n";

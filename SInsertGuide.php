@@ -9,7 +9,7 @@
 ////////////////////////////////////////
 session_start();
  include ('db_config.php');
-    
+    include ('LinkHeader.php');
     $l_sql=$_REQUEST['g_query'];
     $l_arry = explode('|',$l_sql);  // split data coming from query string
     
@@ -59,7 +59,7 @@ session_start();
     
     // send email to Guide on recieving guide request from teams
     $l_webMaster = 'support@zaireprojects.com';
-    $l_message = $l_UR_TeamName." has sent you a Guide Request. Please login and view them in http://www.zaireprojects.com/GHome. <br><br>Sincerely, <br>Zaireprojects Support Team";
+    $l_message = $l_UR_TeamName." has sent you a Guide Request. Please login and view them in '.$l_filehomepath.'/GHome. <br><br>Sincerely, <br>Zaireprojects Support Team";
     $l_subject = "Pending Request";
     $l_headers2 = "From: $l_webMaster\r\n";
     $l_headers2 .= "Content-type:  text/html\r\n";

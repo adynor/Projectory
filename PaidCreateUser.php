@@ -497,7 +497,7 @@ if($l_URPR_Type=='S'){
         </div>
       
     <div id="loading">
-  <img id="loading-image" src="https://www.zaireprojects.com/test/assets/ajax-loader.gif" alt="Loading..." />
+  <img id="loading-image" src="<?php echo $l_filehomepath; ?>/assets/ajax-loader.gif" alt="Loading..." />
 </div>
 </div>
 <?php include('footer.php'); ?>
@@ -508,20 +508,13 @@ $('#loading').show();
     var str = $('#user_type').val();
     
     if(str == ""){
-<<<<<<< HEAD
-     window.location="https://www.zaireprojects.com/test/PaidCreateUser.php";
-=======
-     window.location="https://www.zaireprojects.com/PaidCreateUser.php";
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
-        
+
+     window.location="<?php echo $l_filehomepath; ?>/PaidCreateUser.php";
+       
     } 
     else{
-    
-<<<<<<< HEAD
-   if( window.location="https://www.zaireprojects.com/test/PaidCreateUser.php?q="+str){
-=======
-   if( window.location="https://www.zaireprojects.com/PaidCreateUser.php?q="+str){
->>>>>>> 40f4b6de6733a4252df2a8fc67e6dfbdbf3e99ac
+      if( window.location="<?php echo $l_filehomepath; ?>/PaidCreateUser.php?q="+str){
+
    $('#loading').show();
     window.setTimeout(function() {
      $('#loading').hide();
