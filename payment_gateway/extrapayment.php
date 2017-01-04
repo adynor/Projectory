@@ -1,5 +1,5 @@
 <?php
-session_start();
+include 'LinkHeader.php';
 //print_r($_SESSION);
 
 $l_Amount= $_SESSION['payment'];

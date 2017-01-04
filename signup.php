@@ -198,7 +198,7 @@ else {
                     $success=mysql_query($l_query);
 if($success){ 
 $to=array($l_UR_Emailid.'@'.$l_UR_EmailidDomain);
-sendmail($to,$subject,$l_message);
+sendmail($to,$l_subject,$l_message);
 //mail( $l_UR_Emailid.'@'.$l_UR_EmailidDomain, $l_subject, $l_message, $l_headers2);
 print('<div class="alert alert-success"><h5>Please check your mail and click on the verification link sent to you. The mail might take a few minutes to reach you. If you do not receive any mail please check your spam folder.</h5></div>');
 }
