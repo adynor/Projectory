@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 include('../LinkHeader.php');
+=======
+include 'LinkHeader.php';
+>>>>>>> f046139bbea0502705a14812fef46c10d50f4a6c
 //print_r($_SESSION);
 
 $l_Amount= $_SESSION['payment'];
