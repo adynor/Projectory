@@ -1,5 +1,5 @@
 <?php
-include 'LinkHeader.php';
+include('../LinkHeader.php');
 //print_r($_SESSION);
 
 $l_Amount= $_SESSION['payment'];
@@ -72,8 +72,8 @@ $count_order_id=mysql_num_rows($query_order_id);
    <tr><td>Order ID:</td><td><input type="text" name="order_id" value="<?php echo $zporderid; ?>" /></td></tr>
    <tr><td>Amount	:</td><td><input type="text" name="amount" value="<?php echo $l_Amount; ?>"/></td></tr>
    <tr><td>currency	:</td><td><input type="hidden" name="currency" value="INR"/></td></tr>
-   <tr><td>Redirect Url	:</td><td><input type="hidden" name="redirect_url" value="https://zaireprojects.com/test/payment_gateway/extrapaymentresponse.php" /></td></tr>       
-   <tr><td>Cancel Url	:</td><td><input type="hidden" name="cancel_url" value="https://zaireprojects.com/test/PaymentMentorhr.php" /></td></tr>
+   <tr><td>Redirect Url	:</td><td><input type="hidden" name="redirect_url" value="<?php echo $l_filehomepath ;?>/payment_gateway/extrapaymentresponse.php" /></td></tr>       
+   <tr><td>Cancel Url	:</td><td><input type="hidden" name="cancel_url" value="<?php echo $l_filehomepath ;?>/PaymentMentorhr.php" /></td></tr>
     <tr><td>language:</td><td><input type="hidden" name="language" value="EN" /><td></tr>
     <tr><td colspan="2">Billing information(optional):</td></tr>
     <tr><td>Billing Name	:</td><td><input type="text" name="billing_name" value="<?php echo $UR_FirstName.' '.$UR_MiddleName.' '.$UR_LastName ;?>"/></td></tr>

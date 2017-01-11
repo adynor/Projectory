@@ -9,10 +9,11 @@ function url(){
     }
     return $protocol . "://" . $_SERVER['HTTP_HOST'];
 }
-$l_filehomepath= url()."/dev"; 
+ $l_filehomepath= url()."/dev"; 
 if($_SESSION['g_UR_id'] ==""){
     echo '<script>window.location.href="'.$l_filehomepath.'/Signout.php"</script>';
 }
+require_once('sessionset.php');
 ?>
 <html lang="en">
     <head>
@@ -25,6 +26,7 @@ if($_SESSION['g_UR_id'] ==""){
         <link rel="shortcut icon" href="https://zaireprojects.com/assets/images/favicon.ico" type="image/x-icon" />
                 
         <link href="<?php echo  $l_filehomepath; ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js" rel="stylesheet">
         <link href="<?php echo  $l_filehomepath; ?>/assets/css/master.css" rel="stylesheet">
         <link href="<?php echo  $l_filehomepath; ?>/assets/css/master1.css" rel="stylesheet">
         

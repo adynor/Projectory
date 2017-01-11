@@ -81,20 +81,17 @@
                 
                 $l_upd_Receiver = 'Update Users set TM_id = '.$l_TM_id.' where UR_id = "'.$l_UR_Receiver.'" AND Org_id = "'.$_SESSION['g_Org_id'].'"';
                 $l_upd_Receiver= mysql_query( $l_upd_Receiver);
-                $_SESSION['g_TM_id']=$l_TM_id;
-                
-                
-                
-                
+                $_SESSION['g_TM_id']=$l_TM_id; 
+               
             }
             else
             {
                 $l_TM_id = $l_row_check[0];
                 
                 $l_upd_Users1 = 'Update Users set TM_id = '.$l_TM_id.' where UR_id = "'.$l_UR_Receiver.'" AND Org_id = "'.$_SESSION['g_Org_id'].'"';
-                //$_SESSION['g_TM_id']=$l_TM_id;
+                $_SESSION['g_TM_id']=$l_TM_id;
                 mysql_query($l_upd_Users1);
-                
+                  
             }
             
             // Update Teammate_request table

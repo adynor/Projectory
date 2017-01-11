@@ -194,7 +194,7 @@ print('<div class="row" style="padding:10px"></div><div class="container" >');
         $l_UR_id = $_SESSION['g_UR_id'];
         $l_UR_Type = $_SESSION['g_UR_Type'];
         $l_TM_id = $_SESSION['g_TM_id'];
-        $l_PR_id = $_SESSION['g_PR_id'];
+     $l_PR_id = $_SESSION['g_PR_id'];
         $l_UR_Receiver=$l_UR_id;
         //$l_UR_PR_Type=$_SESSION['g_UR_PR_Type'];
         $l_query_UR_PR_Type="Select UR_PR_Type from Users WHERE  UR_id ='".$l_UR_id."'";
@@ -205,8 +205,8 @@ print('<div class="row" style="padding:10px"></div><div class="container" >');
         
     $sql_freeprojects_check=mysql_query('SELECT MO.MO_Amount,MO.MO_id FROM Projects AS PR ,Model AS MO WHERE MO.MO_id=PR.MO_id AND PR.PR_id='.$l_PR_id.'');
     $Presult= mysql_fetch_row($sql_freeprojects_check);
-    $l_PR_amount= $Presult[0];
-    $l_MO_id=  $Presult[1];
+     $l_PR_amount= $Presult[0];
+     $l_MO_id=  $Presult[1];
      // query for project completion 
     $l_project_complete ='select TM_EndDate from Teams where TM_id = "'.$l_TM_id .'"';
     $l_project_complete_result = mysql_query($l_project_complete);
@@ -470,18 +470,19 @@ print('<div class="row" style="padding:10px"></div><div class="container" >');
     <?php }?>
     
         
-        <div class="progress" style="<?php if($l_PR_Before <= 7){ echo "background-color: #d9534f"; } else{ echo "background-color: rgba(111, 85, 91, 0.32)" ; } ?>">
+        <div class="progress" style="<?php if($l_PR_Before <= 7 && $l_TM_StartDate!=NULL ){ echo "background-color: #d9534f"; } else{ echo "background-color: rgba(111, 85, 91, 0.32)" ; } ?>">
             <div class="progress-bar " role="progressbar" aria-valuenow="<?php echo $percentage; ?>" aria-valuemin="2" aria-valuemax="100" style="min-width: 2em; width:<?php echo $percentage.'%'; ?>;">
                 <?php echo $percentage; ?>%
                 
             </div>
         </div>
         <?php
+        if($l_TM_StartDate!=NULL ){ 
     if($l_PR_Before <= 7 && $l_PR_Before >0){?> 
        <p style='color: red !important;margin: -20px 0px 5px;text-align:center'> Your project is ending within a week</p>
     <?php } else{
     echo "<p style='color: red !important;margin: -20px 0px 5px;text-align:center'> Your Project Duration is Over</p>";
-    }?>
+    }}?>
     <?php    if($l_PR_complete!=NULL)
     {
     ?>
@@ -555,8 +556,13 @@ print('<div class="row" style="padding:10px"></div><div class="container" >');
             $pdquery="select PD_Status from Project_Documents as PD where PD.AL_id=".$l_data[1]." and PD.TM_id='".$l_TM_id."' and PD.PR_id=".$l_PR_id." ORDER BY PD_id DESC LIMIT 0,1";
             $pdrun=mysql_fetch_row(mysql_query($pdquery));
            
-            if($pdrun[0]=='A' ){$bg='background: #14a76c'; 
-            }else if($pdrun[0]=='R'){ $bg='background:rgba(19, 18, 18, 0.63)'; }else if($pdrun[0]=='P'){$bg='background: rgba(255, 99, 71, 0.85) ';}else { 
+            if($pdrun[0]=='A' ){
+                $bg='background: #14a76c'; 
+            }else if($pdrun[0]=='R'){ 
+                $bg='background:rgba(19, 18, 18, 0.63)'; }else if($pdrun[0]=='P'){
+                    $bg='background: rgba(255, 99, 71, 0.85) ';
+                       
+                }else { 
             
             $bg="" ; 
             

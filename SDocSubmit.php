@@ -146,12 +146,18 @@ span{
     $timezone = new DateTimeZone("Asia/Kolkata" );
     $date = new DateTime();
     $date->setTimezone($timezone );
-    $l_PD_SubmissionDate = $date->format( 'Ymd' );
+     $l_PD_SubmissionDate = $date->format( 'Ymd' ); echo "<br>";
    $l_TM_StartDate_query ='select TM_StartDate from Teams where TM_id = "'.$l_TM_id.'"';   // query for TM_startDate
     $l_TM_result = mysql_query($l_TM_StartDate_query);
     $l_TM_row = mysql_fetch_row($l_TM_result);
-     $l_TM_StartDate = $l_TM_row[0];
-     if(strtotime($l_TM_StartDate) < strtotime($l_PD_SubmissionDate)){
+     $l_PR_Duration_query ='select PR_Duration ,PR_SynopsisURL from Projects where PR_id = "'. $l_PR_id .'"';
+    // query for PR_Duration
+    $l_PR_result = mysql_query($l_PR_Duration_query);
+    $l_PR_row = mysql_fetch_row($l_PR_result);
+    $l_PR_Duration = $l_PR_row[0];
+     $l_TM_endDate = date('Ymd',strtotime($l_TM_row[0]) + (24*3600*$l_PR_Duration));
+     
+     if(strtotime($l_TM_endDate) < strtotime($l_PD_SubmissionDate)){
      echo "<h3 style='color:red;margin:0 auto;text-align:center'>Sorry !! Your Project Duration is Over</h3>";
      }
      else {
@@ -178,10 +184,17 @@ span{
            
            if($l_data = mysql_fetch_row($l_res))
             { 
-            $pdquery="select PD_Status from Project_Documents as PD where PD.AL_id=".$l_data[1]." and PD.TM_id='".$l_TM_id."' and PD.PR_id=".$l_PR_id."";
+            $pdquery="select PD_Status from Project_Documents as PD where PD.AL_id=".$l_data[1]." and PD.TM_id='".$l_TM_id."' and PD.PR_id=".$l_PR_id." ORDER BY PD_id DESC LIMIT 0,1";
             $pdrun=mysql_fetch_row(mysql_query($pdquery));
             if($pdrun[0]=='A'){$bg='background: #14a76c'; 
-            }else if($pdrun[0]=='P'){$bg='background: rgba(255, 99, 71, 0.85) ';}else { 
+            
+            }else if($pdrun[0]=='R'){ 
+               
+                $bg='background:rgba(19, 18, 18, 0.63)'; }
+                else if($pdrun[0]=='P'){
+               
+                $bg='background: rgba(255, 99, 71, 0.85) ';}else { 
+                
             
             $bg="" ; 
             

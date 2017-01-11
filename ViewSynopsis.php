@@ -18,11 +18,11 @@ $Query=mysql_query('select PR_Name,PR_Desc,PR_Objective,PR_Background,PR_Functio
 
 $l_PR_Result=  mysql_fetch_row($Query);
 
-//$Query1=mysql_query('select PR_ExtraDoc_Size,PR_ExtraDoc_Name from Project_Synopsis where PR_id='.$l_PR_id.'');
-//$l_PR_Result1=  mysql_fetch_row($Query1);
-$l_PR_Result1[0]=NULL;
+$Query1=mysql_query('select PR_ExtraDoc_Size,PR_ExtraDoc_Name from Project_Synopsis where PR_id='.$l_PR_id.'');
+$l_PR_Result1=  mysql_fetch_row($Query1);
 ?><br> <br><br>
 <div class="container">
+    
     <?php if($_SESSION['g_UR_Type'] == 'M' || $_SESSION['g_UR_Type'] == 'T'):?>
     <div class="col-md-4 col-md-offset-6" ><a class="btn btn-block btn-primary" href="iframetest.php">View PDF </a></div>
     <?php endif;?>
@@ -35,15 +35,16 @@ box-shadow: 0px 0px 23px 3px grey;">
         <h3>Description:</h3>
        <div> <?php  echo htmlspecialchars_decode($l_PR_Result[1]);?></div>
     </div>
+         <?php if($l_PR_Result1[0]!=""){?>
+   <div class="row"> 
+       <div><a class="btn btn-primary btn-block" href="blob_download.php?exdocid=<?php echo $l_PR_id;?>"> Download <?php echo $l_PR_Result1[1] ?></a></div>
+    </div>
+    <?php } ?>
       <div class="row">
         <h3>Objective:</h3>
         <div><?php  echo htmlspecialchars_decode($l_PR_Result[2]);?></div>
     </div>
-  <?php if(isset($l_PR_Result1[0])){?>
-   <div class="row"> 
-        <div><a class="btn btn-primary btn-block"> Download <?php echo $l_PR_Result1[1] ?></a></div>
-    </div>
-    <?php } ?>
+ 
       <div class="row">
         <h3>Background:</h3>
         <div><?php  echo htmlspecialchars_decode($l_PR_Result[3]);?></div>
