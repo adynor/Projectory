@@ -157,7 +157,7 @@ span{
     $l_PR_Duration = $l_PR_row[0];
      $l_TM_endDate = date('Ymd',strtotime($l_TM_row[0]) + (24*3600*$l_PR_Duration));
      
-     if(strtotime($l_TM_endDate) < strtotime($l_PD_SubmissionDate)){
+     if(strtotime($l_TM_endDate) < strtotime($l_PD_SubmissionDate ) && isset($l_TM_id)){
      echo "<h3 style='color:red;margin:0 auto;text-align:center'>Sorry !! Your Project Duration is Over</h3>";
      }
      else {
