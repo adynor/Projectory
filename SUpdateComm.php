@@ -95,6 +95,8 @@
                 //$_SESSION['g_TM_id']=$l_TM_id;
                 mysql_query($l_upd_Users1);
                 
+            
+                
             }
             
             // Update Teammate_request table
