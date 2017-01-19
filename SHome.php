@@ -463,14 +463,14 @@ print('<div class="row" style="padding:10px"></div><div class="container" >');
   
     <?php
     $currentdate=date('d-M-Y');
-     $l_PR_Before = (strtotime($l_PR_finalDate) - strtotime($currentdate))/ (60 * 60 * 24);
+    $l_PR_Before = (strtotime($l_PR_finalDate) - strtotime($currentdate))/ (60 * 60 * 24);
      if($l_TM_StartDate!=NULL )
     {?>
     	<p>The project needs to be completed by:<?php echo $l_PR_finalDate;?></p>
     <?php }?>
     
         
-        <div class="progress" style="<?php if($l_PR_Before <= 7 && $l_TM_StartDate!=NULL ){ echo "background-color: #d9534f"; } else{ echo "background-color: rgba(111, 85, 91, 0.32)" ; } ?>">
+        <div class="progress" style='<?php if($l_PR_Before <= 7 && $l_TM_StartDate!=NULL ){ echo "background-color: #d9534f"; } else{ echo "background-color: rgba(111, 85, 91, 0.32)" ; } ?>'>
             <div class="progress-bar " role="progressbar" aria-valuenow="<?php echo $percentage; ?>" aria-valuemin="2" aria-valuemax="100" style="min-width: 2em; width:<?php echo $percentage.'%'; ?>;">
                 <?php echo $percentage; ?>%
                 
@@ -480,9 +480,11 @@ print('<div class="row" style="padding:10px"></div><div class="container" >');
         if($l_TM_StartDate!=NULL ){ 
     if($l_PR_Before <= 7 && $l_PR_Before >0){?> 
        <p style='color: red !important;margin: -20px 0px 5px;text-align:center'> Your project is ending within a week</p>
-    <?php } else{
+    <?php } else if($l_PR_Before<=0){
     echo "<p style='color: red !important;margin: -20px 0px 5px;text-align:center'> Your Project Duration is Over</p>";
-    }}?>
+    }
+    
+    }?>
     <?php    if($l_PR_complete!=NULL)
     {
     ?>
