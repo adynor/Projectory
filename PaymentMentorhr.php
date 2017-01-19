@@ -101,7 +101,7 @@ $team=$_SESSION['g_TM_id'];
         ?>
         
         <?php if($_POST['mhr']!=""){
-	         $l_sql_mentors=mysql_query('SELECT DISTINCT (US.UR_id), CONCAT( UR.UR_FirstName," ", UR.UR_MiddleName," ", UR.UR_LastName ) UR_FullName, CONCAT( UR.UR_Emailid,"@", UR.UR_EmailidDomain ) UR_Email,UR.UR_Phno,UR.Org_id FROM UR_Subdomains AS US, Project_SubDomains AS PSD, Users AS UR WHERE US.UR_id = UR.UR_id AND UR.UR_Type="M" AND PSD.PR_id =37 AND PSD.SD_id = US.SD_id AND PSD.SD_Preference =  "R"');
+	         $l_sql_mentors=mysql_query('SELECT DISTINCT (US.UR_id), CONCAT( UR.UR_FirstName," ", UR.UR_MiddleName," ", UR.UR_LastName ) UR_FullName, CONCAT( UR.UR_Emailid,"@", UR.UR_EmailidDomain ) UR_Email,UR.UR_Phno,UR.Org_id FROM UR_Subdomains AS US, Project_SubDomains AS PSD, Users AS UR WHERE US.UR_id = UR.UR_id AND UR.UR_Type="M" AND PSD.PR_id ='.$l_PR_id.' AND PSD.SD_id = US.SD_id AND PSD.SD_Preference =  "R"');
 	         ?>
 	          <table id="" class="display" cellspacing="0" width="100%">
         <thead>
@@ -144,20 +144,20 @@ $team=$_SESSION['g_TM_id'];
                 break;
                  case Failure: ?>
                
-                     <a class="btn btn-primary mentor-hr" data-org="<?php echo $rows[4];?>" data-user="<?php echo $rows[0];?>" data-hr="<?php echo $_POST['mhr'];?>"> Add Mentor</a>
+                     <a class="btn btn-primary mentor-hr"  style=" margin-bottom: 10px;" data-org="<?php echo $rows[4];?>" data-user="<?php echo $rows[0];?>" data-hr="<?php echo $_POST['mhr'];?>"> Add Mentor</a>
                 <?php
                 break;
                 case Pending:
              //echo "p";
                 if($rows[0] == $mstatus[1]){ ?>
-                    <a class="btn btn-warning" data-org="<?php echo $rows[4];?>" data-user="<?php echo $rows[0];?>" data-hr="<?php echo $_POST['mhr'];?>" disabled="disabled"> Add Mentor</a>
+                    <a class="btn btn-warning"  style=" margin-bottom: 10px;" data-org="<?php echo $rows[4];?>" data-user="<?php echo $rows[0];?>" data-hr="<?php echo $_POST['mhr'];?>" disabled="disabled"> Add Mentor</a>
                <?php } else{ ?>
-                     <a class="btn btn-primary " data-org="<?php echo $rows[4];?>" data-user="<?php echo $rows[0];?>" data-hr="<?php echo $_POST['mhr'];?>" disabled="disabled"> Add Mentor</a>
+                     <a class="btn btn-primary "  style=" margin-bottom: 10px;" data-org="<?php echo $rows[4];?>" data-user="<?php echo $rows[0];?>" data-hr="<?php echo $_POST['mhr'];?>" disabled="disabled"> Add Mentor</a>
                 <?php }
                 break;
                 default:
                 ?>
-                <a class="btn btn-primary mentor-hr" data-org="<?php echo $rows[4];?>" data-user="<?php echo $rows[0];?>" data-hr="<?php echo $_POST['mhr'];?>"> Add Mentor</a>
+                <a class="btn btn-primary mentor-hr"  style=" margin-bottom: 10px;" data-org="<?php echo $rows[4];?>" data-user="<?php echo $rows[0];?>" data-hr="<?php echo $_POST['mhr'];?>"> Add Mentor</a>
                 <?php
                 }
                 ?>

@@ -207,7 +207,7 @@ else {
        $l_headers2 = "From: $l_webMaster\r\n";
         $l_headers2 .= "Content-type:  text/html\r\n";*/
        $l_SD_sel_arrs = $_POST['l_SD_sel'];
-       print_r($l_SD_sel_arrs);
+       //print_r($l_SD_sel_arrs);
        
   $l_query = "insert into Users (UR_id, UR_Khufiya, UR_Emailid, UR_EmailidDomain, UR_Type, UR_USN, UR_Salutation,UR_FirstName, UR_MiddleName,UR_LastName,UR_CompanyName,UR_ProfileInfo,UR_InsertDate,UR_RegistrationStatus,UR_VerifyCode,UR_Semester,IT_id,PG_id,Org_id) values
  ('".$l_UR_id."', '".md5($l_pass)."', '".$l_UR_Emailid."', '".$l_UR_EmailidDomain."' , '".$l_UR_Type."','".$l_UR_USN."','".$l_UR_Salutation."','".$l_UR_FirstName."',
@@ -219,7 +219,7 @@ $to=array($l_UR_Emailid.'@'.$l_UR_EmailidDomain);
 if(isset($l_SD_sel_arrs)){
 		foreach ($l_SD_sel_arrs as $l_SD_sel_arr)
                         {
-                          echo   $l_query = "insert into UR_Subdomains (UR_id, SD_id,Org_id) values ('".$l_UR_id."',".$l_SD_sel_arr.",'".$l_UR_Org_id."')";
+                             $l_query = "insert into UR_Subdomains (UR_id, SD_id,Org_id) values ('".$l_UR_id."',".$l_SD_sel_arr.",'".$l_UR_Org_id."')";
                             $l_TEechnologies_Inserted = mysql_query($l_query) or die(mysql_error());    // run the actual SQL
                          }
  			}

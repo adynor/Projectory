@@ -48,6 +48,7 @@ $l_UR_NameReceiver = $l_row_ReceiverName[0];
 // if the request is accepted
     if($l_choice=='Accept')
     {
+    
         $l_PR_id = $l_arry[2];
        //echo "Accept";
 
@@ -82,12 +83,11 @@ $l_UR_NameReceiver = $l_row_ReceiverName[0];
         mysql_query($l_TM_upd_query);
         }
 
-        // Update Guide_request table 
+       // Update Guide_request table 
         
 //echo $l_TM_upd_query;
 ///////set the MR_ResponseDateTime 
         $l_TM_query = 'Update Mentor_Requests set MR_ResponseDateTime = "'.$l_Datetime.'", MR_Status="A" where UR_id  = "'.$l_UR_id.'" and TM_id = '.$l_TM_id.' and Org_id = "'.$_SESSION['g_Org_id'].'"';
-
         mysql_query($l_TM_query);
 
 //echo $l_TM_query;
@@ -128,6 +128,7 @@ $l_message = $l_UR_NameReceiver." has accepted your team request. <br><br>Sincer
 //Rejected send through mail
 else if($l_choice == 'Reject')
 {
+     
     $l_CM_Message = 'Mentor request Rejected';
     $l_CM_Type = 'MR';
     

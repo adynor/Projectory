@@ -133,7 +133,7 @@
                         if($l_UR_Receiver == $l_r_or_s_id){
                             print('<a class="btn btn-primary" href="SUpdateComm.php?g_updSQL=Cancel"> Cancel </a>');
                         }
-                        else{
+                        else{   
                             //  echo $l_UR_Receiver ."|".$l_r_or_s_id;
                             echo "<p style='color: red !important;text-align: center;'>Your Response Pending</p>";
 
@@ -160,7 +160,7 @@
     }
     if($l_TM_id == NULL || $l_TM_id == -99){
       $l_limitstudentque=mysql_query('SELECT PR.PR_No_Students  FROM  Projects PR WHERE PR_id='.$l_PR_id);
-      $l_PR_limit=mysql_fetch_row($l_limitstudentque)[0];
+      $l_PR_limit=mysql_fetch_row($l_limitstudentque);
       function getCountTeammates($teamid)
       {
       $Tque=mysql_query('SELECT UR_id FROM  Users PR WHERE TM_id='.$teamid);
@@ -176,7 +176,7 @@
 if(mysql_num_rows($teamsql) >0){
     ?>
     <br><br>
-    
+    <?php  if($l_TM_id == NULL || $l_TM_id == -99){?>
       <table class="ady-table-content" border="1" width="100%" >
             <tr>
 	            <th> Team Name </th>
@@ -216,7 +216,7 @@ if(mysql_num_rows($teamsql) >0){
             <?php }
              $l_prev_teamname =$teamsresrow[0] ;} ?>
        </table>
-       <?php } } ?>
+    <?php } }} ?>
 </div>
 </div>
 </div>

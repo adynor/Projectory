@@ -12,7 +12,7 @@ function url(){
 }
 
 
-$l_filehomepath= url(); 
+$l_filehomepath= url()."/dev"; 
 ?>
 <html lang="en">
     <head>

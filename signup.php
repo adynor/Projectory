@@ -198,7 +198,7 @@ else {
                     $success=mysql_query($l_query);
 if($success){ 
 $to=array($l_UR_Emailid.'@'.$l_UR_EmailidDomain);
-sendmail($to,$subject,$l_message);
+sendmail($to,$l_subject,$l_message);
 //mail( $l_UR_Emailid.'@'.$l_UR_EmailidDomain, $l_subject, $l_message, $l_headers2);
 print('<div class="alert alert-success"><h5>Please check your mail and click on the verification link sent to you. The mail might take a few minutes to reach you. If you do not receive any mail please check your spam folder.</h5></div>');
 }
@@ -418,6 +418,7 @@ if($l_URPR_Type=='S'){
         <div class="col-md-3 ">  </div>
     </div>
     <div id="loading">
+
   <img id="loading-image" src="<?php echo $l_filehomepath; ?>/assets/ajax-loader.gif" alt="Loading..." />
 </div>
 </div>
@@ -429,15 +430,10 @@ $('#loading').show();
     var str = $('#user_type').val();
     
     if(str == ""){
-
      window.location="<?php echo $l_filehomepath; ?>/signup.php";
-
     } 
     else{
-    
-
    if( window.location="<?php echo $l_filehomepath; ?>/signup.php?q="+str){
-
    $('#loading').show();
     window.setTimeout(function() {
      $('#loading').hide();

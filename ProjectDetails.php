@@ -3,20 +3,16 @@ include('header.php');
 include ('db_config.php');
 print('<div class="row" style="padding:10px"></div><div class="container" >'); 
 
-$current_url= "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
 $timezone = new DateTimeZone("Asia/Kolkata");
 $date = new DateTime();
 $date->setTimezone($timezone);
 $l_Datetime = $date->format('YmdHi');
 
  $l_sql=$_REQUEST['PR_id'];
-   // echo $l_sql=str_replace("\\","",$l_sql);
     $l_arry = explode("|",$l_sql);
   $l_PR_id= $l_arry[0];
-   //$l_MO_Amount=$l_arry[1];
-
-$backurl= "https://".$_SERVER[HTTP_HOST]."/test/ProjectModel01.php?g_MO_id=".$_REQUEST['model']."|".$l_arry[1];
+$_SESSION['g_PR_id_pay']=$l_PR_id;
+$backurl= $l_filehomepath."/ProjectModel01.php?g_MO_id=".$_REQUEST['model']."|".$l_arry[1];
 if(isset($_POST['AcceptNda'])){
  $l_UR_NDA_Action = $_POST['AcceptNda'];
 }
@@ -79,7 +75,7 @@ print( '<tr><td style="width:40%">Project Name </td><td colspan=2> '.$l_PR_Name.
             print( '<tr><td>Project Description</td><td colspan=2>'.htmlspecialchars_decode($l_PR_Desc).'</td></tr>');
              
 //print( '<tr><td>Project Synopsis:</td><td colspan=2><a href='.$_SESSION['g_pdf_view'].'><input class="btn btn-primary" type=submit value="View" name="download"></input></a></td></tr>');
-   
+$_SESSION['g_PR_Name_pay']=$l_PR_Name ;
  if($l_PR_NDAstatus != "NA")
         {
             $_SESSION['g_view_Nda'] = $l_PR_NDAstatus;
@@ -231,7 +227,7 @@ print('</table><br>');
                 <p>Available credits: <strong><i style="font-size:12px" class="fa fa-inr"></i> <?php echo $_SESSION['g_Credits']; ?></strong></p>
                 <p>select payment mode:</p>
                 <a type="button" class="btn btn-primary btn-color btn-bg-color btn-sm" id="payby" > Pay By Wallet</a>
-                <a type="button" class="btn btn-primary btn-color btn-bg-color btn-sm " href="payment_gateway/testpayment.php">Pay By Card</a>
+                <a type="button" class="btn btn-primary btn-color btn-bg-color btn-sm " id="pbcard">Pay By Card</a>
         </div>  
         </div>
          <div class="modal-footer">
@@ -270,8 +266,13 @@ $(document).ready(function(){
     else{
          $("#myModal3").modal({backdrop: "static"});
          //$("input[name='l_ur_pr_type']").val($(this).data('href'));
+          url="payment_gateway/testpayment.php?type="+$(this).data('href');
          $('#payby').attr('data-value', '');
          $('#payby').attr('data-value', $(this).data('href'));
+         
+         $('#pbcard').attr('href', '');
+         $('#pbcard').attr('href',url);
+        
     }
      });
 });

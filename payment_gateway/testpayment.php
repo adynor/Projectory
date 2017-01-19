@@ -1,12 +1,12 @@
 <?php
-session_start();
+//session_start();
+require_once('../LinkHeader.php');
 $l_Amount= $_SESSION['payment'];
 $l_PR_id_pay=$_SESSION['g_PR_id_pay'];
 $l_UR_id=$_SESSION['g_UR_id'];
 $l_PR_Name_pay=$_SESSION['g_PR_Name_pay'] ;
 $l_org_id=$_SESSION['g_Org_id'];
-$l_UR_PR_Type=$_SESSION['l_User_PR_Type'];
-
+$l_UR_PR_Type=$_REQUEST['type'];
 /* Database connection*/
 echo "<center style='color:red'>Please Wait..........</center>";
 include('../db_config.php');
@@ -67,8 +67,8 @@ $count_order_id=mysql_num_rows($query_order_id);
    <tr><td>Amount	:</td><td><input type="text" name="amount" value="<?php echo $l_Amount; ?>"/></td></tr>
    <tr><td>currency	:</td><td><input type="hidden" name="currency" value="INR"/></td></tr>
 
-   <tr><td>Redirect Url	:</td><td><input type="hidden" name="redirect_url" value="https://zaireprojects.com/payment_gateway/ccavResponseHandler.php" /></td></tr>       
-   <tr><td>Cancel Url	:</td><td><input type="hidden" name="cancel_url" value="https://zaireprojects.com/Projects.php" /></td></tr>
+   <tr><td>Redirect Url	:</td><td><input type="hidden" name="redirect_url" value="<?php echo $l_filehomepath ;?>/payment_gateway/ccavResponseHandler.php" /></td></tr>       
+   <tr><td>Cancel Url	:</td><td><input type="hidden" name="cancel_url" value="<?php echo $l_filehomepath ;?>/Projects.php" /></td></tr>
     <tr><td>language:</td><td><input type="hidden" name="language" value="EN" /><td></tr>
     <tr><td colspan="2">Billing information(optional):</td></tr>
     <tr><td>Billing Name	:</td><td><input type="text" name="billing_name" value="<?php echo $UR_FirstName.' '.$UR_MiddleName.' '.$UR_LastName ;?>"/></td></tr>

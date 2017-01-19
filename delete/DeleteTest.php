@@ -10,7 +10,7 @@
 //$conn=  mysql_connect('localhost','zairepro_test','test@123');
 //$db=mysql_select_db("zairepro_projectory_test",$conn);
 include '../db_config.php';
-$student_ids= array('tests9','tests10');
+$student_ids= array('tests01','tests02','tests04','tests05','tests06','tests03');
 print_r($student_ids);
 
 foreach ($student_ids as $userid)

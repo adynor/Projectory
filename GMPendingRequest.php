@@ -6,7 +6,7 @@
     // Called By    : Ghome
     // Calls        : GupdateComm,MupdateComm
     // Mod history  :
-    //////////////////////////////////////////////
+    //////////////////////////////////////////////ccx
 
  include ('header.php');
  include ('db_config.php');
@@ -73,12 +73,12 @@ print ('</tr>');
             $l_UR_USN1      = $l_row[8];
             $l_UR_Sem       = $l_row[9];
             $l_UR_Phone     = $l_row[10];
-            $l_TM_id        = $l_row[11];
+            $l_TM_id        = $l_row[11]; 
             $l_PR_id        = $l_row[12];
             $l_User_org       = $l_row[13];
-            $l_model       = $l_row[14];
+             $l_model       = $l_row[14];
             print ('<tr style="' . $l_UR_Color_Table02. '">');
-            
+              
                 if($l_prev_teamname <> $l_TM_Name)
                     {
                         print ( '<td>' . $l_TM_Name. '</td>');

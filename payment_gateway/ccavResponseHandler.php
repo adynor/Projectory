@@ -9,9 +9,8 @@ box-shadow: 7px 10px 14px 1px rgba(148,204,242,1);
 </style>
 <?php
 @session_start();
-
  include('Crypto.php');
-include('LinkHeader.php');
+include('../LinkHeader.php');
 ?>
 
 <?php

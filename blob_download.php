@@ -17,9 +17,12 @@ else if(isset($_GET['pdid']))
     }
 else if(isset($_GET['ALid']))
     {
-    echo $l_AL_id=$_GET['ALid']; 
-    echo $query='SELECT AL_Template,AL_Desc,AL_Templatec_Size,AL_Template_Type FROM Access_Level
- where AL_id='.$l_AL_id.'';
+     $l_AL_id=$_GET['ALid']; 
+    $query='SELECT AL_Template,AL_Desc,AL_Templatec_Size,AL_Template_Type FROM Access_Level Where AL_id='.$l_AL_id.'';
+ } else if(isset($_REQUEST['exdocid'])){ 
+     $l_PR_id=$_REQUEST['exdocid'];
+     $query= 'select PR_ExtraDoc,CONCAT(PR_ExtraDoc_Name,".pdf"),PR_ExtraDoc_Size,PR_ExtraDoc_Type from Project_Synopsis where PR_id='.$l_PR_id.'';
+             
  }
     else{      
    echo "<script>window.location.href='".$_SERVER['HTTP_REFERER']."'</script>";
