@@ -1,9 +1,8 @@
 <?php
     include ('db_config.php');
     include ('header.php');
-    //echo "<br><br><br><br><br><br><br>";
-    //Fprint_r($_SESSION);
-    ?>
+   
+   ?>
 
 <style>
 .ady-text-area
@@ -26,17 +25,26 @@
           function ShowNdaRadio(){
           if(document.getElementById("AcceptNda").checked == true){
           document.getElementById("Ndatr").style.display="block";
+          document.getElementById("errnda").innerHTML = "";
           }else{
           document.getElementById("Ndatr").style.display="none";
           document.getElementById("NdaR1").checked = false;
           document.getElementById("NdaR2").checked = false;
           document.getElementById("thenda").style.display = "none";
           document.getElementById("thenda").value = "";
+          document.getElementById("errnda").innerHTML = "";
           }
           }
           function myFunctionshow(){
+         
           document.getElementById("thenda").style.display = "block";
-          }
+          document.getElementById("errnda").innerHTML = "";
+          document.getElementById("thenda").style.borderColor = "grey";
+          document.getElementById("thenda").value();
+          var thendaval  = document.getElementById("thenda").value();
+          
+          return thendaval;
+           }
           function myFunctionhide(){
           document.getElementById("thenda").style.display = "none";
           document.getElementById("thenda").value = "";
@@ -213,11 +221,7 @@
           $l_SizeAL_sel_id_arr_uni = count($l_AL_sel_id_arr_uni);
           // template coding ends......
           
-          if($l_PR_ReleaseDate >= $l_PR_ExpiryDate)
-          {
-          $_SESSION['msg']='<div class="alert alert-danger">Selected Date is incorrect <strong>Expiry-Date</strong> should be greater than <strong>Start-Date</strong></div>';
-          }
-          else if(count($l_AL_sel_id_arr_uni)==1 && $l_AL_sel_id_arr_uni[0]=="Null")
+         if(count($l_AL_sel_id_arr_uni)==1 && $l_AL_sel_id_arr_uni[0]=="Null")
           {
           $_SESSION['msg']= '<div class="alert alert-danger">Please add some document type</div>';
           }
@@ -275,55 +279,14 @@
           
           else
           {
-          
-          //$l_in_filename        = $_FILES['file']['tmp_name'];
-          
-          
-          //          //if (strpos('DUMMYSTRING' . $l_PR_Name , '"') && strpos('DUMMYSTRING' . $l_PR_Desc , '"') !== false)
-          //          {
-          //          break;
-          //          }
-          
-          //          $l_file_extention_numb = 0;
-          //          while (true)
-          //          {
-          //          $l_file_extention_numb = $l_file_extention_numb + 1;
-          //          $filename  = basename($_FILES['file']['name']);
-          //          $l_synopsis_original_name=$_FILES['file']['name'];
-          //          $extension = pathinfo($filename, PATHINFO_EXTENSION);
-          //
-          //          $rename =  $l_PR_id.'_'.$l_file_extention_numb;
-          //
-          //          $l_PR_Synopsis      = $rename.'.'.$extension;
-          //
-          //          if (file_exists($l_PR_Synopsis))
-          //          {}
-          //          else
-          //          {
-          //          break ;
-          //
-          //          }
-          //
-          //          }
-          
-          //          if (file_exists("Projectory/ProjectSynopsis/" . $_FILES["file"]["name"]))
-          //          {
-          //          $_FILES["file"]["name"] . "<font color=red> Please choose file for projects synopsis. </font>";
-          //          }
-          
+         
           if (empty( $_FILES["file"]["name"]))
           {
           $_FILES["file"]["name"] . "<font color=red> Please choose file for projects synopsis. </font>";
           }
           else
           {
-          //$tempfolder = 'Projectory/ProjectSynopsis'; // for linux
-          //move_uploaded_file($l_in_filename,$tempfolder.'/'.$l_PR_Synopsis );
-          
-          
-          //$l_PR_Synopsis_URL=$l_filehomepath."/Projectory/ProjectSynopsis/".$l_PR_Synopsis;  // Project Synopsis URL
-          
-          
+         
           $l_sql_validate = 'select PR_id from Projects where PR_id ='.$l_PR_id.' and Org_id="'.$_SESSION['g_Org_id'].'"';
           $l_result_validate = mysql_query($l_sql_validate);
           $l_count_validate = mysql_num_rows($l_result_validate);
@@ -333,11 +296,7 @@
           if ( $l_count_validate == 0 )
           {
           
-          
-          /*$l_query = "insert into Projects  (PR_id, PR_Name,PR_Desc,PR_Objective,PR_Background,PR_Functional_Requirement,PR_Non_Functional_Requirement,PR_System_Requirements, PR_ReleaseDate , PR_ExpiryDate, PR_SynopsisURL,UR_Owner,PR_InsertDateTime,PR_Duration,PR_ComplexityLevel,PR_ip,MO_id,PR_Synopsis_Original_Name,Org_id,PR_No_Students,IN_id) values (".$l_PR_id.", \"".$l_PR_Name."\",\"".htmlspecialchars($l_PR_Desc)."\", \"".htmlspecialchars($l_PR_Objective)."\",\"".htmlspecialchars($l_PR_Background)."\",\"".htmlspecialchars($l_PR_Functional_req)."\",\"".htmlspecialchars($l_Non_PR_Functional_req)."\",\"".htmlspecialchars($l_PR_System_Req)."\",".$l_PR_ReleaseDate.",".$l_PR_ExpiryDate.", \"".$l_PR_Synopsis_URL."\", \"".$l_UR_id."\",".$l_PR_InsertDateTime.",".$l_PR_Duration.",".$l_PR_level.",\"".$l_Z_NDA_URL."\",".$l_PR_model.",\"".$l_synopsis_original_name."\",\"".$_SESSION['g_Org_id']."\",\"".$l_PR_No_Students."\",".$l_PR_Industry.")";
-          $result = mysql_query($l_query);
-          */
-          /*Modified Date:8th SEP 2016 */
+         
            $l_query = "insert into Projects  (PR_id, PR_Name,PR_Desc,PR_Short_Desc,PR_Objective,PR_Background,PR_Functional_Requirement,PR_Non_Functional_Requirement,PR_System_Requirements, PR_ReleaseDate , PR_ExpiryDate, PR_SynopsisURL,UR_Owner,PR_InsertDateTime,PR_Duration,PR_ComplexityLevel,PR_ip,MO_id,PR_Synopsis_Original_Name,Org_id,PR_No_Students,IN_id,PR_Prerequisites,PR_AllowedSynopsis,PR_MentorAllowed) values (".$l_PR_id.", \"".$l_PR_Name."\",\"".htmlspecialchars($l_PR_Desc)."\",\"".htmlspecialchars($l_PR_Short_Desc)."\", \"".htmlspecialchars($l_PR_Objective)."\",\"".htmlspecialchars($l_PR_Background)."\",\"".htmlspecialchars($l_PR_Functional_req)."\",\"".htmlspecialchars($l_Non_PR_Functional_req)."\",\"".htmlspecialchars($l_PR_System_Req)."\",".$l_PR_ReleaseDate.",".$l_PR_ExpiryDate.", \"".$l_PR_Synopsis_URL."\", \"".$l_UR_id."\",".$l_PR_InsertDateTime.",".$l_PR_Duration.",".$l_PR_level.",\"".$l_Z_NDA_URL."\",".$l_PR_model.",\"".$l_synopsis_original_name."\",\"".$_SESSION['g_Org_id']."\",\"".$l_PR_No_Students."\",".$l_PR_Industry.",\"".$l_PR_Prerequisite."\",\"".$allowed_synopsis."\",\"".$allowed_mentors."\")";
           $result = mysql_query($l_query);
           /*------   -----*/
@@ -362,6 +321,7 @@
                 unset($_SESSION['l_PR_Functional_req_fill']);
                 unset( $_SESSION['l_Non_PR_Functional_req_fill']);
                 unset( $_SESSION['l_PR_System_Req_fill']);
+                unset( $_SESSION['l_PR_Prerequisite']);
           }
           
           }/// if ( $l_row_validate[0] == 0 )
@@ -516,48 +476,86 @@ Add Your Project
 <table style="width:100%;" class="ady-table-content "
 
 <tr>
-<td>Project Name </td>
+<td>Project Name <a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="Name of the project to be shown to the student">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a><span id="errprname"></span></td>
 <td colspan=3>
-<input class="form-control ady-form" value="<?php echo $_SESSION['l_PR_Name_fill']?>" type=text name=l_PR_Name>
+<input id="prname" class="form-control ady-form" value="<?php echo $_SESSION['l_PR_Name_fill']?>" type=text name=l_PR_Name>
 </td>
 </tr>
 
 <tr>
 <td >
-Project Short Description</td>
+Project Short Description<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="This is a short description which will be shown to the student before he applies for it.">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a><span id="errprshortdisc"></span></td>
 <td colspan=3>
-<textarea class=" form-control ady-form"  name=l_PR_Short_Desc ><?php echo $_SESSION['l_PR_Short_Desc_fill'] ?></textarea>
+<textarea  class=" form-control ady-form"  name="l_PR_Short_Desc" ><?php echo $_SESSION['l_PR_Short_Desc_fill'] ?></textarea>
 <script type="text/javascript">
-CKEDITOR.replace('l_PR_Short_Desc');
+CKEDITOR.replace('l_PR_Short_Desc', {
+    on: {
+
+        key: function() {
+        $('#errprshortdisc').text('');
+        }
+    }
+}
+);
 CKEDITOR.add
+
 </script>
 </td>
 </tr>
 <tr>
 <td >
-Project Description</td>
+Project Description<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="This is a description of a project which will be shown to the student after he applies for it.">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a> <span id="errprdiscrip"></span></td>
 <td colspan=3>
-<textarea class=" form-control ady-form"  name=l_PR_Desc ><?php echo $_SESSION['l_PR_Desc_fill'] ?></textarea>
+<textarea  class=" form-control ady-form"  name="l_PR_Desc" ><?php echo $_SESSION['l_PR_Desc_fill'] ?></textarea>
 <script type="text/javascript">
-CKEDITOR.replace('l_PR_Desc');
+CKEDITOR.replace('l_PR_Desc', {
+    on: {
+
+        key: function() {
+        $('#errprdiscrip').text('');
+        }
+    }
+});
 CKEDITOR.add
 </script>
 </td>
 </tr>
 <tr>
-<td > Project Objective</td>
+<td > Project Objective<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="What is the objective of the project for the student to achieve?">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a>  <span id="errprobjective"></span></td>
 <td colspan=3>
-<textarea class="ady-text-area form-control ady-form"  name=l_PR_Objective ><?php echo $_SESSION['l_PR_Objective_fill'] ?></textarea>
+<textarea  class="ady-text-area form-control ady-form"  name="l_PR_Objective" ><?php echo $_SESSION['l_PR_Objective_fill'] ?></textarea>
 <script type="text/javascript">
-CKEDITOR.replace('l_PR_Objective');
+CKEDITOR.replace('l_PR_Objective', {
+    on: {
+
+        key: function() {
+        $('#errprobjective').text('');
+        }
+    }
+});
 CKEDITOR.add
 </script>
 </td>
 </tr>
 <tr>
-<td > Project Background</td>
+<td > Project Background<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="A brief background on how the project idea was initiated">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a></td>
 <td colspan=3>
-<textarea class="ady-text-area form-control ady-form"  name=l_PR_Background ><?php echo $_SESSION['l_PR_Background_fill'] ?></textarea>
+<textarea class="ady-text-area form-control ady-form"  name="l_PR_Background" ><?php echo $_SESSION['l_PR_Background_fill'] ?></textarea>
 <script type="text/javascript">
 CKEDITOR.replace( 'l_PR_Background' );
 CKEDITOR.add
@@ -565,29 +563,52 @@ CKEDITOR.add
 </td>
 </tr>
 <tr>
-<td > Functional Requirement</td>
+<td > Functional Requirement<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content=" This is the functional requirements that will help allow the students to refer for him to finish the project.">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a> <span id="errprfunctionreq"></span></td>
 <td colspan=3>
-<textarea class="ady-text-area form-control ady-form"  name=l_PR_Functional_req ><?php echo $_SESSION['l_PR_Functional_req_fill'] ?></textarea>
+<textarea  class="ady-text-area form-control ady-form"  name="l_PR_Functional_req" ><?php echo $_SESSION['l_PR_Functional_req_fill'] ?></textarea>
 <script type="text/javascript">
-CKEDITOR.replace( 'l_PR_Functional_req' );
+CKEDITOR.replace( 'l_PR_Functional_req' , {
+    on: {
+
+        key: function() {
+        $('#errprfunctionreq').text('');
+        }
+    }
+});
 CKEDITOR.add
 </script>
 </td>
 </tr>
 <tr>
-<td >Non Functional Requirement</td>
+<td >Non Functional Requirement<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content=" This is the Non-functional requirements that will help allow the students to refer for him to finish the project.">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a> <span id="errprnonfunctionreq"></span></td>
 <td colspan=3>
-<textarea class="ady-text-area form-control ady-form" name=l_PR_N_req><?php echo $_SESSION['l_Non_PR_Functional_req_fill'] ?></textarea>
+<textarea  class="ady-text-area form-control ady-form" name="l_PR_N_req"><?php echo $_SESSION['l_Non_PR_Functional_req_fill'] ?></textarea>
 <script type="text/javascript">
-CKEDITOR.replace('l_PR_N_req');
+CKEDITOR.replace('l_PR_N_req', {
+    on: {
+
+        key: function() {
+        $('#errprnonfunctionreq').text('');
+        }
+    }
+});
 CKEDITOR.add
 </script>
 </td>
 </tr>
 <tr>
-<td >System Requirements</td>
+<td >System Requirements<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="Are there any specific system requirements or softwares needed for the student to perform this project?">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a></td>
 <td colspan=3>
-<textarea class="ady-text-area form-control ady-form"  name=l_PR_System_req><?php echo $_SESSION['l_PR_System_Req_fill'] ?></textarea>
+<textarea class="ady-text-area form-control ady-form"  name="l_PR_System_req"><?php echo $_SESSION['l_PR_System_Req_fill'] ?></textarea>
 <script type="text/javascript">
 CKEDITOR.replace( 'l_PR_System_req' );
 CKEDITOR.add
@@ -595,9 +616,12 @@ CKEDITOR.add
 </td>
 </tr>
 <tr>
-<td >Skills  Required</td>
+<td >Skills  Required<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="Are there any pre-requisites or prior skills knowledge needed for the students to perform this project">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a></td>
 <td colspan=3>
-<textarea class="ady-text-area form-control ady-form"  name=l_PR_Prerequisite><?php echo $_SESSION['l_PR_Prerequisite'] ?></textarea>
+<textarea class="ady-text-area form-control ady-form"  name="l_PR_Prerequisite"><?php echo $_SESSION['l_PR_Prerequisite'] ?></textarea>
 <script type="text/javascript">
 CKEDITOR.replace( 'l_PR_Prerequisite' );
 CKEDITOR.add
@@ -605,7 +629,10 @@ CKEDITOR.add
 </td>
 </tr>
 <tr>
-<td>Maximum No of Students</td>
+<td>Maximum No of Students<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="How many number of students can perform this project per team?">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a></td>
 <td> <select class="form-control" name=l_PR_No_Students >
 
 <?php for($i=1; $i<8; $i++){ ?>
@@ -617,7 +644,10 @@ CKEDITOR.add
 
 <!-- Level-->
 <tr>
-<td>Complexity Level</td>
+<td>Complexity Level<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="How complex is the project for an average student to perform this project?">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a></td>
 <td> <select class="form-control" name=l_PR_level value="">
 
 <?php
@@ -632,7 +662,10 @@ CKEDITOR.add
     /*level End*/
     ?>
     <tr>
-    	<td>Project Duration</td><td>
+    	<td>Project Duration<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="How long will an average team of 3 students will take to finish this project?">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a></td><td>
        		 <select class="form-control" name="l_PR_Duration1" value="">
 	       		 <?php for($pr=1;$pr<=12;$pr++){?>
 		            <option value="<?php echo $pr;?>" ><?php echo $pr;?></option>
@@ -648,8 +681,13 @@ CKEDITOR.add
     </tr>
           <?php
           /*Project will be visible from specified start date  */
-          print('<tr><td>Project Start Date</td>
-                <td>Month<select class="form-control" name=SMonth value="">Select Month</option>
+          print('<tr><td>Project Start Date<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="This indicates from what time the project will be shown in projectory to the students.
+
+">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a></td>
+                <td>Month<select id="SMonth" class="form-control" name=SMonth value="">Select Month</option>
                 <option value=01>January</option>
                 <option value=02>February</option>
                 <option value=03>March</option>
@@ -664,7 +702,7 @@ CKEDITOR.add
                 <option value=12>December</option>
                 </select></td>
                 
-                <td>Date<select class="form-control" name=SDate >
+                <td>Date<select id="SDate" class="form-control" name=SDate >
                 <option value=01>01</option>
                 <option value=02>02</option>
                 <option value=03>03</option>
@@ -698,7 +736,7 @@ CKEDITOR.add
                 <option value=31>31</option>
                 </select></td>');
                 
-                print('<td>Year<select class="form-control" name="SYear">');
+                print('<td>Year<select id="SYear" class="form-control" name="SYear">');
                 for($i =date('Y'); $i< 2025; $i++)
                 {
                 print('<option>'.$i.'</option>');
@@ -708,8 +746,12 @@ CKEDITOR.add
                 print('</td></tr>');
                 
                 /*Project will not be visible after this date  */
-                print('<tr><td>Project ExpiryDate</td>
-                      <td>Month<select class="form-control" name=EMonth value="">Select Month</option>
+                print('<tr><td>Project ExpiryDate<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="This indicates till what time the project will be shown in projectors to the students.
+">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a><span id="errdate" style="font-size: 12px; color:red;"></span></td>
+                      <td>Month<select class="form-control "  id="EMonth" name=EMonth value="">Select Month</option>
                       <option value=01>January</option>
                       <option value=02>February</option>
                       <option value=03>March</option>
@@ -724,7 +766,7 @@ CKEDITOR.add
                       <option value=12>December</option>
                       </select></td>
                       
-                      <td>Date<select class="form-control"name=EDate >
+                      <td>Date<select class="form-control" id="EDate" name=EDate >
                       <option value=01>01</option>
                       <option value=02>02</option>
                       <option value=03>03</option>
@@ -758,7 +800,7 @@ CKEDITOR.add
                       <option value=31>31</option>
                       </select> </td>');
                       
-                      print('<td>Year<select class="form-control" name="EYear">');
+                      print('<td>Year<select class="form-control" id="EYear" name="EYear">');
                       for($i =date('Y'); $i<2025; $i++)
                       {
                       print('<option>'.$i.'</option>');
@@ -767,18 +809,34 @@ CKEDITOR.add
                       print('</td></tr></table>');
                       /*Project Synopsis*/
                       print('<br>');
-                      print('<table class="ady-table-content" style="width:100%;"><tr style="    background-color:rgba(11, 14, 95, 0.22);"><td>Attach Project Synopsis :<font color=red>*</font></td><td><input  type="file" name="file" id="file"></td></tr></table>');
+                      print('<table class="ady-table-content" style="width:100%;"><tr style="background-color:rgba(11, 14, 95, 0.22);"><td>Attach Project Synopsis :<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="This is a document form of the information provided above in pdf format.
+">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a><font color=red>*<span id="errsynopsis"></span></font></td><td><input  id="attachsynopsis" type="file" name="file" id="file"></td></tr></table>');
                       
                       print('<br>');
-                      print('<table class="ady-table-content" style="width:100%;"><tr style="    background-color:rgba(11, 14, 95, 0.22);"><td style="width:35%">Allow Synopsis View as Pdf:<font color=red>*</font></td><td><input  type="radio" name="allowed_synopsis" id="allowed_synopsis" value="Y"> Yes&nbsp&nbsp&nbsp&nbsp&nbsp<input  type="radio" name="allowed_synopsis" checked id="allowed_synopsis" value="N">  No</td></tr></table>');
+                      print('<table class="ady-table-content" style="width:100%;"><tr style="    background-color:rgba(11, 14, 95, 0.22);"><td style="width:35%">Allow Synopsis View as Pdf:<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content=" This indicates whether to allow the student to view it in the pdf format or allow only HTML format view of the synopsis as provided above.
+">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a><font color=red>*</font></td><td><input  type="radio" name="allowed_synopsis" id="allowed_synopsis" value="Y"> Yes&nbsp&nbsp&nbsp&nbsp&nbsp<input  type="radio" name="allowed_synopsis" checked id="allowed_synopsis" value="N">  No</td></tr></table>');
                       print('<br>');
                      
-                      print('<table class="ady-table-content" style="width:100%;"><tr style="    background-color:rgba(11, 14, 95, 0.22);"><td style="width:35%">Allow Only Company Mentors<font color=red>*</font></td><td><input  type="radio" name="allowed_mentors" id="allowed_mentors" value="Y"> Yes&nbsp&nbsp&nbsp&nbsp&nbsp<input  type="radio" name="allowed_mentors" checked id="allowed_mentors" value="N">  No</td></tr></table>');
+                      print('<table class="ady-table-content" style="width:100%;"><tr style="    background-color:rgba(11, 14, 95, 0.22);"><td style="width:35%">Allow Only Company Mentors<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="This indicates whether to allow only your company mentors or allow any mentor of any company to mentor this project.
+">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a><font color=red>*</font></td><td><input  type="radio" name="allowed_mentors" id="allowed_mentors" value="Y"> Yes&nbsp&nbsp&nbsp&nbsp&nbsp<input  type="radio" name="allowed_mentors" checked id="allowed_mentors" value="N">  No</td></tr></table>');
                       print('<br>');
                       ?>
                        <table class="ady-table-content" style="width:100%;">
                          <tr style="    background-color:rgba(11, 14, 95, 0.22);">
-                         	<td>Attach Extra document</td>
+                         	<td>Attach Extra document<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="This allows you to add another supplement documents for the students to view after they have signed up for it.
+">
+  
+  
+  <span class="glyphicon glyphicon-info-sign" ></span></a></td>
                          	<td> Name of Document:<input  type="text" name="datafile_name" id="datafile_name"></td>
                          	<td><input  type="file" name="datafile" id="datafile"></td>
                          </tr>
@@ -789,7 +847,10 @@ CKEDITOR.add
                       $l_SO_result = mysql_query($l_SO_sql);
                       
                       print('<br>');
-                      print('<table class="ady-table-content" style="width:100%;"><tr style="background-color:rgba(11, 14, 95, 0.22);"><td>Solution :<font color=red>*</font></td><td><select class="form-control" name="l_solution"><option value="NULL">Select...</option>');
+                      print('<table class="ady-table-content" style="width:100%;"><tr style="background-color:rgba(11, 14, 95, 0.22);"><td>Solution <a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="Please enter one of the Solution which is applicable to the project.
+">
+ 
+  <span class="glyphicon glyphicon-info-sign" ></span></a>:<font color=red>*<span id="errsolution"></span></font></td><td><select id="selectsolution" class="form-control" name="l_solution"><option value="NULL">Select...</option>');
 
                       while($l_SO_row = mysql_fetch_row($l_SO_result))
                       {
@@ -806,8 +867,11 @@ CKEDITOR.add
                       $l_IN_sql = 'select IN_id, IN_Name from Industry ';
                       $l_IN_result = mysql_query($l_IN_sql);
                       
-                      print('<br>');
-                      print('<table class="ady-table-content" style="width:100%;"><tr style="background-color:rgba(11, 14, 95, 0.22);"><td>Industry :<font color=red>*</font></td><td><select class="form-control" name="l_industry"><option value="NULL">Select...</option>');
+                     
+                      print('<table class="ady-table-content" style="width:100%;"><tr style="background-color:rgba(11, 14, 95, 0.22);"><td>Industry <a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="Please enter one of the Industry which is applicable to the project.
+">
+ 
+  <span class="glyphicon glyphicon-info-sign" ></span></a>:<font color=red>*<span id="errindustry"></span></font></td><td><select id="industry" class="form-control" name="l_industry"><option value="NULL">Select...</option>');
                       
                       while($l_IN_row = mysql_fetch_row($l_IN_result))
                       {
@@ -817,11 +881,7 @@ CKEDITOR.add
                       
                       }
                       print('</select></td></tr></table>');
-                      print('<br>');
-  
-                      
-                      
-                      $l_AL_sql = 'select AL_id, AL_Desc from Access_Level WHERE AL_Type = "PV" order by AL_id asc';
+                     $l_AL_sql = 'select AL_id, AL_Desc from Access_Level WHERE AL_Type = "PV" order by AL_id asc';
                       $l_AL_result = mysql_query($l_AL_sql);
                       $l_AL_count = mysql_num_rows($l_AL_result);
                       
@@ -835,10 +895,18 @@ CKEDITOR.add
                       }
                       
                       /* Preference of documents to be submitted by students during the project */
-                      print('<table class="ady-table-content" style="width:100%;"><tr><td>
+                      print('<table class="ady-table-content" style="width:100%;">
+                      
+                      
+                      <tr style="font-weight:bold"><th  colspan=2>Project Process Documents<a  style="color: hsl(180, 100%, 99%);" title="Please add the types of documents the student should deliver
+" data-toggle="popover" data-trigger="hover" data-html="true" data-content="
+">
+ 
+  <span class="glyphicon glyphicon-info-sign" ></span></a></th></tr>
+                      <tr><td>
                             
                             Your First Document</td>
-                            <td><select class="form-control" name="l_AL_sel[]">
+                            <td><select id="firstdoc" class="form-control" name="l_AL_sel[]">
                             <option value="NULL">Select...</option>');
                             
                             //$l_AL_array[0][1]=Design;
@@ -853,7 +921,7 @@ CKEDITOR.add
                             
                             print('<tr><td>
                                   Your Second Document</td>
-                                  <td><select class="form-control" name="l_AL_sel[]">
+                                  <td><select id="seconddoc" class="form-control" name="l_AL_sel[]">
                                   <option value="NULL">Select...</option>');
                                   foreach ($l_AL_array as $row)
                                   {
@@ -864,7 +932,7 @@ CKEDITOR.add
                                   
                                   print('<tr><td>
                                         Your Third Document</td>
-                                        <td><select class="form-control" name="l_AL_sel[]">
+                                        <td><select id="thirddoc" class="form-control" name="l_AL_sel[]">
                                         <option value="NULL">Select...</option>');
                                         
                                         foreach ($l_AL_array as $row)
@@ -874,7 +942,7 @@ CKEDITOR.add
                                         
                                         print('</select><input  type="file" name="l_file_Template[]" multiple="multiple"></td></tr>'); // choose Third doc templeate
                                         
-                                        print('<tr><td>Your Fourth Document</td><td><select class="form-control" name="l_AL_sel[]"><option value="NULL">Select...</option>');
+                                        print('<tr><td>Your Fourth Document</td><td><select  id="fourthdoc" class="form-control" name="l_AL_sel[]"><option value="NULL">Select...</option>');
                                         
                                         foreach ($l_AL_array as $row)
                                         {
@@ -953,7 +1021,11 @@ CKEDITOR.add
                                                                             
                                                                             print('</table><br>');
                                                                             print('<table style="width:100%;" class="ady-table-content">');
-                                                                            print('<tr><th style="font-weight:bold" colspan=2>Select Streams to which the project is targetted </th></tr>');
+                                                                            print('<tr><th style="font-weight:bold" colspan=2>Select Streams to which the project is targeted<a  style="color: hsl(180, 100%, 99%);" title="Please select the target streams you would like this project to be performed by.
+" data-toggle="popover" data-trigger="hover" data-html="true" data-content="
+">
+ 
+  <span class="glyphicon glyphicon-info-sign" ></span></a> </th></tr>');
                                                                             
                                                                             
                                                                             /*Select and Display All Branches Names*/
@@ -990,12 +1062,21 @@ CKEDITOR.add
                             Domains
                                 </div>
                         <div class="col-md-4">
-                            Select Technologies used for the Project
+                            Select Technologies used for the Project<a  style="color: hsl(180, 100%, 99%);" title="Please select the technologies the students should use to perform this project. For instance, the technologies to be used for a PHP project could be - PHP, HTML, CSS, etc.
+" data-toggle="popover" data-trigger="hover" data-html="true" data-content="
+">
+ 
+  <span class="glyphicon glyphicon-info-sign" ></span></a>
                                 </div>
                         <div class="col-md-4">
-                            Most Prefered Technology
+                            Most Prefered Technology<a  style="color: hsl(180, 100%, 99%);" title="Please select the one core technology from the list of the technologies which is required in the project. For instance, if it is a PHP project, the most preferred project is PHP. 
+" data-toggle="popover" data-trigger="hover" data-html="true" data-content="
+">
+ 
+  <span class="glyphicon glyphicon-info-sign" ></span></a>
                                 </div>
     </div>
+   <p id="errprefertech" style="text-align:center"></p> 
  <div class="panel-group" style="margin-bottom: 0px;" id="accordion">            
 
                                             <?php
@@ -1029,10 +1110,10 @@ CKEDITOR.add
                                                                 <div class="row"><div class="col-md-4"><label> <?php echo $l_SD_Name; ?>: </label>
                                 </div>
                                 <div class="col-md-4">
-                               <input  type="checkbox" class="g_checkbox_select_DM" value="<?php echo $l_SD_id; ?>" name="l_SD_sel[]"> 
+                               <input  type="checkbox" class="g_checkbox_select_DM checkbox" value="<?php echo $l_SD_id; ?>" name="l_SD_sel[]"> 
                               </div>
                                 <div class="col-md-4">
-                               <input  type="radio" class="g_checkbox_select_DM" value="<?php echo $l_SD_id; ?>" name="l_SD_prf" required>
+                               <input  type="radio" class="g_checkbox_select_DM checkradio" value="<?php echo $l_SD_id; ?>" name="l_SD_prf">
  </div>
      </div>                                                             
                                                 <?php } ?> </div>
@@ -1057,14 +1138,14 @@ print('<tr><td style="text-align:left">Do You Want to Add NDA?</td><td style="wi
 
 print('<tr id="Ndatr" style="display:none"><td>');
 print('<input  type="Radio" onclick="myFunctionshow()" id="NdaR1" class="g_checkbox_select_DM" value="N" name="Z_NDA">Custom <a>NDA</a>');
-print('<input class="form-control ady-form" type="file" name="NDAfile" id="thenda" style="display:none" /></td>');
+print('<input class="form-control ady-form" type="file" name="NDAfile" id="thenda" style="display:none" /><span id="errnda"></span></td>');
 print('<td><input type="Radio" class="" value="Y" id="NdaR2" onclick="myFunctionhide()" name="Z_NDA">Go with Zaireprojects <a>NDA</a>
                                       </td></tr>
                                       ');
 mysql_free_result($l_result_sql);
 print('</table>');
 print('<table style="width:100%">');
-print('<tr><td style ="text-align:center" colspan=2><br><input class=" ady-req-btn btn-primary" type=submit name=SaveRec  accesskey=Alt-S value="Add Project" ></td></tr>');
+print('<tr><td style ="text-align:center" colspan=2><br><input id="addproject" class=" ady-req-btn btn-primary" type="submit" name=SaveRec  accesskey=Alt-S value="Add Project" ></td></tr>');
 print('</table>');
 
 }
@@ -1074,6 +1155,175 @@ print('</table>');
  </div></div></div>
    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<form>
+ 
+<script>
+$(document).ready(function(){
+
+
+$('.checkradio').on('click',function(){
+ $('#checkpref').prop('checked', false);
+  $('#checkpref').removeAttr( "id" );
+ $(this).parent().parent().find('input[type=checkbox]').attr("id","checkpref")
+ $(this).parent().parent().find('input[type=checkbox]').prop('checked', true);
+$('#errprefertech').html("");
+});
+
+$('#thenda').on('change',function(){
+var fileExtension = ['pdf'];
+                    if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+                        
+                        this.value = ''; // Clean field
+                       $("#thenda").css( "border-color","red" );     
+                       $("#errnda").html( "<font color=red>Only PDF Allowed...</font>" );     
+                         e.preventDefault();
+                    }
+                    else{
+                    $('#thenda').css('border-color','green');
+                     $("#errnda").html( "<font color=green>Valid file format.</font>" );
+                    e.preventDefault();
+                    }
+                
+});
+
+$('#attachsynopsis').on('change', function() {
+		$("#errsynopsis").hide().html("");
+	});
+	$('#selectsolution').on('change', function() {
+		$("#errsolution").hide().html("");
+	});
+	$('#industry').on('change', function() {
+		$("#errindustry").hide().html("");  
+	});
+	$('#prname').on("keyup",function() {
+		$("#errprname").hide().html("");  
+	}); 
+ 	
+ 
+ 	
+ 	$('#EYear,#EMonth,#EDate').on('change', function() {
+		var Releasedate=$("#SYear").val()+$("#SMonth").val()+$("#SDate").val();
+ 		var Expirydate=$("#EYear").val()+$("#EMonth").val()+$("#EDate").val();
+	   if(Expirydate > Releasedate){
+		$("#errdate").hide().html(" [Expiry-Date should be greater than Start-Date.]");
+     	  }   
+	});
+	$('#firstdoc').on('change', function() {
+		$("#firstdoc").css('border-color','green');  
+	});
+	$('#seconddoc').on('change', function() {
+		$("#seconddoc").css('border-color','green');  
+	});
+        $("form").submit( function(e) {
+		var flag = true;
+		
+		var synopsis=$("#attachsynopsis").val();
+		var solution=$("#selectsolution").val();
+		var firstdoc=$("#firstdoc").val();
+		var seconddoc=$("#seconddoc").val();
+		
+		var industry=$("#industry").val();
+		var Expirydate=$("#EYear").val()+$("#EMonth").val()+$("#EDate").val();
+		var Releasedate=$("#SYear").val()+$("#SMonth").val()+$("#SDate").val();
+		
+		var prname=$("#prname").val();
+		var messageLength0 = CKEDITOR.instances['l_PR_Short_Desc'].getData().replace(/<[^>]*>/gi, '').length;
+		var messageLength1 = CKEDITOR.instances['l_PR_Desc'].getData().replace(/<[^>]*>/gi, '').length;
+		var messageLength2 = CKEDITOR.instances['l_PR_Objective'].getData().replace(/<[^>]*>/gi, '').length;
+		var messageLength3 = CKEDITOR.instances['l_PR_Functional_req'].getData().replace(/<[^>]*>/gi, '').length;
+		var messageLength4 = CKEDITOR.instances['l_PR_N_req'].getData().replace(/<[^>]*>/gi, '').length;
+	    
+	       var ndafile=$("#thenda").val();
+	        if(ndafile!=""){
+	$('#thenda').css('border-color','green');
+	
+	    }else{
+	    $('#thenda').css('border-color','red');
+	    }
+	       
+	    
+	    if(prname==""){
+	
+		$('#prname').focus();
+		flag = false;
+		$("#errprname").show().html("[Project Name Invalid].");
+		$("#errprname").css('color', 'red');
+	    }
+            if( !messageLength0 ) {
+            flag =false;
+		$("#errprshortdisc").show().html("[Short Description empty].");
+		$("#errprshortdisc").css('color', 'red'); 
+               e.preventDefault();
+            }
+            if( !messageLength1 ) {
+            	flag =false;
+                $("#errprdiscrip").show().html("[Discription can't be empty].");
+  		$("#errprdiscrip").css('color', 'red');
+                e.preventDefault();
+            }
+            if( !messageLength2 ) {
+            	flag =false;
+                $("#errprobjective").show().html("Objective can't be empty].");
+		$("#errprobjective").css('color', 'red');
+                e.preventDefault();
+            }
+            if( !messageLength3 ) {
+            	flag =false; 
+                $("#errprfunctionreq").show().html("[Functional req can't be empty].");
+		$("#errprfunctionreq").css('color', 'red');
+                e.preventDefault();
+            }
+            if( !messageLength3 ) {
+            	flag =false;
+                $("#errprnonfunctionreq").show().html("[Non-Functional req can't be empty].");
+                $("#errprnonfunctionreq").css('color', 'red');
+                e.preventDefault();
+            }
+	    if(Releasedate>=Expirydate){
+		flag = false;
+		$("#errdate").show().html(" [Expiry-Date should be greater than Start-Date.]");
+		e.preventDefault();
+	    } 
+	    if(synopsis==""){
+		flag = false;
+		$("#errsynopsis").show().html("[Please Select Synopsis].");
+		e.preventDefault();
+	    }
+	    if(solution=='NULL'){
+		flag = false;
+		$("#errsolution").show().html("[Please Select Solution.]");
+		e.preventDefault();
+	    }
+	    if(industry=='NULL'){
+		flag = false;
+		$("#errindustry").show().html("[Please Select Industry.]");
+		e.preventDefault();
+	    }
+	    if(firstdoc=='NULL'){
+		flag = false;
+		$("#firstdoc").css("border-color", "red");
+		e.preventDefault();
+	    }
+	    if(seconddoc=='NULL'){
+		flag = false;
+		$("#seconddoc").css("border-color", "red");
+		e.preventDefault();
+	    }
+	    if($('input[name=l_SD_prf]:checked').length<=0) {
+		$('#errprefertech').html('<font color="red" >Please Select the Most Prefered Technology and check the corresponding boxes</font>');
+	    }
+	    if(myFunctionshow()==""){
+		flag=false;
+	    } else{
+	    $('#thenda').css('border-color','green');
+	    }
+	    if(flag == true){
+		return true;
+	    } else{
+	    	return false;
+	    }  
+       });
+});
+</script>
+      
         
  <?php include('footer.php') ?>
