@@ -240,9 +240,9 @@ print('</table><br>');
     </div>
 </div>
 <div style="text-align:center">
-
+   <?php if($_SESSION['g_IT_id'] !=0){?>
    <button type="button" class="btn btn-primary btn-md myBtn3" style="margin-right: 20px;" data-href="C"  data-toggle="popover" data-trigger="hover" data-placement="top" data-content="You can perform this project as part of your college curriculum. You will have the option of selecting a college professor as a guide in the system and a company mentor to help you through the project.">Enroll As Curriculum Project</button>
-    
+    <?php } ?>
    <button type="button" class="btn btn-primary btn-md <?php if($l_MO_Amount != 0){ echo 'myBtn3'; } else { echo 'disabled'; } ?>" style="margin-right: 20px;" data-href="N" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="You can perform this project on your own with the help of your mentor to build up your skills">Enroll as Non Curriculum Project</button>
   
 <?php
@@ -250,7 +250,9 @@ print('</table><br>');
 ?>
 <a class="btn btn-danger" href="<?php echo $l_filehomepath;?>/Projects.php" >Cancel and Go Back</a></div>
 </div></div></div>
-      <?php include('footer.php');?>
+      <?php include('footer.php');
+          
+          ?>
    
 <script>
 $(document).ready(function(){
