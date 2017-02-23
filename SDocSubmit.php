@@ -157,7 +157,7 @@ span{
     $l_PR_Duration = $l_PR_row[0];
      $l_TM_endDate = date('Ymd',strtotime($l_TM_row[0]) + (24*3600*$l_PR_Duration));
      
-     if(strtotime($l_TM_endDate) < strtotime($l_PD_SubmissionDate)){
+     if(strtotime($l_TM_endDate) < strtotime($l_PD_SubmissionDate ) && isset($l_TM_id)){
      echo "<h3 style='color:red;margin:0 auto;text-align:center'>Sorry !! Your Project Duration is Over</h3>";
      }
      else {
@@ -177,7 +177,7 @@ span{
         for($inc = 1; $inc <= $l_Max_PS_id; $inc++)
         {
             // get Access level names in the list according to sequence number
-            $l_Seq_sql = 'select AL.AL_Desc,AL.AL_id from ProjectDocument_Sequence as PS,Access_Level as AL where PS.PR_id="'.$l_PR_id.'" and PS.PS_Seq_No="'.$inc.'" and PS.AL_id=AL.AL_id';
+            $l_Seq_sql = 'select AL.AL_Desc,AL.AL_id from ProjectDocument_Sequence as PS,Access_Level as AL where PS.PR_id="'.$l_PR_id.'" and PS.PS_Seq_No="'.$inc.'" and PS.AL_id=AL.AL_id ';
             $l_res = mysql_query($l_Seq_sql) or die(mysql_error());
           
            
@@ -212,7 +212,12 @@ span{
       <span class="user_tip_marker"><span class="blink"> </span><span class="inner_blink"></span></span> 
       <?php 
       }
-      else if($i==1 && $pdrun[0]!='P' && $pdrun[0]!='A' && $j!=7)
+      else if($pdrun[0]=='R')
+      {$j=7;?>
+      <span class="user_tip_marker"><span class="blink"> </span><span class="inner_blink"></span></span> 
+      <?php 
+      }
+      else if($i==1 && $pdrun[0]!='P' && $pdrun[0]!='A' && $pdrun[0]!='R' && $j!=7)
       {?>
       <span class="user_tip_marker"><span class="blink"> </span><span class="inner_blink"></span></span> 
       <?php 
@@ -281,7 +286,7 @@ span{
         
         else
         {
-            $l_max_filesize = 500;
+            $l_max_filesize = 1000;
         }
         
         print('<div class="alert alert-info"> <h4>Once you upload a file, You cannot delete the uploaded file</h4> </div>');
@@ -547,10 +552,10 @@ span{
         $l_Max_PS_id = max($l_PS_id_arr);
         $l_Max_PS_id = $l_Max_PS_id + 1;
         print('<select class="form-control" name="l_AL_id" >');
-        for($inc = 1; $inc <= $l_Max_PS_id; $inc++)
+        for($inc = 1; $inc <= $l_Max_PS_id; $l_Max_PS_id--)
         {
             // get Access level names in the list according to sequence number
-            $l_Seq_sql = 'select PS.AL_id, AL.AL_Desc from ProjectDocument_Sequence as PS,Access_Level as AL where PS.PR_id='.$l_PR_id.' and PS.PS_Seq_No='.$inc.' and PS.AL_id=AL.AL_id';
+            $l_Seq_sql = 'select PS.AL_id, AL.AL_Desc from ProjectDocument_Sequence as PS,Access_Level as AL where PS.PR_id='.$l_PR_id.' and PS.PS_Seq_No='.$l_Max_PS_id.' and PS.AL_id=AL.AL_id';
             $l_res = mysql_query($l_Seq_sql) or die(mysql_error());
             
             if($l_data = mysql_fetch_row($l_res))
@@ -576,13 +581,13 @@ span{
 <br /><br />
 <?php
     // nav code for view template documents starts here !!!!!
-    print('<table class="ady-table-content" style="width:100%;margin-top:15px;" border="1" ><tr><th>Documents Templates</th><th>Template Status</th></tr>');
+    print('<table class="ady-table-content" style="width:100%;margin-top:15px;" border="1" ><tr><th>Documents Templates</th><th>Template Status</th><th>Deadlines</th></tr>');
    
     if($l_count_PD == 0)
     {
-        
+      
         //select template data where project document sequence number is 1
-        $l_Template_query  ='select AL.AL_Desc,PDS.PS_id,PDS.PS_Doc_Size,AL.AL_id,AL.AL_Templatec_Size FROM  ProjectDocument_Sequence as PDS,Access_Level as AL where  PDS.PR_id='.$l_PR_id.' and PDS.PS_Seq_No=1 and PDS.AL_id=AL.AL_id';
+     $l_Template_query  ='select AL.AL_Desc,PDS.PS_id,PDS.PS_Doc_Size,AL.AL_id,AL.AL_Templatec_Size,PDS.PS_Deadlines FROM  ProjectDocument_Sequence as PDS,Access_Level as AL where  PDS.PR_id='.$l_PR_id.' and PDS.PS_Seq_No=1 and PDS.AL_id=AL.AL_id';
         $l_Template_res = mysql_query($l_Template_query);
         if($l_row = mysql_fetch_row($l_Template_res))
         {
@@ -591,24 +596,30 @@ span{
             $l_Template_Size      =$l_row[2];
              $l_AL_id=$l_row[3];
             $l_AL_Size=$l_row[4];
+            if($l_row[5] !=NULL || $l_row[5] !=0){
+            $l_AL_Deadlines='whitin '.$l_row[5].' days';
+            }else{
+            $l_AL_Deadlines= 'Not Applicable';
+            }
             if($l_Template_Size!=0)
             {
             
                 print( '<tr><td><font color=009933>' .$l_AL_Desc . '</font></td>');
-                echo "<td><a class='btn btn-primary' href='blob_download.php?psid=".$l_Template_ID."'>Download</a>";
-                echo "</td></tr>";
+                echo "<td><a class='btn btn-primary' href='blob_download.php?psid=".$l_Template_ID."'>Download</a></td>";
+                print( '<td><font color=009933> '.$l_AL_Deadlines.'</font></td>');
+                echo "</tr>";
             }
            else 
                 {
-                
                 if($l_AL_Size==0){
-                
-                    print( '<tr><td ><font color=009933> '.$l_AL_Desc .' </font></td><td style="text-align:center" >Not Available</td></tr>');
-                    
+                    print( '<tr><td ><font color=009933> '.$l_AL_Desc .' </font></td><td style="text-align:center" >Not Available</td>');
+                                    print( '<td><font color=009933> '.$l_AL_Deadlines.'</font></td>');
+print('</tr>');
                     }else{
                    echo"<tr><td ><font color=009933> ".$l_AL_Desc ."</font></td>";
-                echo "<td><a class='btn btn-primary' href='DefaultTemplateDownload.php?ALid=".$l_AL_id."'>Download</a>";
-                    echo "</td></tr>";
+                echo "<td><a class='btn btn-primary' href='DefaultTemplateDownload.php?ALid=".$l_AL_id."'>Download</a></td>";
+                                    print( '<td><font color=009933> '.$l_AL_Deadlines.'</font></td>');
+                                    print('</tr>');
                     }
                     
                 }
@@ -616,13 +627,18 @@ span{
         
     }
     else
-    {
-        for($inc = 1; $inc <= $l_Max_PS_id; $inc++)
+    {  
+    
+    $l_Max_PS_id = max($l_PS_id_arr);
+    $l_Max_PS_id = $l_Max_PS_id + 1;
+
+        for($inc = 1; $inc <= $l_Max_PS_id; $l_Max_PS_id--)
         {
+       
             //select template data as per the project document sequence number
           
           
-            $l_Template_query = 'select AL.AL_Desc,PDS.PS_id,PDS.PS_Doc_Size,AL.AL_id,AL.AL_Templatec_Size FROM  ProjectDocument_Sequence as PDS , Access_Level as AL where AL.AL_id = PDS.AL_id and PDS.PS_Seq_No='.$inc.' and PDS.PR_id = '.$l_PR_id.'' ;
+           $l_Template_query = 'select AL.AL_Desc,PDS.PS_id,PDS.PS_Doc_Size,AL.AL_id,AL.AL_Templatec_Size,PDS.PS_Deadlines FROM  ProjectDocument_Sequence as PDS , Access_Level as AL where AL.AL_id = PDS.AL_id and PDS.PS_Seq_No='.$l_Max_PS_id.' and PDS.PR_id = '.$l_PR_id.'' ;
             $l_Template_res = mysql_query($l_Template_query);
             if($l_row = mysql_fetch_row($l_Template_res))
             {
@@ -631,21 +647,27 @@ span{
                 $l_Template_Size      =$l_row[2];
                 $l_AL_id=$l_row[3];
                 $l_AL_Size=$l_row[4];
+                if($l_row[5] !=NULL || $l_row[5] !=0){
+            $l_AL_Deadlines='whitin '.$l_row[5].' days';
+            }else{
+            $l_AL_Deadlines= 'Not Applicable';
+            }
+
                 if($l_Template_Size!=0)
                 {
                     print( '<tr><td><font color=009933>' .$l_AL_Desc . '</font></td>');
                     echo "<td><a class='btn btn-primary' href='blob_download.php?psid=".$l_Template_ID."'>Download</a>";
-                    echo "</td></tr>";
+                    echo "</td><td><font color=009933> ".$l_AL_Deadlines."</font></td></tr>";
                 }
                 else 
                 {
                 if($l_AL_Size==0){
-                    print( '<tr><td ><font color=009933> '.$l_AL_Desc .' </font></td><td style="text-align:center" >Not Available</td></tr>');
+                    print( '<tr><td ><font color=009933> '.$l_AL_Desc .' </font></td><td style="text-align:center" >Not Available</td><td><font color=009933> '.$l_AL_Deadlines.'</font></td></tr>');
                     
                     }else{
                 echo"<tr><td ><font color=009933> ".$l_AL_Desc ."</font></td>";
                 echo "<td><a class='btn btn-primary' href='DefaultTemplateDownload.php?ALid=".$l_AL_id."'>Download</a>";
-                    echo "</td></tr>";
+                    echo "</td><td><font color=009933> ".$l_AL_Deadlines."</font></td></tr>";
                     }
                     
                 }
