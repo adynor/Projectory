@@ -7,6 +7,7 @@ p{color: black !important;}
 </style>
 
 <script src="//cdn.ckeditor.com/4.5.8/standard/ckeditor.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <?php
 include ('db_config.php');
 include ('header.php');
@@ -188,80 +189,118 @@ $l_row = mysql_fetch_row($l_result);
 <tr><th>Mentor</th><th colspan=3><?php echo $l_row[0] ?></th></tr>
 
 <tr>
-    <td>Project Name  </td>  
+    <td>Project Name<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="Name of the project to be shown to the student"><span class="glyphicon glyphicon-info-sign" ></span></a><span id="errprname"></span> </td>  
     <td colspan=3 >
-        <input class="form-control form-control1 ady-form" type=text name="l_Project_name"  value = '<?php echo htmlspecialchars_decode($l_Project_name); ?>'>
+        <input id="prname" class="form-control form-control1 ady-form" type=text name="l_Project_name"  value = '<?php echo htmlspecialchars_decode($l_Project_name); ?>'>
     </td></tr>
 
 
 <tr>
-    <td>Project Short Description</td>
+    <td>Project Short Description<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="This is a short description which will be shown to the student before he applies for it."><span class="glyphicon glyphicon-info-sign" ></span></a>
+  <span id="errprshortdisc"></span></td></td>
     <td colspan=3>
         <textarea style="height: 83px;"class="form-control ady-form" name="l_PR_Short_Desc" >
             <?php echo $l_PR_Short_Desc ;?>
         </textarea>
         <script type="text/javascript">
-      CKEDITOR.replace( 'l_PR_Short_Desc' );
-      CKEDITOR.add            
+     // CKEDITOR.replace( 'l_PR_Short_Desc' );
+      CKEDITOR.replace('l_PR_Short_Desc', {
+    on: {
+
+        key: function() {
+        $('#errprshortdisc').text('');
+        }
+    }
+});         
    </script>
     </td>
 </tr>
 
 <tr>
-    <td>Project Description</td>
+    <td>Project Description<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="This is a description of a project which will be shown to the student after he applies for it."><span class="glyphicon glyphicon-info-sign" ></span></a><span id="errprdiscrip"></span></td></td>
     <td colspan=3>
         <textarea style="height: 83px;"class="form-control ady-form" name="l_PR_Desc" >
             <?php echo $l_PR_Desc ;?>
         </textarea>
         <script type="text/javascript">
-      CKEDITOR.replace( 'l_PR_Desc' );
-      CKEDITOR.add            
+     // CKEDITOR.replace( 'l_PR_Desc' );
+     CKEDITOR.replace('l_PR_Desc', {
+    on: {
+
+        key: function() {
+        $('#errprdiscrip').text('');
+        }
+    }
+});         
    </script>
     </td>
 </tr>
 
 <tr>
-    <td>Project Objective</td>
+    <td>Project Objective<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="What is the objective of the project for the student to achieve?"><span id="errprobjective"><span class="glyphicon glyphicon-info-sign" ></span></a></span></td></td>
     <td colspan=3>
         <textarea class="textarea" style="height: 83px;"class="form-control ady-form" name="l_PR_Objective" >
             <?php echo $l_PR_Objective ;?>
         </textarea>
         <script type="text/javascript">
-      CKEDITOR.replace( 'l_PR_Objective' );
-      CKEDITOR.add            
+      //CKEDITOR.replace( 'l_PR_Objective' );
+      CKEDITOR.replace('l_PR_Objective', {
+    on: {
+
+        key: function() {
+        $('#errprobjective').text('');
+        }
+    }
+});          
    </script>
     </td>
 </tr>
 <tr>
-    <td>Project Background</td>
+    <td>Project Background<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="A brief background on how the project idea was initiated"><span class="glyphicon glyphicon-info-sign" ></span></a></td>
     <td colspan=3>
         <textarea style="height: 83px;"class="form-control ady-form" name="l_PR_Background" >
            <?php echo $l_PR_Background ;?>
 
         </textarea>
    <script type="text/javascript">
-      CKEDITOR.replace( 'l_PR_Background' );
-      CKEDITOR.add            
+     // CKEDITOR.replace( 'l_PR_Background' );
+     CKEDITOR.replace('l_PR_Background', {
+    on: {
+
+        key: function() {
+       //$('#errprobjective').text('');
+        }
+    }
+});         
    </script>
     </td>
 </tr>
 
 
 <tr>
-    <td>Project Functional Requirements</td>
+    <td>Project Functional Requirements<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content=" This is the functional requirements that will help allow the students to refer for him to finish the project."><span class="glyphicon glyphicon-info-sign" ></span></a>
+  <span id="errprfunctionreq"></span></td></td>
     <td colspan=3><textarea style="height: 83px;"class="form-control ady-form" name="l_Functional_Requirement" >
          <?php echo $l_Functional_Requirement ;?>
     </textarea>
    <script type="text/javascript">
-      CKEDITOR.replace( 'l_Functional_Requirement' );
-      CKEDITOR.add            
+     // CKEDITOR.replace( 'l_Functional_Requirement' );
+      CKEDITOR.replace('l_Functional_Requirement', {
+    on: {
+
+        key: function() {
+        $('#errprfunctionreq').text('');
+        }
+    }
+});          
    </script>
     </td>
 </tr>
 
                <tr>
                    <td>
-                       Project Non Functional requirements
+                       Project Non Functional requirements<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content=" This is the Non-functional requirements that will help allow the students to refer for him to finish the project."><span class="glyphicon glyphicon-info-sign" ></span></a>
+  <span id="errprnonfunctionreq"></span></td>
                    </td>
                    <td colspan=3>
                        <textarea style="height: 83px;"class="form-control ady-form" name="l_PR_Non_Functional_Requirement" >
@@ -269,14 +308,22 @@ $l_row = mysql_fetch_row($l_result);
                            <?php echo $l_PR_Non_Functional_Requirement ?>
                        </textarea>
                       <script type="text/javascript">
-      CKEDITOR.replace( 'l_PR_Non_Functional_Requirement' );
-      CKEDITOR.add            
+     // CKEDITOR.replace( 'l_PR_Non_Functional_Requirement' );
+       CKEDITOR.replace('l_PR_Non_Functional_Requirement', {
+    on: {
+
+        key: function() {
+        $('#errprnonfunctionreq').text('');
+        }
+    }
+});                
    </script>
                    </td>
                </tr>
 
  <tr>
-    <td>Edit Project Synopsis</td>
+    <td>Edit Project Synopsis<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="This is a document form of the information provided above in pdf format.
+"><span class="glyphicon glyphicon-info-sign" ></span></a></td>
     <td colspan=3>
          <div class="form-group">
                 <div class="input-group input-group-md">
@@ -292,7 +339,7 @@ $l_row = mysql_fetch_row($l_result);
 </tr> 
   
 <tr>
-    <td>Project Duration</td>
+    <td>Project Duration<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="How long will an average team of 3 students will take to finish this project?"><span class="glyphicon glyphicon-info-sign" ></span></a></td>
     <td colspan=3>
          <div class="form-group">
              <div class="input-group input-group-md">
@@ -307,7 +354,7 @@ $l_row = mysql_fetch_row($l_result);
   </td>
 </tr>
 <tr>
-    <td>Maximum No of Students</td>
+    <td>Maximum No of Students<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="How many number of students can perform this project per team?"><span class="glyphicon glyphicon-info-sign" ></span></a></td>
     <td colspan=3>
          <div class="form-group">
                 <div class="input-group input-group-md">
@@ -323,7 +370,8 @@ $l_row = mysql_fetch_row($l_result);
     <td>Project Release Date</td>
     <td colspan=3><?php  echo $l_PR_ReleaseDate_display; ?></td>
 </tr>
-<tr><td>Project Expiry Date</td></td><td>Month<select class="form-control" name=Month>
+<tr><td>Project Expiry Date<a  title="" data-toggle="popover" data-trigger="hover" data-html="true" data-content="This indicates till what time the project will be shown in projectors to the students.
+"><span class="glyphicon glyphicon-info-sign" ></span></a><span id="errdate"></span></td></td><td>Month<select id="EMonth" class="form-control" name=Month>
   <?php
 for ($m=1; $m<=12; $m++) 
 {
@@ -351,11 +399,10 @@ for ($m=1; $m<=12; $m++)
     print(' <option value="'.$m.'" >'.date('F', mktime(0,0,0,$m)).'</option>') ;
         }
      }
-
 }
 print('</select></td>');
 
-print('<td>Date<select class="form-control" name=Date >');
+print('<td>Date<select id="EDate"  class="form-control" name=Date >');
 for($i=1; $i< 31; $i++)
 {
 if($i== $l_PR_ExpiryDate)
@@ -384,7 +431,7 @@ else
 }
 print('</select> </td>');
 
-print('<td>Year<select class="form-control" name="Year">');
+print('<td>Year<select id="EYear" class="form-control" name="Year">');
 for($i = date('Y'); $i<=date('Y')+3; $i++)
 {
 if($i== $l_PR_ExpiryYear)
@@ -401,7 +448,8 @@ else
 print('</select>');
 print('</td></tr>');
 
-print('<tr><td><font size="2" color="red">Note : All fields with * are mandatory. </font></td>   <td colspan=3><input class="form-control btn-primary ady-req-btn" type=submit name=submit value="Update" ></td></tr>');
+print('<tr><td><font size="2" color="red">Note : All fields with * are mandatory. </font></td>   <td colspan=3>
+<input  class="form-control btn-primary ady-req-btn" type="submit" name=submit value="Update" ></td></tr>');
     
     print('</table>');
     print('</form></div></div></div>');
@@ -409,6 +457,92 @@ print('<tr><td><font size="2" color="red">Note : All fields with * are mandatory
 ?>
 </div></div></div>
 <?php include('footer.php'); ?>
+<script>
+$(document).ready(function(){
+
+$('#prname').on("keyup",function() {
+		$("#errprname").hide().html("");  
+	}); 
+ 	
+ 	$('#EYear,#EMonth,#EDate').on('change', function() {
+		var Releasedate='<?php  echo $l_PR_ReleaseDate_display; ?>';
+ 		var Expirydate=$("#EYear").val()+$("#EMonth").val()+$("#EDate").val();
+	   if(Expirydate > Releasedate){
+		$("#errdate").hide().html(" [Expiry-Date should be greater than Start-Date.]");
+     	  }   
+	});
+	
+        $("form").submit( function(e) {
+		var flag = true;
+		
+		var Releasedate='<?php  echo $l_row_display[2]; ?>';
+		var Expirydate=$("#EYear").val()+$("#EMonth").val()+$("#EDate").val();
+		
+	        var prname=$("#prname").val();
+	       
+	         alert(prname+Expirydate+Releasedate);
+		var messageLength0 = CKEDITOR.instances['l_PR_Short_Desc'].getData().replace(/<[^>]*>/gi, '').length;
+		var messageLength1 = CKEDITOR.instances['l_PR_Desc'].getData().replace(/<[^>]*>/gi, '').length;
+		var messageLength2 = CKEDITOR.instances['l_PR_Objective'].getData().replace(/<[^>]*>/gi, '').length;
+		var messageLength3 = CKEDITOR.instances['l_Functional_Requirement'].getData().replace(/<[^>]*>/gi, '').length;
+		var messageLength4 = CKEDITOR.instances['l_PR_Non_Functional_Requirement'].getData().replace(/<[^>]*>/gi, '').length;
+	    
+	    if(prname==""){
+                $('#prname').focus();
+		flag = false;
+		$("#errprname").show().html("[Project Name Invalid].");
+		$("#errprname").css('color', 'red');
+	    alert();
+	    
+	    }
+	   
+            if( !messageLength0 ) {
+            flag =false;
+		$("#errprshortdisc").show().html("[Short Description empty].");
+		$("#errprshortdisc").css('color', 'red'); 
+               e.preventDefault();
+            }
+            if( !messageLength1 ) {
+            	flag =false;
+                $("#errprdiscrip").show().html("[Discription can't be empty].");
+  		$("#errprdiscrip").css('color', 'red');
+                e.preventDefault();
+            }
+            if( !messageLength2 ) {
+            	flag =false;
+                $("#errprobjective").show().html("[Objective can't be empty].");
+		$("#errprobjective").css('color', 'red');
+                e.preventDefault();
+            }
+            if( !messageLength3 ) {
+            	flag =false; 
+                $("#errprfunctionreq").show().html("[Functional req can't be empty].");
+		$("#errprfunctionreq").css('color', 'red');
+                e.preventDefault();
+            }
+            if( !messageLength3 ) {
+            	flag =false;
+                $("#errprnonfunctionreq").show().html("[Non-Functional req can't be empty].");
+                $("#errprnonfunctionreq").css('color', 'red');
+                e.preventDefault();
+            }
+	    if(Releasedate>=Expirydate){
+		flag = false;
+		$("#errdate").show().html(" [Expiry-Date should be greater than Release Date.]");
+		 $("#errdate").css('color', 'red');
+		e.preventDefault();
+	    } 
+	    
+	    if(flag == true){
+	      return true;
+	    } else{
+	    	return false;
+	    }  
+       });
+});
+</script>
+
+
 <script>
 
 

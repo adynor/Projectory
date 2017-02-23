@@ -587,7 +587,11 @@ span{
     {
       
         //select template data where project document sequence number is 1
+<<<<<<< HEAD
      $l_Template_query  ='select AL.AL_Desc,PDS.PS_id,PDS.PS_Doc_Size,AL.AL_id,AL.AL_Templatec_Size,PDS.PS_Deadlines FROM  ProjectDocument_Sequence as PDS,Access_Level as AL where  PDS.PR_id='.$l_PR_id.' and PDS.PS_Seq_No=1 and PDS.AL_id=AL.AL_id';
+=======
+        $l_Template_query  ='select AL.AL_Desc,PDS.PS_id,PDS.PS_Doc_Size,AL.AL_id,AL.AL_Templatec_Size,PDS.PS_Deadlines FROM  ProjectDocument_Sequence as PDS,Access_Level as AL where  PDS.PR_id='.$l_PR_id.' and PDS.PS_Seq_No=1 and PDS.AL_id=AL.AL_id';
+>>>>>>> f9809b6d342b585488ddd33ae1056f3bc13c7480
         $l_Template_res = mysql_query($l_Template_query);
         if($l_row = mysql_fetch_row($l_Template_res))
         {
@@ -638,7 +642,11 @@ print('</tr>');
             //select template data as per the project document sequence number
           
           
+<<<<<<< HEAD
            $l_Template_query = 'select AL.AL_Desc,PDS.PS_id,PDS.PS_Doc_Size,AL.AL_id,AL.AL_Templatec_Size,PDS.PS_Deadlines FROM  ProjectDocument_Sequence as PDS , Access_Level as AL where AL.AL_id = PDS.AL_id and PDS.PS_Seq_No='.$l_Max_PS_id.' and PDS.PR_id = '.$l_PR_id.'' ;
+=======
+            $l_Template_query = 'select AL.AL_Desc,PDS.PS_id,PDS.PS_Doc_Size,AL.AL_id,AL.AL_Templatec_Size,PDS.PS_Deadlines FROM  ProjectDocument_Sequence as PDS , Access_Level as AL where AL.AL_id = PDS.AL_id and PDS.PS_Seq_No='.$inc.' and PDS.PR_id = '.$l_PR_id.'' ;
+>>>>>>> f9809b6d342b585488ddd33ae1056f3bc13c7480
             $l_Template_res = mysql_query($l_Template_query);
             if($l_row = mysql_fetch_row($l_Template_res))
             {
