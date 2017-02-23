@@ -479,8 +479,7 @@ $('#prname').on("keyup",function() {
 		var Expirydate=$("#EYear").val()+$("#EMonth").val()+$("#EDate").val();
 		
 	        var prname=$("#prname").val();
-	       
-	         alert(prname+Expirydate+Releasedate);
+	          
 		var messageLength0 = CKEDITOR.instances['l_PR_Short_Desc'].getData().replace(/<[^>]*>/gi, '').length;
 		var messageLength1 = CKEDITOR.instances['l_PR_Desc'].getData().replace(/<[^>]*>/gi, '').length;
 		var messageLength2 = CKEDITOR.instances['l_PR_Objective'].getData().replace(/<[^>]*>/gi, '').length;
@@ -492,8 +491,7 @@ $('#prname').on("keyup",function() {
 		flag = false;
 		$("#errprname").show().html("[Project Name Invalid].");
 		$("#errprname").css('color', 'red');
-	    alert();
-	    
+	   
 	    }
 	   
             if( !messageLength0 ) {
