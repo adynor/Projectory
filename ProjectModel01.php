@@ -179,6 +179,7 @@ if($l_IN_Name!='Dummyname')
 }
 $sql.=' and PR.Org_id="'.$TargetOrg.'"';
 $sql.=' GROUP BY PR.PR_id ';
+$sql.=' Order BY PR.PR_Name ';
 
 $l_query_project=  $sql; 
 $l_result_project=mysql_query($l_query_project) or die(mysql_error());
