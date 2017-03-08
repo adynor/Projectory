@@ -18,7 +18,8 @@ $date->setTimezone($timezone );
 $l_CM_DateTime = $date->format( 'YmdHi' );
 
 // query for last login Date and Time
-$l_query_users='select UR.UR_id,UR.IT_id, UR.PG_id, UR.UR_Type,UR.TM_id,UR.UR_Semester, UR.PR_id,UR.UR_USN, UR.UR_RegistrationStatus,UR.UR_PR_Type,UR.Org_id,UR.UR_Credits from  Users as UR where ( (UR.UR_Emailid="'.$l_UR_Emailid.'" and UR.UR_EmailidDomain="'.$l_UR_EmailidDomain.'") or UR.UR_id= "'.$l_username.'") and UR.UR_Khufiya ="'.$l_password.'"';
+$l_query_users='select UR.UR_id,UR.IT_id, UR.PG_id, UR.UR_Type,UR.TM_id,UR.UR_Semester, UR.PR_id,UR.UR_USN, UR.UR_RegistrationStatus,UR.UR_PR_Type,UR.Org_id,UR.UR_Credits from  Users as UR
+ where  ( (UR.UR_Emailid="'.$l_UR_Emailid.'" and UR.UR_EmailidDomain="'.$l_UR_EmailidDomain.'") or UR.UR_id= "'.$l_username.'") and UR.UR_Khufiya ="'.$l_password.'"';
 $l_result_users = mysql_query($l_query_users) or die(mysql_error());
 $l_result_users_rowcount=mysql_num_rows($l_result_users);
     if($l_result_users_rowcount==1){
@@ -34,11 +35,17 @@ $l_result_users_rowcount=mysql_num_rows($l_result_users);
             $_SESSION['g_PG_id']=$l_row_users[2];
             $g_UR_Type = $l_row_users[3];
             $_SESSION['g_UR_Type']=$g_UR_Type;
+            if($g_UR_Type == 'S'){
+            $l_b2bsql=mysql_query("SELECT IT.IT_B2B FROM Institutes as IT WHERE IT.IT_id =".$l_row_users[1]."");
+            $l_b2bresult=mysql_fetch_array($l_b2bsql);
+            $_SESSION['g_IT_B2B']=$l_b2bresult[0];
+            }
             $_SESSION['g_TM_id']=$l_row_users[4];
             $_SESSION['g_Semester_id']=$l_row_users[5];
             $_SESSION['g_PR_id']=$l_row_users[6];
             $_SESSION['g_UR_PR_Type']=$l_row_users[9];
             $_SESSION['g_Org_id']=$l_row_users[10];
+           // $_SESSION['g_IT_B2B']=$l_row_users[12];
             if($l_row_users[11] == NULL){
            $_SESSION['g_Credits']=0;
            } else{
