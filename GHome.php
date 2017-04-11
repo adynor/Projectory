@@ -57,7 +57,7 @@ $l_checkrequest_result = mysql_query($l_checkrequest_query);
 $l_TM_id_row = mysql_fetch_row($l_checkrequest_result);
 $l_TM_id = $l_TM_id_row[0];
 
-$notificationguide='select PD.PD_FeedbackDate,TM.TM_Name,PD.PD_Status from Project_Documents as PD,Teams as TM where PD.PD_FeedbackDate is NUll and PD.PD_Status="P"  and TM.TM_id=PD.TM_id  order by PD.PD_SubmissionDate DESC limit 0,1';
+$notificationguide='select PD.PD_FeedbackDate,TM.TM_Name,PD.PD_Status from Project_Documents as PD,Teams as TM where PD.PD_FeedbackDate is NUll and PD.PD_Status="P"  and TM.TM_id=PD.TM_id  and TM.UR_id_Guide="'.$l_UR_id.'" order by PD.PD_SubmissionDate DESC limit 0,1';
 $runnoti=  mysql_query($notificationguide);
 $runresult=  mysql_fetch_row($runnoti);
   ?>

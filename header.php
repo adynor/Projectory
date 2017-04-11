@@ -9,7 +9,7 @@ function url(){
     }
     return $protocol . "://" . $_SERVER['HTTP_HOST'];
 }
- $l_filehomepath= url()."/dev"; 
+ $l_filehomepath= url(); 
 if($_SESSION['g_UR_id'] ==""){
     echo '<script>window.location.href="'.$l_filehomepath.'/Signout.php"</script>';
 }
@@ -67,11 +67,7 @@ require_once('sessionset.php');
     <body onload="javascript:window.history.forward(1);">   
     
    <nav class="navbar  navbar-fixed-top nav-cus-top">
-   <div  style="float:right;" id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
         <div class="container">
 
           <div class="navbar-header">
@@ -168,14 +164,19 @@ $Home='Back';
               }
               else if($_SESSION['g_UR_Type']=='T')
               {
-               // print('<button type="button" class="btn btn-default navbar-btn btn-info" onclick="location.href = \''.$l_filehomepath.'/THome.php\'">Home</button>');
-             
              ?>
               <a href="<?php echo  $l_filehomepath; ?>/THome.php"><img style="width:69px;height: 65px;margin-right: 12px;"src="<?php echo  $l_filehomepath; ?>/assets/images/Projectory_B1_Blue.png"></a>
             <?php    
               }
+              else if($_SESSION['g_UR_Type']=='CG')
+              {
+             ?>
+              <a href="<?php echo  $l_filehomepath; ?>/Techno_ViewProjects.php"><img style="width:69px;height: 65px;margin-right: 12px;"src="<?php echo  $l_filehomepath; ?>/assets/images/Projectory_B1_Blue.png"></a>
+            <?php    
+              }
              
               ?>
+              
              
               </div>
        
@@ -188,8 +189,11 @@ $Home='Back';
                <li class=""><button type="button" class="btn btn-default navbar-btn btn-default" >Available credits: <strong><i style="font-size:12px" class="fa fa-inr"></i> <?php echo $_SESSION['g_Credits']; ?></strong></button></li>
                <?php } ?>
               <?php
+               if($_SESSION['g_UR_Type']!='CG')
+              {
                 print('<li class=""><button type="button" style="margin-left:10px" class="btn btn-default navbar-btn btn-info" onclick="location.href = \''.$l_filehomepath.'/EditProfile.php\'">Edit Profile</button></li>');
                print('<li class=""><button type="button" style="margin-left:10px" class="btn btn-default navbar-btn btn-info" onclick="location.href = \''.$l_filehomepath.'/ProfileChangePassword.php\'">Change Password</button></li>');
+              }
               if($_SESSION['g_UR_Type']=='S')
               {
                 print('<li class=""><button type="button" style="margin-left:10px" class="btn btn-default navbar-btn btn-info" onclick="location.href = \''.$l_filehomepath.'/StudentHelp.php\'">How it works</button></li>');

@@ -22,13 +22,13 @@ $Query1=mysql_query('select PR_ExtraDoc_Size,PR_ExtraDoc_Name from Project_Synop
 $l_PR_Result1=  mysql_fetch_row($Query1);
 ?><br> <br><br>
 <div class="container">
-    
-    <?php if($_SESSION['g_UR_Type'] == 'M' || $_SESSION['g_UR_Type'] == 'T'):?>
-    <div class="col-md-4 col-md-offset-6" ><a class="btn btn-block btn-primary" href="iframetest.php">View PDF </a></div>
+        <?php if($_SESSION['g_UR_Type'] == 'M' || $_SESSION['g_UR_Type'] == 'T'):?>
+    <div class="col-md-4 col-md-offset-6" ><a class="btn btn-block btn-primary" href="iframetest.php?prid=<?php echo $l_PR_id;?>">View PDF </a></div>
     <?php endif;?>
     <div class="col-md-8 col-md-offset-2" style="border: 1px solid grey;
 box-shadow: 0px 0px 23px 3px grey;">
-    <div class="row">
+    <div class="row"><?php if($_SESSION['g_UR_Type'] == 'CG'){ echo "<a class='btn btn-default' href=' Techno_ViewProjects.php'>GO Back</a>"; } ?>
+
         <h3 class="text-center" style="color:#639FEC"><?php  echo htmlspecialchars_decode($l_PR_Result[0]);?></h3>
     </div>
     <div class="row">
@@ -55,8 +55,8 @@ box-shadow: 0px 0px 23px 3px grey;">
     </div>
       <div class="row">
         <h3>Non-functional Requirement:</h3>
-        <div><?php  echo htmlspecialchars_decode($l_PR_Result[5]);?></div>
+        <div><?php  echo htmlspecialchars_decode($l_PR_Result[5]);?><br></div><br><br>
     </div>
       </div>
-</div>
+</div><br><br><br>
 <?php include('footer.php');?>

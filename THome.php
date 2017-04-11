@@ -93,6 +93,8 @@ print('<tr><td><a href="'.$l_filehomepath.'/TAdd_DefaultTemplate.php">Add Defaul
 
 print('<tr><td><a href="'.$l_filehomepath.'/TSendMail.php">Send Mail</a></td></tr>');
 print('<tr><td><a href="'.$l_filehomepath.'/TCreateUser.php">Create User</a></td></tr>');
+print('<tr><td><a href="'.$l_filehomepath.'/Uploadfile/home.php">Create Multiple User</a></td></tr>');
+
 print('<tr><td><a href="'.$l_filehomepath.'/PaidCreateUser.php">Walet Registration</a></td></tr>');
 
 print('</table>');

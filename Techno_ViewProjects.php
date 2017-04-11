@@ -41,11 +41,12 @@ include ('header.php');
     
     $l_UR_Type= $_SESSION['g_UR_Type'];
     $l_UR_id = $_SESSION['g_UR_id'];
-    
-        
+   $_SESSION['g_UR_Type']= $l_UR_Type="CG";
+       
+       $_GET['UR_id']="ady01";
     print('<div style="clear:left">');
     
-    if(is_null($l_UR_id) || $l_UR_Type!='T')
+    if(is_null($l_UR_id) || $l_UR_Type!='CG')
     {
         $l_alert_statement =  '<script type="text/javascript">        
         window.alert("You have not logged in as an admin. Please login correctly")
@@ -54,6 +55,8 @@ include ('header.php');
         print($l_alert_statement );
     }
     
+    $projectsarray = array(119,146,147,149,64,39,130,151,136,115,151,138,59,130,106,110,108,61,177,65,145,151);
+   
     
     if(isset($_GET['UR_id']))
     {
@@ -72,19 +75,20 @@ include ('header.php');
             if($l_PR_Name=='')
                 $l_PR_Name='Dummyname';
             
-      
+            //echo "PR_Name.".$l_PR_Name.".".'<br>';
+            //echo "SD_Name ".$l_SD_Name.'<br>';
         }
         
         if ($l_PR_Name == 'Dummyname' && $l_SD_Name=='Dummyname')/////// filter
         {
-            $l_query='Select distinct PR.PR_id,PR.PR_Name,PR.PR_Desc,PR.PR_ComplexityLevel,PR.PR_SynopsisURL, PR.PR_NoOfPastAttempts, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR, Projects as PR where PR.PR_id>30 and PR.PR_Status="C" and PR.UR_Owner = (select UR.UR_id from Users as UR where UR.UR_CompanyName = "'.$l_co_UR_id.'" and outerUR.UR_id = UR.UR_id) order by PR.PR_Name';
+            $l_query='Select distinct PR.PR_id,PR.PR_Name,PR.PR_Desc,PR.PR_ComplexityLevel,PR.PR_SynopsisURL, PR.PR_AllowedSynopsis, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR, Projects as PR where PR.PR_id IN (' . implode(",", array_map("intval", $projectsarray)) . ') and PR.PR_id>30 and PR.PR_Status="C" and PR.UR_Owner = (select UR.UR_id from Users as UR where UR.UR_CompanyName = "'.$l_co_UR_id.'" and outerUR.UR_id = UR.UR_id) order by PR.PR_Name';
 
         }       // if ($l_PR_Name != null)
         
         else if ($l_PR_Name == 'Dummyname' && $l_SD_Name!='Dummyname')
         {
-            $l_query='Select distinct PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR.PR_NoOfPastAttempts, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR,  Projects as PR, SubDomain SD,Project_SubDomains PS
-            where PR.PR_id>30 and PR.PR_Status="C" and PR.PR_id=PS.PR_id
+            $l_query='Select distinct PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR.PR_AllowedSynopsis, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR,  Projects as PR, SubDomain SD,Project_SubDomains PS
+            where PR.PR_id IN (' . implode(",", array_map("intval", $projectsarray)) . ') and  PR.PR_id>30 and PR.PR_Status="C" and PR.PR_id=PS.PR_id
             and PS.SD_id=SD.SD_id
             and SD.SD_Name like "%'.$l_SD_Name.'%"
             and PR.UR_Owner = (select UR.UR_id from Users as UR where UR.UR_CompanyName = "'.$l_co_UR_id.'" and outerUR.UR_id = UR.UR_id) order by PR.PR_Name';
@@ -95,7 +99,7 @@ include ('header.php');
         
         else if ($l_PR_Name != 'Dummyname' and $l_SD_Name=='Dummyname')///////// n o filters
         {
-            $l_query='Select PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR_NoOfPastAttempts, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR,  Projects as PR where PR.PR_id>30 and PR.PR_Status="C" and PR.PR_Name like "%'.$l_PR_Name.'%" and PR.UR_Owner = (select UR.UR_id from Users as UR where UR.UR_CompanyName = "'.$l_co_UR_id.'" and outerUR.UR_id = UR.UR_id) order by PR.PR_Name';
+            $l_query='Select PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR_AllowedSynopsis, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR,  Projects as PR where PR.PR_id IN (' . implode(",", array_map("intval", $projectsarray)) . ') and   PR.PR_id>30 and PR.PR_Status="C" and PR.PR_Name like "%'.$l_PR_Name.'%" and PR.UR_Owner = (select UR.UR_id from Users as UR where UR.UR_CompanyName = "'.$l_co_UR_id.'" and outerUR.UR_id = UR.UR_id) order by PR.PR_Name';
             
             // get the current applications and past applications
             // current applications will be known from
@@ -103,19 +107,15 @@ include ('header.php');
         
         else if ($l_PR_Name != 'Dummyname' && $l_SD_Name!='Dummyname')
         {
-            $l_query='Select distinct PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR.PR_NoOfPastAttempts, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR, Projects as PR,Project_SubDomains PS,SubDomain SD
-            where PR.PR_id>30 and PR.PR_Status="C" and PR.PR_id=PS.PR_id
+            $l_query='Select distinct PR.PR_id, PR.PR_Name, PR.PR_Desc, PR.PR_ComplexityLevel, PR.PR_SynopsisURL, PR.PR_AllowedSynopsis, outerUR.UR_FirstName, outerUR.UR_LastName,PR.PR_Status from Users as outerUR, Projects as PR,Project_SubDomains PS,SubDomain SD
+            where PR.PR_id IN (' . implode(",", array_map("intval", $projectsarray)) . ') and  PR.PR_id>30 and PR.PR_Status="C" and PR.PR_id=PS.PR_id
             and PS.SD_id=SD.SD_id
             and PR.PR_Name like "%'.$l_PR_Name.'%"
             and SD.SD_Name like "%'.$l_SD_Name.'%"
             and PR.UR_Owner = (select UR.UR_id from Users as UR where UR.UR_CompanyName = "'.$l_co_UR_id.'" and outerUR.UR_id = UR.UR_id) order by PR.PR_Name';
             
             
-        }       // if ($l_PR_Name != null)
-        //    echo "PR_Name ".$l_PR_Name.'<br>';
-        //echo "SD_Name ".$l_SD_Name.'<br>';
-        
-        
+        }      
         $l_result=mysql_query($l_query);    // run the actual SQL
         
         print('<br><div class="alert alert-info" style=" margin-bottom: -26px;
@@ -185,9 +185,9 @@ include ('header.php');
      <td>SL No.</td>
      <td>Project  Name </td>
      <td> Project Description </td>
-     <td> Current <br> Applications</td>
+     
      <td>View Synopsis</td>
-     <td>Mentor</td>
+     
      </tr>
   </thead>
 <tbody>
@@ -199,14 +199,21 @@ include ('header.php');
             
             $i=1;
             while ($l_row = mysql_fetch_row($l_result))
-            {   
+            { 
+            
                 $l_PR_id                = $l_row[0];
+            //if (in_array($l_PR_id,$projectsarray))
+            
+            
+         // {
+           
+              
                 $l_PR_Name              = $l_row[1];
                 $l_PR_Desc              = htmlspecialchars_decode($l_row[2]);
                 $l_PR_ComplexityLevel   = $l_row[3];
                $l_PR_URL               = $l_row[4];
-                $l_PR_NoOfPastAttempts  = $l_row[5];
-                $l_UR_Owner             = $l_row[6].' '.$l_row[7];
+                $l_PR_AllowedSynopsis  = $l_row[5];
+                //$l_UR_Owner             = $l_row[6].' '.$l_row[7];
                 if($l_row[8]=="C"){
               
                   $PR_Status="<br><span style='color:olivedrab;'>Confirmed</span>";  
@@ -216,25 +223,32 @@ include ('header.php');
                 }
               ?>
 <tr>
-<td><?php echo $i.'-'.$l_PR_id; ?></td>
+<td><?php echo $i; ?></td>
 
-<td>  <a style="color: black;TEXT-DECORATION: NONE" href="AdminProjectDetails.php/?PR_id=<?php echo $l_PR_id?>"><?php echo $l_PR_Name; ?><?php echo $PR_Status; ?></a></td>
+<td>  <a style="color: black;TEXT-DECORATION: NONE" ><?php echo $l_PR_Name; ?><?php //echo $PR_Status; ?></a></td>
 
 <td><?php echo $l_PR_Desc;?> </td>
                 <?php
-                $l_PR_NoOfCurrentApp_query  = 'Select count(TM_id) from Teams
-                where PR_id = '.$l_PR_id.' and TM_EndDate is NULL';
-                $l_PR_NoOfCurrentApp_res    = mysql_query($l_PR_NoOfCurrentApp_query);
-                $l_PR_NoOfCurrentApp_row    = mysql_fetch_row($l_PR_NoOfCurrentApp_res);
-                $l_PR_NoOfCurrentApp         = $l_PR_NoOfCurrentApp_row[0];
+               // $l_PR_NoOfCurrentApp_query  = 'Select count(TM_id) from Teams
+               // where PR_id = '.$l_PR_id.' and TM_EndDate is NULL';
+              //  $l_PR_NoOfCurrentApp_res    = mysql_query($l_PR_NoOfCurrentApp_query);
+               // $l_PR_NoOfCurrentApp_row    = mysql_fetch_row($l_PR_NoOfCurrentApp_res);
+                
                 ?>
-               <td><?php echo $l_PR_NoOfCurrentApp; ?></td>
-               <td> <button class='btn-primary ady-req-btn glyphicon glyphicon-download' type=button onClick="location.href='ViewBlob.php?PR_id=<?php echo $l_PR_id; ?>'">&nbsp;Download</button></td>
-                <td><?php echo $l_UR_Owner; ?></td>
+              
+                              <td><?php 
+                if($l_PR_AllowedSynopsis == 'Y'){
+        print('<a class="btn btn-primary" role="button" href="giframeprojects.php?PR_id='.$l_PR_id.'">View Synopsis</a>');
+        }  else {
+         print('<a class="btn btn-primary" role="button" href="ViewSynopsis.php?prid='.$l_PR_id.'">View Synopsis</a>');
+        }
+        ?></td>
                 </tr>  
            <?php
                 $i++;
-            }?>
+            }
+            //}
+            ?>
            </tbody>
 </table>
 

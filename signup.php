@@ -46,7 +46,7 @@ if(isset($_POST['user_submit']) ){
     }
     $l_UR_Salutation=$_POST['user_Salutation'];
     $l_Name=$_POST['user_name'];
-    echo $l_StudentType=$_POST['student_type'];
+    $l_StudentType=$_POST['student_type'];
     $l_UR_id=$_POST['user_id'];
     $l_pass=$_POST['user_password'];
     $l_cpass=$_POST['user_password_confirm'];
@@ -82,7 +82,7 @@ if(isset($_POST['user_submit']) ){
     $l_Semester=$_POST['user_semester'];
     }
     else{
-   echo $l_Semester=NULL;
+    $l_Semester=NULL;
     }
 
    $l_Emailid=$_POST['user_email'];
@@ -330,7 +330,7 @@ if($l_URPR_Type=='S'){
                     $l_institutes= array();
                     if($l_URPR_Type=='S'||$l_URPR_Type=='G' ||$l_URPR_Type=='A' )
                     {    
-                    $l_sql      ='SELECT IT_id, IT_Name FROM  Institutes WHERE IT_id <> 0 ORDER BY IT_Name ';
+                    $l_sql      ='SELECT IT_id, IT_Name FROM  Institutes WHERE IT_id <> 0 and IT_B2B <> "Y" ORDER BY IT_Name ';
                     $l_result =mysql_query($l_sql);
                     while($l_row_results=mysql_fetch_row($l_result)){
                     array_push($l_institutes,$l_row_results);

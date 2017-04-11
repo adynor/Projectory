@@ -179,7 +179,7 @@ $l_MentorName= 'Select UR_FirstName, UR_MiddleName, UR_LastName from Users where
 $l_result = mysql_query($l_MentorName);
 $l_row = mysql_fetch_row($l_result);
 ?>
-               
+ <a href="MProjList01.php">Back</a>                   
 <div class="panel panel-primary" style="width:100%;">
 <div class="panel-heading" style="width:100%;"> Edit Project</div>
 <div class="panel-body table-responsive table" style="width:100%;">
