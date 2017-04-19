@@ -274,7 +274,7 @@ print('<div class="row" style="padding:10px"></div><div class="container" >');
 <div class="row alert alert-info" style="font-size: large;        margin-top: 23px;">
     <div class="col-md-5">
     <b>Welcome to Projectory:&nbsp;</b><font color="ff6347">
-<?php echo $l_UR_FName;?></font>
+<?php echo $l_UR_FName;?></font><?php if($_SESSION['login']){ ?><a  class ="btn btn-danger" href ="gitlogin.php?action=login" >Git Access</a><?php } ?>
     </div>
     <div class="col-md-3"></div>
     <div class="col-md-4 ady-logged-in" >
@@ -578,17 +578,18 @@ print('<div class="row" style="padding:10px"></div><div class="container" >');
       {  ?> <span class="glyphicon glyphicon glyphicon-ok-sign"></span>   <?php 
       }
       else if($pdrun[0]=='R')
-      {?>
-       <span class="glyphicon glyphicon glyphicon glyphicon-remove-sign"></span> 
+      {$r=4;?>
+       <!--<span class="glyphicon glyphicon glyphicon glyphicon-remove-sign"></span> -->
+      <span class="user_tip_marker"><span class="blink"> </span><span class="inner_blink"></span></span> 
       <?php 
       }
-      else if($pdrun[0]=='P' && $c!=4 && $c!=5 && $c!=6)
+      else if($pdrun[0]=='P' && $c!=4 && $c!=5 && $c!=6 && $r!=4)
       {$j=7;?>
       <span class="user_tip_marker"><span class="blink"> </span><span class="inner_blink"></span></span> 
       <?php 
       }
-      else if($i==1 && $pdrun[0]!='P' && $pdrun[0]!='A' && $j!=7 && $c!=4 && $c!=5 && $c!=6)
-      {?>
+      else if($i==1 && $pdrun[0]!='P' && $pdrun[0]!='A' && $j!=7 && $c!=4 && $c!=5 && $c!=6 && $r!=4)
+      {  ?>
       <span class="user_tip_marker"><span class="blink"> </span><span class="inner_blink"></span></span> 
       <?php 
       }
@@ -617,7 +618,7 @@ print('<div class="row" style="padding:10px"></div><div class="container" >');
              $l_PR_AllowedSynopsis= $l_row_PR[2];
         }
          print('<div class="row "><div class="col-md-4 "></div>');
-        print('<div class="col-md-4 "><table class="ady-row" border ="0" bordercolor="#718DE2">');
+        print('<div class="col-md-4 "><Your Project is class="ady-row" border ="0" bordercolor="#718DE2">');
         
        // print('<tr><td ><a class="btn btn-primary ady-btn" role="button" href="PDFView.php">View Synopsis</a></td></tr>');
         if($l_PR_AllowedSynopsis == 'Y'){
@@ -665,13 +666,31 @@ print('<div class="row" style="padding:10px"></div><div class="container" >');
         print('<td >Your Project is </td>');
         print('<td>'.$l_PR_Name .'</td>');
         print('</tr>');
-        
+      
         print ('<tr>');
         print('<td >Your Project description is </td>');
         print('<td>'.htmlspecialchars_decode($l_PR_Desc).'</td>');
         print('</tr>');
         
+        $techquery="select SD.SD_Name from SubDomain as SD,Project_SubDomains as PSD where PSD.SD_id=SD.SD_id and PSD.PR_id=".$_SESSION['g_PR_id']." group by SD.SD_Name";
+        $techrun=mysql_query($techquery);
+        $techcount = mysql_num_rows($techrun);
+        print ('<tr>');
+        print('<td >Technologies to be used </td>');
+        print('<td>');
+        $count=1;
         
+        while($l_row_tech = mysql_fetch_row($techrun))
+                {
+                 if($count<$techcount)   
+                     print($l_row_tech[0].' , ');
+                else
+                     print($l_row_tech[0]);
+ 
+                $count=$count+1;
+                }
+        print('</td>');
+        print('</tr>');
         //select  Institute Name,programme Name,university serial number
         $l_sql_UR = 'select UR.UR_USN, UR.UR_Semester, PG.PG_Name, IT.IT_Name from Users as UR, Institutes as IT, Programs as PG where IT.IT_id = UR.IT_id and PG.PG_id  = UR.PG_id and UR.UR_id="' . $l_UR_id . '"';
         
@@ -785,7 +804,7 @@ print('<div class="row" style="padding:10px"></div><div class="container" >');
             
         }
         
-        print('</table></div></div>');
+        print('</Your Project is></div></div>');
         print('</div><br>');
     //}
         ?>
@@ -793,6 +812,8 @@ print('<div class="row" style="padding:10px"></div><div class="container" >');
  
  $l_completed_query=  mysql_query($l_completed_projects);
  $l_completed_count=  mysql_num_rows($l_completed_query);
+ 
+ 
        
 if( $l_completed_count >0){
  ?>
